@@ -50,6 +50,8 @@ Example:
 
 ## Types of Linear Algebra
 
+<i> 
+
 `1. Foundations of Linear Algebra :` Elementary linear algebra introduces the foundational concepts that form the building blocks of the subject. It covers basic operations on matrices, solving systems of equations, and understanding vectors.
 ```bash
 1. Scalars : Quantities with magnitude only (e.g., speed, mass, volume, etc.).
@@ -58,11 +60,12 @@ Example:
 4. Matrix : A rectangular array of numbers arranged in rows and columns.
 5. Matrix Operations : Arithmetic operations like addition, multiplication, and transposition.
 ```
+<br>
 
 `2. Abstract Linear Algebra :` Advanced/Abstract linear algebra mostly covers all the advanced topics related to linear algebra, such as Linear function, Linear transformation, Eigenvectors, and Eigenvalues.
 <br>
 
-<i> <b>1. Linear Transformations : </b> A linear transformation is a special kind of function between vector spaces that preserves the operations of
+<b>1. Linear Transformations : </b> A linear transformation is a special kind of function between vector spaces that preserves the operations of
 1. Vector addition and Subtraction
 2. Scalar multiplication
 
@@ -87,8 +90,27 @@ Where:
 - **v** = Eigenvector (non-zero vector)
 - **λ** = Eigenvalue (scalar value)
 
-<b> Singular Value Decomposition : </b> Singular Value Decomposition (SVD) is a powerful mathematical technique used in signal processing, statistics, and machine learning.
+<b> 3. Singular Value Decomposition : </b> Singular Value Decomposition (SVD) is a powerful mathematical technique used in signal processing, statistics, and machine learning.
 
 - It decomposes a matrix into three other matrices, where one represents the rotation, another the scaling, and the third the final rotation.
 - It's essential for identifying the intrinsic geometric structure of data.
+
+<br>
+
+`3. Applied Linear Algebra :` In Applied Linear Algebra, the topics covered are generally the practical implications of Elementary and advanced linear Algebra topics such as the Complement of a matrix, matrix factorization, norm of vectors, etc.
+
+<b> 1. Linear Programming : </b> Linear programming is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships.
+
+- It is widely used in business and economics to maximize profit or minimize cost while considering constraints.
+- This is a technique for optimizing (maximizing or minimizing) a linear objective function, subject to linear equality and inequality constraints.
+- It's like planning the best outcome under given restrictions.
+
+<b> 2. Linear Equation Systems : </b> Systems of linear equations involve multiple linear equations that share the same set of variables.
+<br>
+The solution to these systems is the set of values that satisfy all equations simultaneously, which can be found using various methods, including substitution, elimination, and matrix operations.
+
+<b> 3. Gaussian Elimination : </b> Gaussian elimination is a systematic method for solving systems of linear equations.
+
+- It involves applying a series of operations to transform the system's matrix into its row echelon form or reduced row echelon form, making it easier to solve for the variables.
+- It is a step-by-step procedure to simplify a system of linear equations into a form that's easier to solve.
 </i>
