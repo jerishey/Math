@@ -1,39 +1,7 @@
 # Linear Algebra
 Linear Algebra is the branch of mathematics that focuses on the study of vectors, vector spaces, matrices, and linear transformations. It deals with linear equations, linear functions, and their representations through matrices and determinants.
 
-```bash
-1. Vector : A vector is an ordered list of numbers that represents a quantity with magnitude and direction.
-
-Example:
-v = [2, 4, 6]
-
-2. Matrix : A matrix is a rectangular arrangement of numbers in rows and columns.
-
-Example:
-[1  2]
-[3  4]
-
-3. Linear Equation : A linear equation is an equation in which each variable has a power of 1.
-
-Example:
-ax+by=c
-
-4. Scalar : A scalar is a single number used to multiply or scale a vector.
-
-Example:
-3 × [1, 2] = [3, 6]
-
-5. Dot Product : The dot product is the multiplication of two vectors that results in a single number.
-
-Example:
-[1,2] • [3,4] = (1×3 + 2×4) = 11
-
-6. Eigenvalues & Eigenvectors : 
-- Eigenvector: A vector whose direction does not change after a transformation
-- Eigenvalue: A scalar that shows how much the vector is scaled
-```
-
-## Uses of Linear Algebra
+`Uses of Linear Algebra`
 ```bash
 1. Machine Learning: Used to represent and process data using vectors and matrices in algorithms.
 
@@ -47,70 +15,65 @@ Example:
 
 6. Search Engines: Used to measure similarity between data using vector representations.
 ```
+## Introduction
+Linear Algebra is the branch of mathematics that studies vectors, matrices, and linear equations and how they interact.
 
-## Types of Linear Algebra
+### `Types of Linear Algebra`
+Linear Algebra is divided into different branches based on the difficulty level of topics, which are
 
-<i> 
-
-`1. Foundations of Linear Algebra :` Elementary linear algebra introduces the foundational concepts that form the building blocks of the subject. It covers basic operations on matrices, solving systems of equations, and understanding vectors.
+`1. Foundations of Linear Algebra :` The foundations of Linear Algebra consist of the basic concepts that are required before studying advanced topics such as vector spaces, eigenvalues, and matrix decompositions.
 ```bash
 1. Scalars : Quantities with magnitude only (e.g., speed, mass, volume, etc.).
+
 2. Vectors : Quantities with both direction and magnitude, elements of a vector space (e.g., velocity, weight, friction, etc).
+
 3. Vector Space : A collection of vectors that can be added and scaled by scalars.
+
 4. Matrix : A rectangular array of numbers arranged in rows and columns.
+
 5. Matrix Operations : Arithmetic operations like addition, multiplication, and transposition.
 ```
-<br>
 
-`2. Abstract Linear Algebra :` Advanced/Abstract linear algebra mostly covers all the advanced topics related to linear algebra, such as Linear function, Linear transformation, Eigenvectors, and Eigenvalues.
-<br>
+`2. Abstract Linear Algebra :` Abstract Linear Algebra studies the theoretical structures behind vectors, matrices, and linear transformations. Instead of focusing mainly on calculations, it focuses on understanding the underlying mathematical concepts and proving their properties.
+```bash
+1. Linear Transformations : A linear transformation is a special kind of function between vector spaces that preserves the operations of
+- Vector addition and Subtraction
+- Scalar multiplication
 
-<b>1. Linear Transformations : </b> A linear transformation is a special kind of function between vector spaces that preserves the operations of
-1. Vector addition and Subtraction
-2. Scalar multiplication
-
-```bash 
-In other words, if T is a linear transformation, then for any vectors u and v and scalar c:
-
-T(u + v) = T(u) + T(v)
-T(cu) = cT(u)
-```
-<b> 2. Eigenvalues and Eigenvectors : </b> Eigenvalues and eigenvectors are fundamental concepts in linear algebra.
-
+2. Eigenvalues and Eigenvectors : Eigenvalues and eigenvectors are fundamental concepts in linear algebra.
 - An eigenvector is a vector whose direction doesn’t change when a matrix is applied.
 - The eigenvalue is the factor by which that vector is scaled.
-
 
 Mathematically:
 
 Av = λv
 
 Where:
-- **A** = Square matrix
-- **v** = Eigenvector (non-zero vector)
-- **λ** = Eigenvalue (scalar value)
+ A = Square matrix
+ v = Eigenvector (non-zero vector)
+ λ = Eigenvalue (scalar value)
 
-<b> 3. Singular Value Decomposition : </b> Singular Value Decomposition (SVD) is a powerful mathematical technique used in signal processing, statistics, and machine learning.
+3. Singular Value Decomposition : Singular Value Decomposition (SVD) is a powerful mathematical technique used in signal processing, statistics, and machine learning.
 
 - It decomposes a matrix into three other matrices, where one represents the rotation, another the scaling, and the third the final rotation.
 - It's essential for identifying the intrinsic geometric structure of data.
+```
 
+`3. Applied Linear Algebra :` Applied Linear Algebra focuses on using linear algebra concepts to solve real-world problems in science, engineering, computer science, data science, machine learning, economics, and many other fields.
 <br>
-
-`3. Applied Linear Algebra :` In Applied Linear Algebra, the topics covered are generally the practical implications of Elementary and advanced linear Algebra topics such as the Complement of a matrix, matrix factorization, norm of vectors, etc.
-
-<b> 1. Linear Programming : </b> Linear programming is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships.
+Unlike Abstract Linear Algebra, which emphasizes theory and proofs, Applied Linear Algebra emphasizes computation, algorithms, and practical applications.
+```bash
+1. Linear Programming : Linear programming is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships.
 
 - It is widely used in business and economics to maximize profit or minimize cost while considering constraints.
 - This is a technique for optimizing (maximizing or minimizing) a linear objective function, subject to linear equality and inequality constraints.
-- It's like planning the best outcome under given restrictions.
 
-<b> 2. Linear Equation Systems : </b> Systems of linear equations involve multiple linear equations that share the same set of variables.
-<br>
-The solution to these systems is the set of values that satisfy all equations simultaneously, which can be found using various methods, including substitution, elimination, and matrix operations.
+2. Linear Equation Systems : Systems of linear equations involve multiple linear equations that share the same set of variables.
 
-<b> 3. Gaussian Elimination : </b> Gaussian elimination is a systematic method for solving systems of linear equations.
+- The solution to these systems is the set of values that satisfy all equations simultaneously, which can be found using various methods, including substitution, elimination, and matrix operations.
+
+3. Gaussian Elimination : Gaussian elimination is a systematic method for solving systems of linear equations.
 
 - It involves applying a series of operations to transform the system's matrix into its row echelon form or reduced row echelon form, making it easier to solve for the variables.
 - It is a step-by-step procedure to simplify a system of linear equations into a form that's easier to solve.
-</i>
+```
