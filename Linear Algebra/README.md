@@ -77,3 +77,23 @@ Unlike Abstract Linear Algebra, which emphasizes theory and proofs, Applied Line
 - It involves applying a series of operations to transform the system's matrix into its row echelon form or reduced row echelon form, making it easier to solve for the variables.
 - It is a step-by-step procedure to simplify a system of linear equations into a form that's easier to solve.
 ```
+
+## Foundations of Linear Algebra
+Linear algebra builds on a small set of core ideas; scalars, vectors, matrices, and the equations that connect them.
+
+### `1. Scalar`
+Scalar is a single numerical value that conveys magnitude but no direction or dimension. It is a zero-dimensional entity, meaning it cannot be decomposed into smaller parts or represented along any axis. 
+<br>
+Scalars serve as the fundamental units of computation in mathematics, physics and computer science.
+
+```bash
+1. Represents a single quantity such as temperature, accuracy or cost.
+
+2. Serves as the building block for forming higher-dimensional data structures like vectors and matrices.
+
+3. Use Case: Used in machine learning to represent loss functions, accuracy values or statistical measures such as mean and variance.
+
+4. Advantage: Simple to store and compute; forms the foundation for complex mathematical models.
+
+5. Disadvantage: Cannot represent any direction, relationship or multidimensional structure.
+```
