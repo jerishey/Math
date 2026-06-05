@@ -97,3 +97,22 @@ Scalars serve as the fundamental units of computation in mathematics, physics an
 
 5. Disadvantage: Cannot represent any direction, relationship or multidimensional structure.
 ```
+
+`Scalar Quantities :` A scalar quantity is a physical quantity that has only magnitude and no direction.
+
+- It is described by a single numerical value, typically with units.
+- Scalars represent quantities where direction is not relevant, such as temperature, mass, time, and energy.
+- They can be added, subtracted, multiplied, and divided using standard arithmetic operations.
+- Scalars are easier to work with compared to vector quantities since they don’t require considering directions or components.
+
+<b>Example: </b>
+```bash
+Temperature
+Mass
+Time
+Distance
+Speed
+Energy
+Area
+Volume
+```
