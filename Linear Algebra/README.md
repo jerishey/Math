@@ -224,3 +224,73 @@ We can easily calculate the dot product of the two vectors using the dot product
 $$
 \theta = \cos^{-1}\left(\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|\,|\vec{b}|}\right)
 $$
+<hr>
+
+### `Types of Vectors`
+Vectors can be classified into different categories on the basis of their magnitude and direction.
+
+<i> `The various types of vectors are :` 
+
+`1. Zero Vector :` A zero vector is the vector that has no magnitude and no direction. A zero vector is written as $\vec{0}$ or 0 and looks like:
+- In 2D: (0, 0)
+- In 3D: (0, 0, 0)
+
+<b>Feature :</b>
+```bash
+1. Its magnitude is 0.
+2. It does not point in any direction.
+3. It acts like the additive identity for vectors. (Adding it to any vector leaves the vector unchanged.)
+```
+`2. Unit Vector :` Unit vectors are the vectors that have a magnitude (length) of exactly 1.
+
+- It shows direction only, not size.
+- Any vector can be converted into a unit vector by dividing it by its magnitude.
+- Represented by the symbol '^' such as $\hat{a}$.
+<hr>
+
+We define a unit vector in each 3-D axis as,
+- Unit vector in the x-direction is i
+- Unit vector in the y-direction is j
+- Unit vector in the z-direction is k
+
+Also, the magnitude of this vector is,
+
+|i| = 1, |j| = 1, |k| = 1
+<hr>
+
+`Unit Vector Formula :` The formula to calculate the unit vector is,
+
+$$
+\
+\hat{v} = \frac{\vec{v}}{|\vec{v}|}
+\
+$$
+
+Where:
+
+- $ \hat{v}\ $ = Unit vector in the direction of \(\vec{v}\)
+- $ \vec{v}\ $ = Given vector
+- $ |\vec{v}|\ $ = Magnitude of the vector
+</i>
+<hr>
+
+`3. Equal Vectors :` Equal vectors are vectors that have the same magnitude and direction. In simple words, two vectors are said to be equal if they have the same length and direction; otherwise, they are unequal vectors.
+
+<b>`Equal Vector Formula :`</b>
+For Two Vectors A and B to be equal, the following two conditions must be met:
+
+- Same Magnitude: Length of A must be equal to the length of B.
+- Same Direction: Direction of A must be the same as the direction of B.
+
+`Properties of Equal Vector`
+```bash
+1. If Two vectors A and B have same length and point in the same direction they are said to be equal else they would be unequal.
+
+2. Equal Vectors are vectors with equal coordinates and same signs so equal vectors can be called as parallel vectors but the reverse may or may not be true.
+
+3. Equal vectors have same components.
+
+4. Position of the vectors does not affect the equality of vectors, Vectors are considered equal as long as their magnitude and direction matches, irrespective of where they are located in the coordinate system.
+
+5. Equal Vector will still be equal if we add / subtract / divide / multiply both the vectors with the same quantity (can be scalar or vector ). For example say A = B and C is another vector then A - C = B - C.
+```
