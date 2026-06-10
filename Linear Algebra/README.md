@@ -294,3 +294,105 @@ For Two Vectors A and B to be equal, the following two conditions must be met:
 
 5. Equal Vector will still be equal if we add / subtract / divide / multiply both the vectors with the same quantity (can be scalar or vector ). For example say A = B and C is another vector then A - C = B - C.
 ```
+
+
+## `Introduction to Matrices`
+Matrices are rectangular arrays of numbers, symbols, or characters where all of these elements are arranged in each row and column.
+
+- A matrix is identified by its order, which is given in the form of rows ⨯ columns, and the location of each element is given by the row and column it belongs to.
+- A matrix is represented as ([P]m⨯n), where P is the matrix, m is the number of rows, and n is the number of columns.
+
+### <b> `Example` </b>
+
+`1. Matrix A (2×2) :`
+
+A=
+$\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix}_{2\times2}$
+
+`2. Matrix B (3×3) :`
+
+B=
+$\begin{bmatrix}
+1 & -1 & 2\\
+3 & 2 & 6\\
+4 & -2 & 5
+\end{bmatrix}_{3\times3}$
+
+Here, A is a 2×2 matrix (2 rows and 2 columns) and B is a 3×3 matrix (3 rows and 3 columns).
+<hr>
+
+### `Order of Matrix :` 
+The order of a matrix refers to its dimensions, i.e., the number of rows and columns. If a matrix has m rows and n columns, its order is denoted as m × n.
+- For example, a matrix with 5 rows and 3 columns has an order of 5 × 3.
+
+<b>`How to Determine the Order of Matrix?`</b>
+The order of the matrix is determined by the number of rows and columns present in the matrix.
+<br>
+For example, if a matrix has "m" rows and "n" columns, then the order of the matrix is said to be "m × n."
+
+<b>`Example`</b>
+<i>
+```bash
+1. Example :
+
+P = [ 2 4 6 8 ]
+- We can see that the matrix P has 1 row and 4 columns. So, the order of the matrix P is written as "1 × 4."
+
+2. Example :
+
+Q = | a b c |
+    | d e f |
+- We can see that the matrix Q has 2 rows and 3 columns. So, the order of the matrix Q is written as "2 × 3."
+
+3. Example :
+
+R = | 1  -1   2 |
+    | 3   2   6 |
+    | 4  -2   5 |
+- We can see that the matrix R has 3 rows and 3 columns. So, the order of the matrix R is written as "3 × 3."
+```
+</i>
+
+#### `Type of Matrices Based on Order of Matrix` 
+The order of a matrix indicates its dimension and also defines the various types of matrices. The following are some different matrices that are classified based on the order of a matrix.
+
+`1. Singleton Matrix :` A singleton matrix is defined as a matrix that has only one element, i.e., it has only one row and one column. So, the order of a singleton matrix is "1 × 1"
+- Matrix given below is a singleton matrix.
+
+        A = [ 23 ]
+
+`2. Row Matrix :` A row matrix is defined as a matrix that has only one row. A matrix "A = [aij]" is said to be a row matrix if the order of the matrix is "1 × n"
+- Matrix given below is a row matrix of order "1 × 3"
+
+        B = [ -1 0 1 ]
+
+`3. Column Matrix :` A column matrix is defined as a matrix that has only one column. The matrix "A = [aij]" is said to be a column matrix if the order of the matrix is "m × 1"
+- Matrix given below is a row matrix of order "4 × 1"
+
+            | p |
+            | q |
+      C =   | r |
+            | s |
+
+`4. Rectangular Matrix :` A rectangular matrix is defined as a matrix that does not have an equal number of rows and columns. The order of a rectangular matrix that has "m" rows and "n" columns is "m × n" 
+- Matrix given below is a row matrix of order "2 × 3"
+
+        D = | 12 14 16 |
+            | 6   7  8 |
+
+`5. Square Matrix :` A square matrix is defined as a matrix that has an equal number of rows and columns. The order of a square matrix that has "n" rows and "n" columns is "n × n" 
+- Matrix given below is a row matrix of order "2 × 2"
+
+        E = | 3  6 |
+            | 9 15 |
+
+#### <b>`Important Points on Order of Matrix` </b>
+```bash
+1. The first number in the order of a matrix will always represent the number of rows in the matrix, while the second number represents the number of columns in the matrix.
+2. The addition or subtraction of any two matrices is possible if the order of the two matrices is the same.
+3. Multiplication of any two matrices is possible only when the number of columns in the first matrix is equal to the number of rows in the second matrix.
+4. If the order of a matrix is "m × n," then the order of its transpose matrix will be "n × m," where a transpose matrix is formed by changing the rows of a matrix into columns and its columns into rows.
+```
