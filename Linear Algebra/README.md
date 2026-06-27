@@ -296,3 +296,58 @@ The order of a matrix indicates its dimension and also defines the various types
 3. Multiplication of any two matrices is possible only when the number of columns in the first matrix is equal to the number of rows in the second matrix.
 4. If the order of a matrix is "m × n," then the order of its transpose matrix will be "n × m," where a transpose matrix is formed by changing the rows of a matrix into columns and its columns into rows.
 ```
+
+## Operation on Matrix
+
+### `1. Matrix Addition` 
+Matrix addition is an operation of adding two different matrices of the same order, with the same number of rows and columns.
+- Let's suppose two matrices A and B, such that A = [aij] and B = [bij], then their addition A + B is defined as [aij + bij], where ij represents the element in the ith row and jth column.
+- Matrix addition is done element-wise, and the resulting matrix has the same dimensions as the original matrices.
+
+#### `Properties of Matrix Addition`
+```bash
+1. Commutative Law: A + B = B + A
+
+2. Associative Law: (A + B) + C = A + (B + C)
+
+3. Identity of Matrix: A + O = O + A = A, where O is a zero matrix, which is the Additive Identity of the Matrix
+
+4. Additive Inverse: A + (-A) = O = (-A) + A, where (-A) is obtained by changing the sign of every element of A, which is the additive inverse of the matrix.
+```
+
+### `2. Subtraction of Matrices`
+Subtraction of matrices is the addition of the negative of a matrix to another matrix which means A - B = A + (-B). The subtraction of the matrix is subtracting the corresponding row-column element of one matrix with the same row-column element of another matrix.
+- Matrix subtraction is an operation where corresponding elements of two matrices are subtracted from each other to form a new matrix. 
+- The two matrices must have the same dimensions, meaning they must have the same number of rows and the same number of columns.
+
+### `3. Multiplying Matrices`
+Matrix multiplication is a binary operation that produces a new matrix from two matrices.
+- For multiplication, the number of columns in the first matrix must equal the number of rows in the second matrix. 
+- The resulting matrix (matrix product) has the same number of rows as the first matrix and the same number of columns as the second matrix.
+- For example, If matrix A is of order m × p and matrix B is of order p × n, then their product AB exists and is of order m × n.
+
+#### `Rules and Conditions for Matrix Multiplication`
+```bash
+1. If "A = [aij]m×n" and "B = [bij]n×o" are two matrices, then the product of A and B is denoted as AB, whose order is "m × o".
+
+2. Matrix multiplication is not commutative, i.e., AB ≠ BA, or, in simple words, the product of A and B matrices is AB, and AB is not equal to BA; it is even possible that AB exists but BA does not exist.
+
+3. Compatibility Conditions for Matrix Multiplication : We can multiply two matrices if the number of columns in the 1st matrix is equal to the number of rows in the 2nd matrix, otherwise, the given matrices cannot be multiplied.
+
+Example:
+- A 2×3 matrix can be multiplied by a 3×2 matrix, resulting in a 2×2 matrix.
+- A 3×3 matrix cannot be multiplied by a 4×2 matrix because their dimensions are incompatible.
+
+4. Special Properties of Matrix Multiplication : 
+- Both AB and BA matrix multiplication are defined if both A and B are square matrices.
+- One of the matrices doesn't need to be a zero matrix if the product of two matrices A and B is zero.
+- French mathematicianJacques Philippe Marie Binet was the first to perform matrix multiplication in 1812.
+```
+
+#### `Step-by-Step Process for Matrix Multiplication`
+To multiply two matrices, A and B, ensure that the number of columns in A equals the number of rows in B.
+```bash
+1. Calculate Elements: Multiply each element in a row of the first matrix by the corresponding element in a column of the second matrix, and sum these products to compute each element of the product matrix. Repeat this process for all rows and columns.
+
+2. Form the Product Matrix: Place the computed elements in their respective positions to construct the resulting matrix.'
+```
