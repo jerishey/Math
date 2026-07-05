@@ -128,9 +128,62 @@ Explanation:
 ## `Types of Vectors`
 Vectors can be classified into different categories on the basis of their magnitude and direction.
 
-<i> `The various types of vectors are :` 
+`The various types of vectors are :` 
 
-`1. Zero Vector :` A zero vector is the vector that has no magnitude and no direction. A zero vector is written as $\vec{0}$ or 0 and looks like:
+### 1. Row Vector
+
+A **row vector** is a vector written **horizontally**, as a single row of numbers. In matrix terms, it is a **1 × n** matrix (1 row, n columns).
+
+**General form:**
+```
+v = [ v1  v2  v3  ...  vn ]
+```
+
+**Example:**
+```
+v = [ 2  5  7 ]
+```
+
+This is a 1 × 3 row vector.
+
+**Key point:** Row vectors are often used when a vector needs to be multiplied *on the left* in matrix multiplication, since matrix dimensions must match (m × n) × (n × p).
+
+---
+
+### 2. Column Vector
+
+A **column vector** is a vector written **vertically**, as a single column of numbers. In matrix terms, it is an **n × 1** matrix (n rows, 1 column).
+
+**General form:**
+```
+    | v1 |
+v = | v2 |
+    | v3 |
+    | .. |
+    | vn |
+```
+
+**Example:**
+```
+    | 2 |
+v = | 5 |
+    | 7 |
+```
+
+This is a 3 × 1 column vector.
+
+**Key point:** Column vectors are the standard/default form used in linear algebra, physics, and most vector operations (especially when multiplying a matrix by a vector: `A · v`).
+
+**Relationship:** A row vector can be converted to a column vector (and vice versa) using the **transpose** operation, denoted `vᵀ`.
+
+```
+If v = [ 2  5  7 ], then vᵀ = | 2 |
+                               | 5 |
+                               | 7 |
+```
+
+### 3. Zero Vector : 
+A zero vector is the vector that has no magnitude and no direction. A zero vector is written as $\vec{0}$ or 0 and looks like:
 - In 2D: (0, 0)
 - In 3D: (0, 0, 0)
 
@@ -140,7 +193,8 @@ Vectors can be classified into different categories on the basis of their magnit
 2. It does not point in any direction.
 3. It acts like the additive identity for vectors. (Adding it to any vector leaves the vector unchanged.)
 ```
-`2. Unit Vector :` Unit vectors are the vectors that have a magnitude (length) of exactly 1.
+### 4. Unit Vector : 
+Unit vectors are the vectors that have a magnitude (length) of exactly 1.
 
 - It shows direction only, not size.
 - Any vector can be converted into a unit vector by dividing it by its magnitude.
@@ -174,13 +228,90 @@ Where:
 
 <br>
 
-`3. Equal Vectors :` Equal vectors are vectors that have the same magnitude and direction. In simple words, two vectors are said to be equal if they have the same length and direction; otherwise, they are unequal vectors.
+### 5. Equal Vectors :
+ Equal vectors are vectors that have the same magnitude and direction. In simple words, two vectors are said to be equal if they have the same length and direction; otherwise, they are unequal vectors.
 
 <b>`Equal Vector Formula :`</b>
 For Two Vectors A and B to be equal, the following two conditions must be met:
 
 - Same Magnitude: Length of A must be equal to the length of B.
 - Same Direction: Direction of A must be the same as the direction of B.
+
+
+### 6. Position Vector
+
+A **position vector** represents the location of a specific point in space **relative to a fixed origin** (usually denoted `O`).
+
+`Definition :`
+
+If a point `P` has coordinates `(x, y, z)`, then the position vector of `P`, denoted `r` or `OP→`, is:
+
+```
+    | x |
+r = | y |
+    | z |
+```
+
+`Example :`
+
+If point `P = (4, -2, 6)`, then its position vector relative to the origin `(0,0,0)` is:
+
+```
+    | 4  |
+r = | -2 |
+    | 6  |
+```
+
+#### Vector Between Two Points
+Position vectors are especially useful for finding the vector **between two points**. If `A` and `B` are points with position vectors `a` and `b`, the vector from `A` to `B` is:
+
+```
+AB→ = b - a
+```
+
+**Example:**
+```
+A = (1, 2),  B = (4, 6)
+a = (1, 2),  b = (4, 6)
+
+AB→ = b - a = (4-1, 6-2) = (3, 4)
+```
+
+---
+
+### 7. Negative Vector
+
+The **negative** of a vector `v`, written `-v`, is a vector with:
+- The **same magnitude** as `v`
+- The **exact opposite direction**
+
+`How to Find It`
+
+Negate (flip the sign of) every component of the vector.
+
+```
+If v = | v1 |        then  -v = | -v1 |
+       | v2 |                   | -v2 |
+       | v3 |                   | -v3 |
+```
+
+`Example`
+```
+v = (3, -4)
+-v = (-3, 4)
+```
+
+`Key Properties`
+- `|v| = |-v|` → magnitudes are equal
+- `v + (-v) = 0` → a vector added to its negative gives the zero vector
+- Geometrically, `-v` is the same arrow as `v`, just **pointing the opposite way**
+
+`Visual Intuition`
+
+If `v` points from the origin to the point `(3, -4)`, then `-v` points from the origin to `(-3, 4)` — the mirror image through the origin.
+
+---
+<br>
 
 `Properties of Equal Vector`
 ```bash
