@@ -588,15 +588,21 @@ R = | 1  -1   2 |
 #### `Type of Matrices Based on Order of Matrix` 
 The order of a matrix indicates its dimension and also defines the various types of matrices. The following are some different matrices that are classified based on the order of a matrix.
 
+---
+
 `1. Singleton Matrix :` A singleton matrix is defined as a matrix that has only one element, i.e., it has only one row and one column. So, the order of a singleton matrix is "1 × 1"
 - Matrix given below is a singleton matrix.
 
         A = [ 23 ]
 
+---
+
 `2. Row Matrix :` A row matrix is defined as a matrix that has only one row. A matrix "A = [aij]" is said to be a row matrix if the order of the matrix is "1 × n"
 - Matrix given below is a row matrix of order "1 × 3"
 
         B = [ -1 0 1 ]
+
+---
 
 `3. Column Matrix :` A column matrix is defined as a matrix that has only one column. The matrix "A = [aij]" is said to be a column matrix if the order of the matrix is "m × 1"
 - Matrix given below is a row matrix of order "4 × 1"
@@ -606,11 +612,15 @@ The order of a matrix indicates its dimension and also defines the various types
       C =   | r |
             | s |
 
+---
+
 `4. Rectangular Matrix :` A rectangular matrix is defined as a matrix that does not have an equal number of rows and columns. The order of a rectangular matrix that has "m" rows and "n" columns is "m × n" 
 - Matrix given below is a row matrix of order "2 × 3"
 
         D = | 12 14 16 |
             | 6   7  8 |
+
+---
 
 `5. Square Matrix :` A square matrix is defined as a matrix that has an equal number of rows and columns. The order of a square matrix that has "n" rows and "n" columns is "n × n" 
 - Matrix given below is a row matrix of order "2 × 2"
@@ -618,11 +628,63 @@ The order of a matrix indicates its dimension and also defines the various types
         E = | 3  6 |
             | 9 15 |
 
+---
+
+`6. Diagonal Matrix :` A diagonal matrix is a square matrix in which all the elements except the main diagonal are 0.
+- Matrix given below is a digonal matrix of order "3 × 3"
+```bash
+        F = | 5 0 0 |
+            | 0 3 0 |
+            | 0 0 7 | 
+
+- Key Poinst :
+1. Must be a square matrix.
+2. Non-diagonal elements are all 0.
+3. Diagonal elements can be any number (including 0).           
+```
+---
+
+`7. Scalar Matrix :` A scalar matrix is a diagonal matrix in which all the diagonal elements are equal.
+- Matrix given below is a scalar matrix of order "3 × 3"
+```bash
+        G = | 4 0 0 |
+            | 0 4 0 |
+            | 0 0 4 |
+
+- Key Points:
+
+1. Must be a square matrix.
+2. All off-diagonal elements are 0.
+3. All diagonal elements are the same.
+```
+---
+
+`8. Identity Matrix ( Unit Matrix ) :` A square matrix in which elements in the diagonal are all 1 and rest are all zero is called an identity matrix.
+- Matrix given below is a identity matrix of order "3 × 3"
+```bash
+        H = | 1 0 0 |
+            | 0 1 0 |
+            | 0 0 1 |
+```
+---
+
+`9. Zero Matrix :` A matrix is said to be zero matrix or null matrix if all its elements are zero.
+- Matrix given below is a zero matrix of order "3 × 3"
+```bash
+        I = | 0 0 0 |
+            | 0 0 0 |
+            | 0 0 0 |
+```
+---
+
 #### <b>`Important Points on Order of Matrix` </b>
 ```bash
 1. The first number in the order of a matrix will always represent the number of rows in the matrix, while the second number represents the number of columns in the matrix.
+
 2. The addition or subtraction of any two matrices is possible if the order of the two matrices is the same.
+
 3. Multiplication of any two matrices is possible only when the number of columns in the first matrix is equal to the number of rows in the second matrix.
+
 4. If the order of a matrix is "m × n," then the order of its transpose matrix will be "n × m," where a transpose matrix is formed by changing the rows of a matrix into columns and its columns into rows.
 ```
 
