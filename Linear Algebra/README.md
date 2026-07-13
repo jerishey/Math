@@ -325,7 +325,214 @@ If `v` points from the origin to the point `(3, -4)`, then `-v` points from the 
 
 5. Equal Vector will still be equal if we add / subtract / divide / multiply both the vectors with the same quantity (can be scalar or vector ). For example say A = B and C is another vector then A - C = B - C.
 ```
+## Vector Operations
 
+Vector operations are fundamental in linear algebra and are widely used in physics, computer graphics, machine learning, robotics, and engineering.
+
+---
+
+### 1. Vector Addition
+
+Two vectors are added by adding their corresponding components.
+
+`Formula`
+
+
+$$
+\vec{A} + \vec{B} =
+\begin{bmatrix}
+a_1 \\
+a_2
+\end{bmatrix}
++
+\begin{bmatrix}
+b_1 \\
+b_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+a_1+b_1 \\
+a_2+b_2
+\end{bmatrix}
+$$
+
+#### Example
+
+```
+A = (2, 3)
+B = (4, 1)
+
+A + B = (6, 4)
+```
+
+---
+
+### 2. Vector Subtraction
+
+Subtract corresponding components of two vectors.
+
+`Formula`
+
+$$
+\vec{A} - \vec{B} =
+\begin{bmatrix}
+a_1-b_1 \\
+a_2-b_2
+\end{bmatrix}
+$$
+
+#### Example
+
+```
+A = (5, 7)
+B = (2, 3)
+
+A - B = (3, 4)
+```
+
+---
+
+### 3. Scalar Multiplication
+
+Multiply every component of a vector by a scalar.
+
+`Formula`
+
+$$
+k\vec{A}=
+k
+\begin{bmatrix}
+a_1\\
+a_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+ka_1\\
+ka_2
+\end{bmatrix}
+$$
+
+#### Example
+
+```
+k = 3
+A = (2, 4)
+
+3A = (6, 12)
+```
+
+---
+
+### 4. Magnitude (Length) of a Vector
+
+The magnitude represents the length of a vector.
+
+`Formula`
+
+$$
+|\vec{A}|=\sqrt{a_1^2+a_2^2}
+$$
+
+#### Example
+
+```
+A = (3, 4)
+
+|A| = √(3² + 4²)
+    = √25
+    = 5
+```
+
+---
+
+### 5. Unit Vector
+
+A unit vector has a magnitude of **1** and points in the same direction as the original vector.
+
+`Formula`
+
+$$
+\hat{A}=\frac{\vec{A}}{|\vec{A}|}
+$$
+
+#### Example
+
+```
+A = (3, 4)
+
+|A| = 5
+
+Â = (3/5, 4/5)
+```
+
+---
+
+### 6. Dot Product (Scalar Product)
+
+The dot product measures how much one vector points in the direction of another.
+
+`Formula`
+
+$$
+\vec{A}\cdot\vec{B}
+=
+a_1b_1+a_2b_2
+$$
+
+#### Example
+
+```
+A = (2, 3)
+B = (4, 5)
+
+A · B
+= (2×4) + (3×5)
+= 8 + 15
+= 23
+```
+
+#### Properties
+
+- Result is a scalar.
+- Commutative:
+
+  ```
+  A · B = B · A
+  ```
+- If
+  ```
+  A · B = 0
+  ```
+  then the vectors are perpendicular.
+
+---
+
+### 7. Cross Product (3D Vectors Only)
+
+The cross product produces a vector perpendicular to both input vectors.
+
+`Formula`
+
+$$
+\vec{A}\times\vec{B}
+=
+\begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k}\\
+a_1&a_2&a_3\\
+b_1&b_2&b_3
+\end{vmatrix}
+$$
+
+#### Example
+
+```
+A = (1, 0, 0)
+B = (0, 1, 0)
+
+A × B = (0, 0, 1)
+```
+
+---
 
 ## `3. Introduction to Matrices`
 Matrices are rectangular arrays of numbers, symbols, or characters where all of these elements are arranged in each row and column.
