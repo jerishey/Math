@@ -695,6 +695,21 @@ Matrix addition is an operation of adding two different matrices of the same ord
 - Let's suppose two matrices A and B, such that A = [aij] and B = [bij], then their addition A + B is defined as [aij + bij], where ij represents the element in the ith row and jth column.
 - Matrix addition is done element-wise, and the resulting matrix has the same dimensions as the original matrices.
 
+`Example :`
+```bash
+A = | 1  2  3 |
+    | 4  5  6 |
+
+B = | 7  8  9 |
+    |10 11 12 |
+
+A + B = | 1+7   2+8   3+9 |
+        |4+10  5+11  6+12 |
+
+      = |  8  10  12 |
+        | 14  16  18 |
+```
+
 #### `Properties of Matrix Addition`
 ```bash
 1. Commutative Law: A + B = B + A
@@ -705,11 +720,28 @@ Matrix addition is an operation of adding two different matrices of the same ord
 
 4. Additive Inverse: A + (-A) = O = (-A) + A, where (-A) is obtained by changing the sign of every element of A, which is the additive inverse of the matrix.
 ```
+---
 
 ### `2. Subtraction of Matrices`
 Subtraction of matrices is the addition of the negative of a matrix to another matrix which means A - B = A + (-B). The subtraction of the matrix is subtracting the corresponding row-column element of one matrix with the same row-column element of another matrix.
 - Matrix subtraction is an operation where corresponding elements of two matrices are subtracted from each other to form a new matrix. 
 - The two matrices must have the same dimensions, meaning they must have the same number of rows and the same number of columns.
+
+`Example :`
+```bash
+A = | 7  8  9 |
+    |10 11 12 |
+
+B = | 1  2  3 |
+    | 4  5  6 |
+
+A - B = | 7-1   8-2   9-3 |
+        |10-4 11-5 12-6 |
+
+      = | 6  6  6 |
+        | 6  6  6 |
+```
+---
 
 ### `3. Multiplying Matrices`
 Matrix multiplication is a binary operation that produces a new matrix from two matrices.
