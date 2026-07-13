@@ -338,21 +338,14 @@ Two vectors are added by adding their corresponding components.
 `Formula`
 
 
-$$ \vec{A} + \vec{B} =
-\begin{bmatrix}
-a_1 \\
-a_2
-\end{bmatrix}
+$$
+\vec{A}+\vec{B}=
+\begin{bmatrix}a_1\\a_2\end{bmatrix}
 +
-\begin{bmatrix}
-b_1 \\
-b_2
-\end{bmatrix}
+\begin{bmatrix}b_1\\b_2\end{bmatrix}
 =
-\begin{bmatrix}
-a_1+b_1 \\
-a_2+b_2
-\end{bmatrix} $$
+\begin{bmatrix}a_1+b_1\\a_2+b_2\end{bmatrix}
+$$
 
 #### Example
 
