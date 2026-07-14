@@ -774,3 +774,30 @@ To multiply two matrices, A and B, ensure that the number of columns in A equals
 
 2. Form the Product Matrix: Place the computed elements in their respective positions to construct the resulting matrix.'
 ```
+
+#### Properties of multiplication of matrices :
+```bash
+1.  The associative law For any three matrices A, B and C. We have
+(AB) C = A (BC), whenever both sides of the equality are defined.
+
+2. The distributive law For three matrices A, B and C.
+- A (B+C) = AB + AC
+- (A+B) C = AC + BC, whenever both sides of equality are defined.
+
+3. The existence of multiplicative identity For every square matrix A, there
+exist an identity matrix of same order such that IA = AI = A.
+```
+`Example :`
+```bash
+A = | 1 2 |
+    | 3 4 |
+
+B = | 5 6 |
+    | 7 8 |
+
+A × B = | (1×5 + 2×7)   (1×6 + 2×8) |
+        | (3×5 + 4×7)   (3×6 + 4×8) |
+
+      = | 19 22 |
+        | 43 50 |
+```
