@@ -470,7 +470,7 @@ $$
 a_1b_1+a_2b_2
 $$
 
-#### Example
+`Example`
 
 ```
 A = (2, 3)
@@ -482,7 +482,7 @@ A · B
 = 23
 ```
 
-#### Properties
+`Properties`
 
 - Result is a scalar.
 - Commutative:
@@ -514,7 +514,7 @@ b_1&b_2&b_3
 \end{vmatrix}
 $$
 
-#### Example
+`Example`
 
 ```
 A = (1, 0, 0)
@@ -531,7 +531,7 @@ Matrices are rectangular arrays of numbers, symbols, or characters where all of 
 - A matrix is identified by its order, which is given in the form of rows ⨯ columns, and the location of each element is given by the row and column it belongs to.
 - A matrix is represented as ([P]m⨯n), where P is the matrix, m is the number of rows, and n is the number of columns.
 
-### <b> `Example` </b>
+<b> `Example` </b>
 
 `1. Matrix A (2×2) :`
 
@@ -677,7 +677,7 @@ The order of a matrix indicates its dimension and also defines the various types
 ```
 ---
 
-#### <b>`Important Points on Order of Matrix` </b>
+### <b>`Important Points on Order of Matrix` </b>
 ```bash
 1. The first number in the order of a matrix will always represent the number of rows in the matrix, while the second number represents the number of columns in the matrix.
 
@@ -710,7 +710,7 @@ A + B = | 1+7   2+8   3+9 |
         | 14  16  18 |
 ```
 
-#### `Properties of Matrix Addition`
+`Properties of Matrix Addition`
 ```bash
 1. Commutative Law: A + B = B + A
 
@@ -749,7 +749,7 @@ Matrix multiplication is a binary operation that produces a new matrix from two 
 - The resulting matrix (matrix product) has the same number of rows as the first matrix and the same number of columns as the second matrix.
 - For example, If matrix A is of order m × p and matrix B is of order p × n, then their product AB exists and is of order m × n.
 
-#### `Rules and Conditions for Matrix Multiplication`
+`Rules and Conditions for Matrix Multiplication`
 ```bash
 1. If "A = [aij]m×n" and "B = [bij]n×o" are two matrices, then the product of A and B is denoted as AB, whose order is "m × o".
 
@@ -767,7 +767,7 @@ Example:
 - French mathematicianJacques Philippe Marie Binet was the first to perform matrix multiplication in 1812.
 ```
 
-#### `Step-by-Step Process for Matrix Multiplication`
+`Step-by-Step Process for Matrix Multiplication :`
 To multiply two matrices, A and B, ensure that the number of columns in A equals the number of rows in B.
 ```bash
 1. Calculate Elements: Multiply each element in a row of the first matrix by the corresponding element in a column of the second matrix, and sum these products to compute each element of the product matrix. Repeat this process for all rows and columns.
@@ -775,7 +775,7 @@ To multiply two matrices, A and B, ensure that the number of columns in A equals
 2. Form the Product Matrix: Place the computed elements in their respective positions to construct the resulting matrix.'
 ```
 
-#### Properties of multiplication of matrices :
+`Properties of multiplication of matrices :`
 ```bash
 1.  The associative law For any three matrices A, B and C. We have
 (AB) C = A (BC), whenever both sides of the equality are defined.
@@ -800,4 +800,64 @@ A × B = | (1×5 + 2×7)   (1×6 + 2×8) |
 
       = | 19 22 |
         | 43 50 |
+```
+
+### `4. Scalar Multiplication of Matrices`
+Scalar multiplication is performed by multiplying every element of a matrix by a scalar (constant).
+
+**Example:**
+
+A = | 1 2 |
+    | 3 4 |
+
+Scalar = 3
+
+3 × A = | 3×1  3×2 |
+        | 3×3  3×4 |
+
+      = | 3  6 |
+        | 9 12 |
+
+---
+
+### `4. Transpose`
+Transpose of a matrix is a new matrix that is obtained by swapping the rows and columns of the given matrix or vice versa, i.e., for the given matrix, the elements in rows are interchanged with the elements in columns.
+
+- For any given matrix A, its transpose is denoted as AT, or Aᵀ.
+- To find Aᵀ, take each row of A and rewrite it as a column.
+
+<br>
+
+`Transpose of a Matrix (Aᵀ or AT) :` The transpose of a matrix is obtained by interchanging its rows and columns.
+
+**Example:**
+```bash
+A = | 1 2 3 |
+    | 4 5 6 | 2 X 3
+
+Aᵀ = | 1 4 |
+     | 2 5 |
+     | 3 6 | 3 X 2
+```
+<br>
+
+`Order of Transpose Matrix :` The order of a matrix represents the number of rows and columns it contains, written as m × n, where m is the number of rows, and n is the number of columns.
+
+For any matrix **A<sub>m×n</sub>**:
+
+- The transpose of **A**, denoted as **Aᵀ** (or **AT**), is obtained by interchanging its rows and columns.
+- If **A** is of order **m × n**, then **Aᵀ** is of order **n × m** (i.e., **Aᵀ** has **n** rows and **m** columns).
+
+`Example`
+```bash
+A (2 × 3)
+
+A = | 1 2 3 |
+    | 4 5 6 |
+
+Aᵀ (3 × 2)
+
+Aᵀ =  | 1 4 |
+      | 2 5 |
+      | 3 6 |
 ```
