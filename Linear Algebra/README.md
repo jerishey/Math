@@ -229,13 +229,13 @@ $$
 
 Where:
 
-- $ \hat{v}\ $ = Unit vector in the direction of \(\vec{v}\)
-- $ \vec{v}\ $ = Given vector
-- $ |\vec{v}|\ $ = Magnitude of the vector
+- $$ \hat{v}\ $$ = Unit vector in the direction of \(\vec{v}\)
+- $$ \vec{v}\ $$ = Given vector
+- $$ |\vec{v}|\ $$ = Magnitude of the vector
 </i>
 
-<br>
 ---
+
 `5. Equal Vectors `
 
 **Equal vectors** are vectors that have the same magnitude and direction. In simple words, two vectors are said to be equal if they have the same length and direction; otherwise, they are unequal vectors.
@@ -543,18 +543,22 @@ Matrices are rectangular arrays of numbers, symbols, or characters where all of 
 
 `1. Matrix A (2×2) :`
 
-A = $$\begin{bmatrix}
+$$
+A = \begin{bmatrix}
 1 & 2\\
 3 & 4
-\end{bmatrix}_{2\times2}$$
+\end{bmatrix}_{2\times2}
+$$
 
 `2. Matrix B (3×3) :`
 
-B = $$\begin{bmatrix}
+$$
+B = \begin{bmatrix}
 1 & -1 & 2\\
 3 & 2 & 6\\
 4 & -2 & 5
-\end{bmatrix}_{3\times3}$$
+\end{bmatrix}_{3\times3}
+$$
 
 Here, A is a 2×2 matrix (2 rows and 2 columns) and B is a 3×3 matrix (3 rows and 3 columns).
 <hr>
@@ -926,66 +930,108 @@ where $O$ is the zero matrix.
 
 ---
 
-### `3. Multiplying Matrices`
-Matrix multiplication is a binary operation that produces a new matrix from two matrices.
-- For multiplication, the number of columns in the first matrix must equal the number of rows in the second matrix. 
-- The resulting matrix (matrix product) has the same number of rows as the first matrix and the same number of columns as the second matrix.
-- For example, If matrix A is of order m × p and matrix B is of order p × n, then their product AB exists and is of order m × n.
+**`3. Matrix Multiplication`**
 
-`Rules and Conditions for Matrix Multiplication`
-```bash
-1. If "A = [aij]m×n" and "B = [bij]n×o" are two matrices, then the product of A and B is denoted as AB, whose order is "m × o".
+**Matrix multiplication** combines two matrices to produce a new matrix. Unlike addition and subtraction, multiplication follows the **row-by-column rule**.
 
-2. Matrix multiplication is not commutative, i.e., AB ≠ BA, or, in simple words, the product of A and B matrices is AB, and AB is not equal to BA; it is even possible that AB exists but BA does not exist.
+---
 
-3. Compatibility Conditions for Matrix Multiplication : We can multiply two matrices if the number of columns in the 1st matrix is equal to the number of rows in the 2nd matrix, otherwise, the given matrices cannot be multiplied.
+**`Condition for Matrix Multiplication`**
 
-Example:
-- A 2×3 matrix can be multiplied by a 3×2 matrix, resulting in a 2×2 matrix.
-- A 3×3 matrix cannot be multiplied by a 4×2 matrix because their dimensions are incompatible.
+If
 
-4. Special Properties of Matrix Multiplication : 
-- Both AB and BA matrix multiplication are defined if both A and B are square matrices.
-- One of the matrices doesn't need to be a zero matrix if the product of two matrices A and B is zero.
-- French mathematicianJacques Philippe Marie Binet was the first to perform matrix multiplication in 1812.
-```
+$$
+A_{m\times n}
+$$
 
-`Step-by-Step Process for Matrix Multiplication :`
-To multiply two matrices, A and B, ensure that the number of columns in A equals the number of rows in B.
-```bash
-1. Calculate Elements: Multiply each element in a row of the first matrix by the corresponding element in a column of the second matrix, and sum these products to compute each element of the product matrix. Repeat this process for all rows and columns.
+and
 
-2. Form the Product Matrix: Place the computed elements in their respective positions to construct the resulting matrix.'
-```
+$$
+B_{n\times p}
+$$
 
-`Properties of multiplication of matrices :`
-```bash
-1.  The associative law For any three matrices A, B and C. We have
-(AB) C = A (BC), whenever both sides of the equality are defined.
+then
 
-2. The distributive law For three matrices A, B and C.
-- A (B+C) = AB + AC
-- (A+B) C = AC + BC, whenever both sides of equality are defined.
+$$
+AB=C_{m\times p}
+$$
 
-3. The existence of multiplicative identity For every square matrix A, there
-exist an identity matrix of same order such that IA = AI = A.
-```
-`Example :`
-```bash
-A = | 1 2 |
-    | 3 4 |
+> The **number of columns** of the first matrix must equal the **number of rows** of the second matrix.
 
-B = | 5 6 |
-    | 7 8 |
+---
 
-A × B = | (1×5 + 2×7)   (1×6 + 2×8) |
-        | (3×5 + 4×7)   (3×6 + 4×8) |
+**`Formula`**
 
-      = | 19 22 |
-        | 43 50 |
-```
+$$
+(AB)_{ij}
+=
+\sum_{k=1}^{n}a_{ik}b_{kj}
+$$
 
-### `4. Scalar Multiplication of Matrices`
+---
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix}
+$$
+
+$$
+B=
+\begin{bmatrix}
+5 & 6\\
+7 & 8
+\end{bmatrix}
+$$
+
+$$
+AB=
+\begin{bmatrix}
+19 & 22\\
+43 & 50
+\end{bmatrix}
+$$
+
+---
+
+**`Properties`**
+
+`1. Associative Property`
+
+$$
+(AB)C=A(BC)
+$$
+
+`2. Distributive Property`
+
+$$
+A(B+C)=AB+AC
+$$
+
+$$
+(A+B)C=AC+BC
+$$
+
+`3. Not Commutative`
+
+$$
+AB \neq BA
+$$
+
+`4. Identity Matrix`
+
+$$
+AI=IA=A
+$$
+
+---
+
+**`Scalar Multiplication of Matrices`**
+
 Scalar multiplication is performed by multiplying every element of a matrix by a scalar (constant).
 
 **Example:**
