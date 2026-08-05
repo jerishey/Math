@@ -49,8 +49,8 @@ Scalars serve as the fundamental units of computation in mathematics, physics an
 
 5. Disadvantage: Cannot represent any direction, relationship or multidimensional structure.
 ```
-
-### `Scalar Quantities :` 
+---
+**`Scalar Quantities :`** 
 A scalar quantity is a physical quantity that has only magnitude and no direction.
 ```bash
 1. It is described by a single numerical value, typically with units.
@@ -78,7 +78,7 @@ Volume
 ## `2. Vector`
 In mathematics, vectors are fundamental objects that represent quantities with both magnitude and direction. They are widely used in various branches of mathematics, physics, engineering, computer science, and other disciplines.
 
-### `Key Features of Vectors:`
+**`Key Features of Vectors:`**
 
 `1. Magnitude :` A vector has a size or length called its magnitude.
 - The size or length of the vector.
@@ -88,14 +88,17 @@ In mathematics, vectors are fundamental objects that represent quantities with b
 - The direction of the vector in space.
 - Represented by the arrowhead that indicates where the vector points.
 
+---
+**`Real-life analogy of Vectors`**
 
-### `Real-life analogy of Vectors`
 To better understand vectors, consider a situation where a football coach is training a goalkeeper to pass the ball. The coach needs to instruct the goalkeeper:
 - `Direction:` Where to send the ball (toward another player or a specific region).
 - `Magnitude:` How hard to kick the ball (the strength of the pass).
 <hr>
 
-### `Representation of Vector`
+---
+**`Representation of Vector`**
+
 Vectors are represented by taking an arrow above the quantity to indicate that it has both magnitude and direction.
 <br>
 The Force vector is represented $\vec{F}$ where the arrow above F represents that it is a vector quantity. 
@@ -124,13 +127,14 @@ Explanation:
 - The point where the vector starts is called the tail of the vector and the endpoint of the vector is called the head of the vector. We can also denote the vector as the coordinate point in 3-Dimensions. 
 ```
 </i>
+---
 
-## `Types of Vectors`
+**`Types of Vectors`**
 Vectors can be classified into different categories on the basis of their magnitude and direction.
 
 `The various types of vectors are :` 
 
-### 1. Row Vector
+`1. Row Vector`
 
 A **row vector** is a vector written **horizontally**, as a single row of numbers. In matrix terms, it is a **1 × n** matrix (1 row, n columns).
 
@@ -146,11 +150,11 @@ v = [ 2  5  7 ]
 
 This is a 1 × 3 row vector.
 
-**Key point:** Row vectors are often used when a vector needs to be multiplied *on the left* in matrix multiplication, since matrix dimensions must match (m × n) × (n × p).
+**Key point :**  Row vectors are often used when a vector needs to be multiplied *on the left* in matrix multiplication, since matrix dimensions must match (m × n) × (n × p).
 
 ---
 
-### 2. Column Vector
+`2. Column Vector`
 
 A **column vector** is a vector written **vertically**, as a single column of numbers. In matrix terms, it is an **n × 1** matrix (n rows, 1 column).
 
@@ -172,17 +176,17 @@ v = | 5 |
 
 This is a 3 × 1 column vector.
 
-**Key point:** Column vectors are the standard/default form used in linear algebra, physics, and most vector operations (especially when multiplying a matrix by a vector: `A · v`).
+**Key point :** Column vectors are the standard/default form used in linear algebra, physics, and most vector operations (especially when multiplying a matrix by a vector: `A · v`).
 
-**Relationship:** A row vector can be converted to a column vector (and vice versa) using the **transpose** operation, denoted `vᵀ`.
+**Relationship :** A row vector can be converted to a column vector (and vice versa) using the **transpose** operation, denoted `vᵀ`.
 
 ```
 If v = [ 2  5  7 ], then vᵀ = | 2 |
                                | 5 |
                                | 7 |
 ```
-
-### 3. Zero Vector : 
+---
+`3. Zero Vector :` 
 A zero vector is the vector that has no magnitude and no direction. A zero vector is written as $\vec{0}$ or 0 and looks like:
 - In 2D: (0, 0)
 - In 3D: (0, 0, 0)
@@ -193,7 +197,9 @@ A zero vector is the vector that has no magnitude and no direction. A zero vecto
 2. It does not point in any direction.
 3. It acts like the additive identity for vectors. (Adding it to any vector leaves the vector unchanged.)
 ```
-### 4. Unit Vector : 
+---
+
+`4. Unit Vector :` 
 Unit vectors are the vectors that have a magnitude (length) of exactly 1.
 
 - It shows direction only, not size.
@@ -227,9 +233,10 @@ Where:
 </i>
 
 <br>
+---
+`5. Equal Vectors `
 
-### 5. Equal Vectors :
- Equal vectors are vectors that have the same magnitude and direction. In simple words, two vectors are said to be equal if they have the same length and direction; otherwise, they are unequal vectors.
+**Equal vectors** are vectors that have the same magnitude and direction. In simple words, two vectors are said to be equal if they have the same length and direction; otherwise, they are unequal vectors.
 
 <b>`Equal Vector Formula :`</b>
 For Two Vectors A and B to be equal, the following two conditions must be met:
@@ -237,8 +244,8 @@ For Two Vectors A and B to be equal, the following two conditions must be met:
 - Same Magnitude: Length of A must be equal to the length of B.
 - Same Direction: Direction of A must be the same as the direction of B.
 
-
-### 6. Position Vector
+---
+`6. Position Vector`
 
 A **position vector** represents the location of a specific point in space **relative to a fixed origin** (usually denoted `O`).
 
@@ -261,8 +268,9 @@ If point `P = (4, -2, 6)`, then its position vector relative to the origin `(0,0
 r = | -2 |
     | 6  |
 ```
+---
+**`Vector Between Two Points`**
 
-#### Vector Between Two Points
 Position vectors are especially useful for finding the vector **between two points**. If `A` and `B` are points with position vectors `a` and `b`, the vector from `A` to `B` is:
 
 ```
@@ -279,7 +287,7 @@ AB→ = b - a = (4-1, 6-2) = (3, 4)
 
 ---
 
-### 7. Negative Vector
+`7. Negative Vector`
 
 The **negative** of a vector `v`, written `-v`, is a vector with:
 - The **same magnitude** as `v`
@@ -325,13 +333,14 @@ If `v` points from the origin to the point `(3, -4)`, then `-v` points from the 
 
 5. Equal Vector will still be equal if we add / subtract / divide / multiply both the vectors with the same quantity (can be scalar or vector ). For example say A = B and C is another vector then A - C = B - C.
 ```
-## Vector Operations
+--- 
+
+**`Vector Operations`**
 
 Vector operations are fundamental in linear algebra and are widely used in physics, computer graphics, machine learning, robotics, and engineering.
 
----
 
-### 1. Vector Addition
+`1. Vector Addition`
 
 Two vectors are added by adding their corresponding components.
 
@@ -347,7 +356,7 @@ $$
 \begin{bmatrix}a_1+b_1\\a_2+b_2\end{bmatrix}
 $$
 
-#### Example
+**Example**
 
 ```
 A = (2, 3)
@@ -358,7 +367,7 @@ A + B = (6, 4)
 
 ---
 
-### 2. Vector Subtraction
+`2. Vector Subtraction`
 
 Subtract corresponding components of two vectors.
 
@@ -372,7 +381,7 @@ a_2-b_2
 \end{bmatrix}
 $$
 
-#### Example
+**Example**
 
 ```
 A = (5, 7)
@@ -383,7 +392,7 @@ A - B = (3, 4)
 
 ---
 
-### 3. Scalar Multiplication
+`3. Scalar Multiplication`
 
 Multiply every component of a vector by a scalar.
 
@@ -403,7 +412,7 @@ ka_2
 \end{bmatrix}
 $$
 
-#### Example
+**Example**
 
 ```
 k = 3
@@ -414,7 +423,7 @@ A = (2, 4)
 
 ---
 
-### 4. Magnitude (Length) of a Vector
+`4. Magnitude (Length) of a Vector`
 
 The magnitude represents the length of a vector.
 
@@ -424,7 +433,7 @@ $$
 |\vec{A}|=\sqrt{a_1^2+a_2^2}
 $$
 
-#### Example
+**Example**
 
 ```
 A = (3, 4)
@@ -436,7 +445,7 @@ A = (3, 4)
 
 ---
 
-### 5. Unit Vector
+`5. Unit Vector`
 
 A unit vector has a magnitude of **1** and points in the same direction as the original vector.
 
@@ -446,7 +455,7 @@ $$
 \hat{A}=\frac{\vec{A}}{|\vec{A}|}
 $$
 
-#### Example
+**Example**
 
 ```
 A = (3, 4)
@@ -458,7 +467,7 @@ A = (3, 4)
 
 ---
 
-### 6. Dot Product (Scalar Product)
+`6. Dot Product (Scalar Product)`
 
 The dot product measures how much one vector points in the direction of another.
 
@@ -498,7 +507,7 @@ A · B
 
 ---
 
-### 7. Cross Product (3D Vectors Only)
+`7. Cross Product (3D Vectors Only)`
 
 The cross product produces a vector perpendicular to both input vectors.
 
@@ -552,8 +561,10 @@ $\begin{bmatrix}
 
 Here, A is a 2×2 matrix (2 rows and 2 columns) and B is a 3×3 matrix (3 rows and 3 columns).
 <hr>
+---
 
-### `Order of Matrix :` 
+### **`Order of Matrix :`**
+
 The order of a matrix refers to its dimensions, i.e., the number of rows and columns. If a matrix has m rows and n columns, its order is denoted as m × n.
 - For example, a matrix with 5 rows and 3 columns has an order of 5 × 3.
 
@@ -584,27 +595,32 @@ R = | 1  -1   2 |
 - We can see that the matrix R has 3 rows and 3 columns. So, the order of the matrix R is written as "3 × 3."
 ```
 </i>
+---
 
-#### `Type of Matrices Based on Order of Matrix` 
+### **`Type of Matrices Based on Order of Matrix`**
+
 The order of a matrix indicates its dimension and also defines the various types of matrices. The following are some different matrices that are classified based on the order of a matrix.
 
 ---
 
-`1. Singleton Matrix :` A singleton matrix is defined as a matrix that has only one element, i.e., it has only one row and one column. So, the order of a singleton matrix is "1 × 1"
+`1. Singleton Matrix :` 
+A singleton matrix is defined as a matrix that has only one element, i.e., it has only one row and one column. So, the order of a singleton matrix is "1 × 1"
 - Matrix given below is a singleton matrix.
 
         A = [ 23 ]
 
 ---
 
-`2. Row Matrix :` A row matrix is defined as a matrix that has only one row. A matrix "A = [aij]" is said to be a row matrix if the order of the matrix is "1 × n"
+`2. Row Matrix :` 
+A row matrix is defined as a matrix that has only one row. A matrix "A = [aij]" is said to be a row matrix if the order of the matrix is "1 × n"
 - Matrix given below is a row matrix of order "1 × 3"
 
         B = [ -1 0 1 ]
 
 ---
 
-`3. Column Matrix :` A column matrix is defined as a matrix that has only one column. The matrix "A = [aij]" is said to be a column matrix if the order of the matrix is "m × 1"
+`3. Column Matrix :` 
+A column matrix is defined as a matrix that has only one column. The matrix "A = [aij]" is said to be a column matrix if the order of the matrix is "m × 1"
 - Matrix given below is a row matrix of order "4 × 1"
 
             | p |
@@ -614,7 +630,8 @@ The order of a matrix indicates its dimension and also defines the various types
 
 ---
 
-`4. Rectangular Matrix :` A rectangular matrix is defined as a matrix that does not have an equal number of rows and columns. The order of a rectangular matrix that has "m" rows and "n" columns is "m × n" 
+`4. Rectangular Matrix :` 
+A rectangular matrix is defined as a matrix that does not have an equal number of rows and columns. The order of a rectangular matrix that has "m" rows and "n" columns is "m × n" 
 - Matrix given below is a row matrix of order "2 × 3"
 
         D = | 12 14 16 |
@@ -622,7 +639,8 @@ The order of a matrix indicates its dimension and also defines the various types
 
 ---
 
-`5. Square Matrix :` A square matrix is defined as a matrix that has an equal number of rows and columns. The order of a square matrix that has "n" rows and "n" columns is "n × n" 
+`5. Square Matrix :` 
+A square matrix is defined as a matrix that has an equal number of rows and columns. The order of a square matrix that has "n" rows and "n" columns is "n × n" 
 - Matrix given below is a row matrix of order "2 × 2"
 
         E = | 3  6 |
@@ -630,7 +648,8 @@ The order of a matrix indicates its dimension and also defines the various types
 
 ---
 
-`6. Diagonal Matrix :` A diagonal matrix is a square matrix in which all the elements except the main diagonal are 0.
+`6. Diagonal Matrix :` 
+A diagonal matrix is a square matrix in which all the elements except the main diagonal are 0.
 - Matrix given below is a digonal matrix of order "3 × 3"
 ```bash
         F = | 5 0 0 |
@@ -644,7 +663,8 @@ The order of a matrix indicates its dimension and also defines the various types
 ```
 ---
 
-`7. Scalar Matrix :` A scalar matrix is a diagonal matrix in which all the diagonal elements are equal.
+`7. Scalar Matrix :` 
+A scalar matrix is a diagonal matrix in which all the diagonal elements are equal.
 - Matrix given below is a scalar matrix of order "3 × 3"
 ```bash
         G = | 4 0 0 |
@@ -659,7 +679,8 @@ The order of a matrix indicates its dimension and also defines the various types
 ```
 ---
 
-`8. Identity Matrix ( Unit Matrix ) :` A square matrix in which elements in the diagonal are all 1 and rest are all zero is called an identity matrix.
+`8. Identity Matrix ( Unit Matrix ) :` 
+A square matrix in which elements in the diagonal are all 1 and rest are all zero is called an identity matrix.
 - Matrix given below is a identity matrix of order "3 × 3"
 ```bash
         H = | 1 0 0 |
@@ -668,7 +689,8 @@ The order of a matrix indicates its dimension and also defines the various types
 ```
 ---
 
-`9. Zero Matrix :` A matrix is said to be zero matrix or null matrix if all its elements are zero.
+`9. Zero Matrix :` 
+A matrix is said to be zero matrix or null matrix if all its elements are zero.
 - Matrix given below is a zero matrix of order "3 × 3"
 ```bash
         I = | 0 0 0 |
@@ -677,7 +699,7 @@ The order of a matrix indicates its dimension and also defines the various types
 ```
 ---
 
-### <b>`Important Points on Order of Matrix` </b>
+<b>`Important Points on Order of Matrix`</b>
 ```bash
 1. The first number in the order of a matrix will always represent the number of rows in the matrix, while the second number represents the number of columns in the matrix.
 
@@ -687,39 +709,136 @@ The order of a matrix indicates its dimension and also defines the various types
 
 4. If the order of a matrix is "m × n," then the order of its transpose matrix will be "n × m," where a transpose matrix is formed by changing the rows of a matrix into columns and its columns into rows.
 ```
+---
 
-## Operation on Matrix
+### **`Operation on Matrix`**
 
-### `1. Matrix Addition` 
-Matrix addition is an operation of adding two different matrices of the same order, with the same number of rows and columns.
-- Let's suppose two matrices A and B, such that A = [aij] and B = [bij], then their addition A + B is defined as [aij + bij], where ij represents the element in the ith row and jth column.
-- Matrix addition is done element-wise, and the resulting matrix has the same dimensions as the original matrices.
+**Matrix Operations** are basic calculations performed on matrices to solve problems or manipulate their structure. Common operations include:
 
-`Example :`
-```bash
-A = | 1  2  3 |
-    | 4  5  6 |
+- Addition: Add two matrices of the same size.
+- Subtraction: Subtract two matrices of the same size.
+- Scalar Multiplication: Multiply each element of a matrix by a constant.
+- Matrix Multiplication: Multiply two matrices to create a new matrix.
+- Transpose: Flip the rows and columns of a matrix.
+- Inverse: Find the inverse of a Matrix.
+---
 
-B = | 7  8  9 |
-    |10 11 12 |
+**`1. Matrix Addition`**
 
-A + B = | 1+7   2+8   3+9 |
-        |4+10  5+11  6+12 |
+**Matrix addition** is the process of adding two matrices by adding their corresponding elements. Matrix addition is one of the most fundamental operations in linear algebra.
 
-      = |  8  10  12 |
-        | 14  16  18 |
-```
+> **Note:** Two matrices can only be added if they have the **same order** (same number of rows and columns).
 
-`Properties of Matrix Addition`
-```bash
-1. Commutative Law: A + B = B + A
+---
 
-2. Associative Law: (A + B) + C = A + (B + C)
+If
 
-3. Identity of Matrix: A + O = O + A = A, where O is a zero matrix, which is the Additive Identity of the Matrix
+$$
+A=[a_{ij}]
+$$
 
-4. Additive Inverse: A + (-A) = O = (-A) + A, where (-A) is obtained by changing the sign of every element of A, which is the additive inverse of the matrix.
-```
+and
+
+$$
+B=[b_{ij}]
+$$
+
+are matrices of the same order, then
+
+$$
+A+B=[a_{ij}+b_{ij}]
+$$
+
+---
+
+**`Condition for Matrix Addition`**
+
+Two matrices can be added only when:
+
+- They have the same number of rows.
+- They have the same number of columns.
+
+If the orders are different, matrix addition is **not defined**.
+
+---
+
+**Example**
+
+Let
+
+$$
+A=
+\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix}
+$$
+
+and
+
+$$
+B=
+\begin{bmatrix}
+5 & 6\\
+7 & 8
+\end{bmatrix}
+$$
+
+Then,
+
+$$
+A+B=
+\begin{bmatrix}
+1+5 & 2+6\\
+3+7 & 4+8
+\end{bmatrix}
+=
+\begin{bmatrix}
+6 & 8\\
+10 & 12
+\end{bmatrix}
+$$
+
+---
+
+**`Properties of Matrix Addition`**
+
+`1. Closure Property`
+
+If matrices have the same order,
+
+$$
+A+B
+$$
+
+is also a matrix of the same order.
+
+`2. Commutative Property`
+
+$$
+A+B=B+A
+$$
+
+`3. Associative Property`
+
+$$
+(A+B)+C=A+(B+C)
+$$
+
+`4. Additive Identity`
+
+$$
+A+O=A
+$$
+
+where $O$ is the zero matrix.
+
+`5. Additive Inverse`
+
+$$
+A+(-A)=O
+$$
+
 ---
 
 ### `2. Subtraction of Matrices`
@@ -861,3 +980,4 @@ Aᵀ =  | 1 4 |
       | 2 5 |
       | 3 6 |
 ```
+
