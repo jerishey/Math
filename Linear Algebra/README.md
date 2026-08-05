@@ -543,18 +543,18 @@ Matrices are rectangular arrays of numbers, symbols, or characters where all of 
 
 `1. Matrix A (2×2) :`
 
-A =$$ \begin{bmatrix}
+A = $$\begin{bmatrix}
 1 & 2\\
 3 & 4
-\end{bmatrix}_{2\times2} $$
+\end{bmatrix}_{2\times2}$$
 
 `2. Matrix B (3×3) :`
 
-B =$$ \begin{bmatrix}
+B = $$\begin{bmatrix}
 1 & -1 & 2\\
 3 & 2 & 6\\
 4 & -2 & 5
-\end{bmatrix}_{3\times3} $$
+\end{bmatrix}_{3\times3}$$
 
 Here, A is a 2×2 matrix (2 rows and 2 columns) and B is a 3×3 matrix (3 rows and 3 columns).
 <hr>
@@ -782,12 +782,10 @@ $$
 Then,
 
 $$
-A+B=
-\begin{bmatrix}
+A+B = \begin{bmatrix}
 1+5 & 2+6\\
 3+7 & 4+8
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 6 & 8\\
 10 & 12
@@ -836,25 +834,96 @@ $$
 
 ---
 
-### `2. Subtraction of Matrices`
-Subtraction of matrices is the addition of the negative of a matrix to another matrix which means A - B = A + (-B). The subtraction of the matrix is subtracting the corresponding row-column element of one matrix with the same row-column element of another matrix.
-- Matrix subtraction is an operation where corresponding elements of two matrices are subtracted from each other to form a new matrix. 
-- The two matrices must have the same dimensions, meaning they must have the same number of rows and the same number of columns.
+**`2. Matrix Subtraction`**
 
-`Example :`
-```bash
-A = | 7  8  9 |
-    |10 11 12 |
+**Matrix subtraction** is the process of subtracting the corresponding elements of one matrix from another.
 
-B = | 1  2  3 |
-    | 4  5  6 |
+> **Note:** Matrix subtraction is possible only when both matrices have the same order.
 
-A - B = | 7-1   8-2   9-3 |
-        |10-4 11-5 12-6 |
+---
 
-      = | 6  6  6 |
-        | 6  6  6 |
-```
+If
+
+$$
+A=[a_{ij}]
+$$
+
+and
+
+$$
+B=[b_{ij}]
+$$
+
+have the same order, then
+
+$$
+A-B=[a_{ij}-b_{ij}]
+$$
+
+---
+
+**Condition**
+
+Matrices must have the same number of rows and columns.
+
+---
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+8 & 7\\
+6 & 5
+\end{bmatrix}
+$$
+
+$$
+B=
+\begin{bmatrix}
+2 & 3\\
+4 & 1
+\end{bmatrix}
+$$
+
+$$
+A-B=
+\begin{bmatrix}
+6 & 4\\
+2 & 4
+\end{bmatrix}
+$$
+
+---
+
+**`Properties`**
+
+`1. Not Commutative`
+
+$$
+A-B \neq B-A
+$$
+
+`2. Not Associative`
+
+$$
+(A-B)-C \neq A-(B-C)
+$$
+
+`3. Identity Property`
+
+$$
+A-O=A
+$$
+
+`4. Self Subtraction`
+
+$$
+A-A=O
+$$
+
+where $O$ is the zero matrix.
+
 ---
 
 ### `3. Multiplying Matrices`
