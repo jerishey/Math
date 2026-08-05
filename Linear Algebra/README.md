@@ -37,7 +37,7 @@ Scalar is a single numerical value that conveys magnitude but no direction or di
 <br>
 Scalars serve as the fundamental units of computation in mathematics, physics and computer science.
 
-### `Features of Scalar`
+**`Features of Scalar`**
 ```bash
 1. Represents a single quantity such as temperature, accuracy or cost.
 
@@ -73,9 +73,10 @@ Energy
 Area
 Volume
 ```
-<hr>
+---
 
 ## `2. Vector`
+
 In mathematics, vectors are fundamental objects that represent quantities with both magnitude and direction. They are widely used in various branches of mathematics, physics, engineering, computer science, and other disciplines.
 
 **`Key Features of Vectors:`**
@@ -89,14 +90,15 @@ In mathematics, vectors are fundamental objects that represent quantities with b
 - Represented by the arrowhead that indicates where the vector points.
 
 ---
+
 **`Real-life analogy of Vectors`**
 
 To better understand vectors, consider a situation where a football coach is training a goalkeeper to pass the ball. The coach needs to instruct the goalkeeper:
 - `Direction:` Where to send the ball (toward another player or a specific region).
 - `Magnitude:` How hard to kick the ball (the strength of the pass).
-<hr>
 
 ---
+
 **`Representation of Vector`**
 
 Vectors are represented by taking an arrow above the quantity to indicate that it has both magnitude and direction.
@@ -269,6 +271,7 @@ r = | -2 |
     | 6  |
 ```
 ---
+
 **`Vector Between Two Points`**
 
 Position vectors are especially useful for finding the vector **between two points**. If `A` and `B` are points with position vectors `a` and `b`, the vector from `A` to `B` is:
@@ -319,7 +322,7 @@ v = (3, -4)
 If `v` points from the origin to the point `(3, -4)`, then `-v` points from the origin to `(-3, 4)` — the mirror image through the origin.
 
 ---
-<br>
+
 
 `Properties of Equal Vector`
 ```bash
@@ -351,8 +354,7 @@ $$
 \vec{A}+\vec{B}=
 \begin{bmatrix}a_1\\a_2\end{bmatrix}
 +
-\begin{bmatrix}b_1\\b_2\end{bmatrix}
-=
+\begin{bmatrix}b_1\\b_2\end{bmatrix} =
 \begin{bmatrix}a_1+b_1\\a_2+b_2\end{bmatrix}
 $$
 
@@ -399,13 +401,12 @@ Multiply every component of a vector by a scalar.
 `Formula`
 
 $$
-k\vec{A}=
+k\vec{A} =
 k
 \begin{bmatrix}
 a_1\\
 a_2
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 ka_1\\
 ka_2
@@ -474,8 +475,7 @@ The dot product measures how much one vector points in the direction of another.
 `Formula`
 
 $$
-\vec{A}\cdot\vec{B}
-=
+\vec{A}\cdot\vec{B} =
 a_1b_1+a_2b_2
 $$
 
@@ -514,8 +514,7 @@ The cross product produces a vector perpendicular to both input vectors.
 `Formula`
 
 $$
-\vec{A}\times\vec{B}
-=
+\vec{A}\times\vec{B} =
 \begin{vmatrix}
 \hat{i} & \hat{j} & \hat{k}\\
 a_1&a_2&a_3\\
@@ -544,20 +543,18 @@ Matrices are rectangular arrays of numbers, symbols, or characters where all of 
 
 `1. Matrix A (2×2) :`
 
-A=
-$\begin{bmatrix}
+A =$$ \begin{bmatrix}
 1 & 2\\
 3 & 4
-\end{bmatrix}_{2\times2}$
+\end{bmatrix}_{2\times2} $$
 
 `2. Matrix B (3×3) :`
 
-B=
-$\begin{bmatrix}
+B =$$ \begin{bmatrix}
 1 & -1 & 2\\
 3 & 2 & 6\\
 4 & -2 & 5
-\end{bmatrix}_{3\times3}$
+\end{bmatrix}_{3\times3} $$
 
 Here, A is a 2×2 matrix (2 rows and 2 columns) and B is a 3×3 matrix (3 rows and 3 columns).
 <hr>
@@ -767,8 +764,7 @@ If the orders are different, matrix addition is **not defined**.
 Let
 
 $$
-A=
-\begin{bmatrix}
+A =\begin{bmatrix}
 1 & 2\\
 3 & 4
 \end{bmatrix}
@@ -777,8 +773,7 @@ $$
 and
 
 $$
-B=
-\begin{bmatrix}
+B =\begin{bmatrix}
 5 & 6\\
 7 & 8
 \end{bmatrix}
