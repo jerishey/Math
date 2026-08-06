@@ -2276,9 +2276,597 @@ $$
 `Determinant Property`
 
 $$
-|A^{-1}|
-=
+|A^{-1}| =
 \frac1{|A|}
 $$
+
+---
+
+## **`4. Determinants in Linear Algebra`**
+
+A **determinant** is a scalar (single numerical value) associated with a **square matrix**. It provides important information about a matrix, such as whether the matrix is invertible, the scaling factor of a linear transformation, and whether a system of linear equations has a unique solution.
+
+Determinants are one of the fundamental concepts in linear algebra and have applications in mathematics, physics, engineering, computer graphics, machine learning, and data science.
+
+> **Note:** Determinants are defined **only for square matrices**.
+
+---
+
+**`Determinants of Different Types of Matrices`**
+
+Different types of matrices have different determinant values and properties.
+
+`1. Determinant of a 1×1 Matrix`
+
+For a matrix
+
+$$
+A=
+\begin{bmatrix}
+a
+\end{bmatrix}
+$$
+
+The determinant is simply
+
+$$
+|A|=a
+$$
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+7
+\end{bmatrix}
+$$
+
+$$
+|A|=7
+$$
+
+---
+
+`2. Determinant of a 2×2 Matrix`
+
+For
+
+$$
+A=
+\begin{bmatrix}
+a & b\\
+c & d
+\end{bmatrix}
+$$
+
+the determinant is
+
+$$
+|A|=ad-bc
+$$
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+2 & 3\\
+1 & 4
+\end{bmatrix}
+$$
+
+$$
+|A|
+=(2)(4)-(3)(1)
+=8-3
+=5
+$$
+
+---
+
+`3. Determinant of a 3×3 Matrix`
+
+For
+
+$$
+A=
+\begin{bmatrix}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{bmatrix}
+$$
+
+$$
+|A|
+=
+a(ei-fh)
+-
+b(di-fg)
++
+c(dh-eg)
+$$
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+1 & 2 & 3\\
+0 & 4 & 5\\
+1 & 0 & 6
+\end{bmatrix}
+$$
+
+$$
+|A|=22
+$$
+
+---
+
+`4. Determinant of an Identity Matrix`
+
+For every identity matrix,
+
+$$
+|I|=1
+$$
+
+**Example**
+
+$$
+I=
+\begin{bmatrix}
+1&0\\
+0&1
+\end{bmatrix}
+$$
+
+$$
+|I|=1
+$$
+
+---
+
+`5. Determinant of a Zero Matrix`
+
+If every element of the matrix is zero,
+
+$$
+|O|=0
+$$
+
+**Example**
+
+$$
+O=
+\begin{bmatrix}
+0&0\\
+0&0
+\end{bmatrix}
+$$
+
+---
+
+`6. Determinant of a Diagonal Matrix`
+
+The determinant of a diagonal matrix is the **product of its diagonal elements**.
+
+For
+
+$$
+A=
+\begin{bmatrix}
+a&0&0\\
+0&b&0\\
+0&0&c
+\end{bmatrix}
+$$
+
+$$
+|A|=abc
+$$
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+2&0&0\\
+0&5&0\\
+0&0&4
+\end{bmatrix}
+$$
+
+$$
+|A|
+=2\times5\times4
+=40
+$$
+
+---
+
+`7. Determinant of a Triangular Matrix`
+
+For both **upper triangular** and **lower triangular** matrices, the determinant equals the product of the diagonal elements.
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+2&4&5\\
+0&3&7\\
+0&0&6
+\end{bmatrix}
+$$
+
+$$
+|A|
+=2\times3\times6
+=36
+$$
+
+---
+
+`8. Determinant of a Symmetric Matrix`
+
+A symmetric matrix satisfies
+
+$$
+A=A^T
+$$
+
+Its determinant is computed in the same way as any square matrix.
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+2&3\\
+3&5
+\end{bmatrix}
+$$
+
+$$
+|A|
+=(2)(5)-(3)(3)
+=1
+$$
+
+---
+
+`9. Determinant of a Singular Matrix`
+
+A singular matrix has
+
+$$
+|A|=0
+$$
+
+Therefore, it has **no inverse**.
+
+---
+
+`10. Determinant of a Non-Singular Matrix`
+
+A non-singular matrix satisfies
+
+$$
+|A|\neq0
+$$
+
+Therefore, the inverse exists.
+
+---
+
+**`Physical Significance of Determinant`**
+
+The determinant has several important interpretations in mathematics and physical sciences.
+
+`1. Scaling Factor`
+
+The determinant tells how much a linear transformation **stretches or shrinks** an object.
+
+- If
+
+$$
+|A|=2
+$$
+
+the area or volume doubles.
+
+- If
+
+$$
+|A|=\frac12
+$$
+
+the area or volume becomes half.
+
+---
+
+`2. Change in Orientation`
+
+- Positive determinant → Orientation remains unchanged.
+- Negative determinant → Orientation is reversed (reflection).
+
+---
+
+`3. Area of a Parallelogram`
+
+If two vectors form a parallelogram, the absolute value of their determinant equals its area.
+
+$$
+\text{Area}=|\det(A)|
+$$
+
+---
+
+`4. Volume of a Parallelepiped`
+
+For three-dimensional vectors,
+
+$$
+\text{Volume}=|\det(A)|
+$$
+
+---
+
+`5. Testing Linear Independence`
+
+If
+
+$$
+|A|\neq0
+$$
+
+then the vectors are **linearly independent**.
+
+If
+
+$$
+|A|=0
+$$
+
+they are **linearly dependent**.
+
+---
+
+`6. Solving Systems of Linear Equations`
+
+A system has a unique solution if
+
+$$
+|A|\neq0
+$$
+
+Otherwise, it has either infinitely many solutions or no solution.
+
+---
+
+`7. Matrix Invertibility`
+
+A matrix is invertible only if
+
+$$
+|A|\neq0
+$$
+
+---
+
+**`Laplace Formula for Determinant`**
+
+The **Laplace Expansion Theorem** (also called the **cofactor expansion**) provides a method for calculating the determinant of any square matrix by expanding along **any row or any column**.
+
+It is especially useful for matrices of order **3×3 or higher**.
+
+---
+
+`Expansion Along the First Row`
+
+$$
+|A| =
+a_{11}C_{11}
++
+a_{12}C_{12}
++
+a_{13}C_{13}
++\cdots
++
+a_{1n}C_{1n}
+$$
+
+where
+
+$$
+C_{ij} =(-1)^{i+j}M_{ij}
+$$
+
+---
+
+## Expansion Along the First Column
+
+$$
+|A| =
+a_{11}C_{11}
++
+a_{21}C_{21}
++
+a_{31}C_{31}
++\cdots
++
+a_{n1}C_{n1}
+$$
+
+---
+
+**`Steps to Apply Laplace Expansion`**
+
+1. Select any row or column.
+2. Find the minor of each element.
+3. Calculate the cofactors.
+4. Multiply each element by its corresponding cofactor.
+5. Add all the products.
+
+---
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+1&2&3\\
+0&4&5\\
+1&0&6
+\end{bmatrix}
+$$
+
+Expand along the first row.
+
+$$
+|A| =
+1(24)
+-
+2(-5)
++
+3(-4)
+$$
+
+$$
+|A| =
+24+10-12 =22
+$$
+
+---
+
+**`Properties of Determinants of a Matrix`**
+
+Determinants satisfy many important algebraic properties.
+
+`1. Determinant Exists Only for Square Matrices`
+
+Only square matrices have determinants.
+
+---
+
+`2. Determinant of Identity Matrix`
+
+$$
+|I|=1
+$$
+
+---
+
+`3. Determinant of Zero Matrix`
+
+$$
+|O|=0
+$$
+
+---
+
+`4. Interchanging Two Rows (or Columns)`
+
+Interchanging any two rows (or columns) changes the **sign** of the determinant.
+
+---
+
+`5. Two Equal Rows (or Columns)`
+
+If any two rows or columns are identical,
+
+$$
+|A|=0
+$$
+
+---
+
+`6. One Row (or Column) is All Zeros`
+
+If any row or column contains only zeros,
+
+$$
+|A|=0
+$$
+
+---
+
+`7. Multiplying a Row by a Scalar`
+
+If one row is multiplied by a constant $k$, the determinant is also multiplied by $k$.
+
+---
+
+`8. Common Factor`
+
+A common factor from any row or column can be taken outside the determinant.
+
+---
+
+`9. Transpose Property`
+
+The determinant of a matrix equals the determinant of its transpose.
+
+$$
+|A^T|=|A|
+$$
+
+---
+
+`10. Product Property`
+
+$$
+|AB| =
+|A||B|
+$$
+
+---
+
+`11. Inverse Property`
+
+If the inverse exists,
+
+$$
+|A^{-1}| =
+\frac1{|A|}
+$$
+
+---
+
+`12. Triangular Matrix Property`
+
+For upper or lower triangular matrices,
+
+$$
+|A| =
+\text{Product of diagonal elements}
+$$
+
+---
+
+`13. Singular Matrix Property`
+
+If
+
+$$
+|A|=0
+$$
+
+the matrix is singular and has no inverse.
+
+---
+
+`14. Non-Singular Matrix Property`
+
+If
+
+$$
+|A|\neq0
+$$
+
+the matrix is non-singular and has an inverse.
 
 ---
