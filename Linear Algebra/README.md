@@ -1845,8 +1845,7 @@ $$
 Then,
 
 $$
-A^{-1}
-=
+A^{-1} =
 \frac{1}{ad-bc}
 \begin{bmatrix}
 d & -b\\
@@ -1894,8 +1893,7 @@ the inverse exists.
 `Step 2: Apply the formula`
 
 $$
-A^{-1}
-=
+A^{-1} =
 \frac{1}{5}
 \begin{bmatrix}
 4 & -3\\
@@ -1906,8 +1904,7 @@ $$
 Therefore,
 
 $$
-A^{-1}
-=
+A^{-1} =
 \begin{bmatrix}
 \frac45 & -\frac35\\
 -\frac15 & \frac25
@@ -1931,8 +1928,7 @@ $$
 Formula:
 
 $$
-A^{-1}
-=
+A^{-1} =
 \frac{1}{|A|}
 \operatorname{adj}(A)
 $$
@@ -1954,8 +1950,7 @@ This method can be used for higher-order square matrices.
 Formula
 
 $$
-A^{-1}
-=
+A^{-1} =
 \frac{1}{|A|}
 \operatorname{adj}(A)
 $$
@@ -2040,9 +2035,9 @@ The transpose of the cofactor matrix is called the **adjoint** of the matrix.
 
 It is denoted by
 
-$$
+$
 \operatorname{adj}(A)
-$$
+$
 
 ---
 
