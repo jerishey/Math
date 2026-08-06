@@ -2035,9 +2035,9 @@ The transpose of the cofactor matrix is called the **adjoint** of the matrix.
 
 It is denoted by
 
-$
+$$
 \operatorname{adj}(A)
-$
+$$
 
 ---
 
@@ -2116,8 +2116,7 @@ $$
 then
 
 $$
-(kA)^{-1}
-=
+(kA)^{-1} =
 \frac1kA^{-1}
 $$
 
@@ -2126,8 +2125,7 @@ $$
 `6. Determinant Property`
 
 $$
-|A^{-1}|
-=
+|A^{-1}| =
 \frac1{|A|}
 $$
 
@@ -2154,8 +2152,7 @@ A=
 $$
 
 $$
-A^{-1}
-=
+A^{-1} =
 \begin{bmatrix}
 \frac12&0\\
 0&\frac15
@@ -2211,8 +2208,7 @@ $$
 then
 
 $$
-|A^{-1}|
-=
+|A^{-1}| =
 \frac18
 $$
 
@@ -2241,8 +2237,7 @@ $$
 `Formula`
 
 $$
-A^{-1}
-=
+A^{-1} =
 \frac1{|A|}
 \operatorname{adj}(A)
 $$
