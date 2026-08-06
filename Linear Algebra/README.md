@@ -1930,7 +1930,7 @@ Formula:
 $$
 A^{-1} =
 \frac{1}{|A|}
-\operatorname{adj}(A)
+\mathrm{adj}(A)
 $$
 
 ---
@@ -1952,7 +1952,7 @@ Formula
 $$
 A^{-1} =
 \frac{1}{|A|}
-\operatorname{adj}(A)
+\mathrm{adj}(A)
 $$
 
 ---
@@ -2036,7 +2036,7 @@ The transpose of the cofactor matrix is called the **adjoint** of the matrix.
 It is denoted by
 
 $$
-\operatorname{adj}(A)
+\mathrm{adj}(A)
 $$
 
 ---
@@ -2190,8 +2190,7 @@ $$
 is an invertible matrix, then
 
 $$
-|A^{-1}|
-=
+|A^{-1}| =
 \frac1{|A|}
 $$
 
@@ -2239,7 +2238,7 @@ $$
 $$
 A^{-1} =
 \frac1{|A|}
-\operatorname{adj}(A)
+\mathrm{adj}(A)
 $$
 
 ---
@@ -2379,10 +2378,8 @@ g & h & i
 $$
 
 $$
-|A|
-=
-a(ei-fh)
--
+|A| =
+a(ei-fh) -
 b(di-fg)
 +
 c(dh-eg)
@@ -2687,7 +2684,7 @@ $$
 
 ---
 
-## Expansion Along the First Column
+`Expansion Along the First Column`
 
 $$
 |A| =
@@ -2728,8 +2725,7 @@ Expand along the first row.
 
 $$
 |A| =
-1(24)
--
+1(24) -
 2(-5)
 +
 3(-4)
