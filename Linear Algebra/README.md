@@ -963,8 +963,7 @@ $$
 **`Formula`**
 
 $$
-(AB)_{ij}
-=
+(AB)_{ij} =
 \sum_{k=1}^{n}a_{ik}b_{kj}
 $$
 
@@ -1049,45 +1048,699 @@ Scalar = 3
 
 ---
 
-### `4. Transpose`
-Transpose of a matrix is a new matrix that is obtained by swapping the rows and columns of the given matrix or vice versa, i.e., for the given matrix, the elements in rows are interchanged with the elements in columns.
+**`4. Transpose of a Matrix`**
 
-- For any given matrix A, its transpose is denoted as AT, or Aᵀ.
-- To find Aᵀ, take each row of A and rewrite it as a column.
+The **transpose** of a matrix is a new matrix obtained by **interchanging the rows and columns** of the original matrix. Every row of the original matrix becomes a column in the transpose, and every column becomes a row.
 
-<br>
+The transpose is one of the most important operations in linear algebra and is widely used in mathematics, engineering, computer science, statistics, machine learning, and computer graphics.
 
-`Transpose of a Matrix (Aᵀ or AT) :` The transpose of a matrix is obtained by interchanging its rows and columns.
+> **Note:** The transpose can be found for **any matrix**, whether it is square or rectangular.
 
-**Example:**
-```bash
-A = | 1 2 3 |
-    | 4 5 6 | 2 X 3
+---
 
-Aᵀ = | 1 4 |
-     | 2 5 |
-     | 3 6 | 3 X 2
-```
-<br>
+Let
 
-`Order of Transpose Matrix :` The order of a matrix represents the number of rows and columns it contains, written as m × n, where m is the number of rows, and n is the number of columns.
+$$
+A=[a_{ij}]
+$$
 
-For any matrix **A<sub>m×n</sub>**:
+be an $m \times n$ matrix.
 
-- The transpose of **A**, denoted as **Aᵀ** (or **AT**), is obtained by interchanging its rows and columns.
-- If **A** is of order **m × n**, then **Aᵀ** is of order **n × m** (i.e., **Aᵀ** has **n** rows and **m** columns).
+The transpose of matrix $A$ is denoted by
+
+$$
+A^T
+$$
+
+or sometimes
+
+$$
+A'
+$$
+
+and is defined as
+
+$$
+A^T=[a_{ji}]
+$$
+
+This means the element at the **i-th row** and **j-th column** of the original matrix becomes the element at the **j-th row** and **i-th column** of the transpose.
+
+---
+
+**`Order of Transpose Matrix`**
+
+If a matrix
+
+$$
+A
+$$
+
+has order
+
+$$
+m \times n
+$$
+
+then its transpose
+
+$$
+A^T
+$$
+
+has order
+
+$$
+n \times m
+$$
+
+Thus, the number of rows becomes the number of columns, and the number of columns becomes the number of rows.
+
+**`Examples`**
+
+| Original Matrix | Order | Transpose | Order |
+|-----------------|-------|-----------|-------|
+| $A$ | $2\times3$ | $A^T$ | $3\times2$ |
+| $A$ | $3\times2$ | $A^T$ | $2\times3$ |
+| $A$ | $4\times5$ | $A^T$ | $5\times4$ |
+| $A$ | $3\times3$ | $A^T$ | $3\times3$ |
+
+---
+
+**`How to Find the Transpose of a Matrix?`**
+
+The transpose of a matrix is obtained by converting every **row into a column**.
+
+**Steps**
+
+1. Write the first row as the first column.
+2. Write the second row as the second column.
+3. Continue until every row becomes a corresponding column.
+
+**Shortcut:**
+
+> **Rows → Columns**  
+> **Columns → Rows**
+
+**Example**
+
+Given
+
+$$
+A=
+\begin{bmatrix}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{bmatrix}
+$$
+
+The first row
+
+$$
+[1\;\;2\;\;3]
+$$
+
+becomes the first column.
+
+The second row
+
+$$
+[4\;\;5\;\;6]
+$$
+
+becomes the second column.
+
+Therefore,
+
+$$
+A^T=
+\begin{bmatrix}
+1 & 4\\
+2 & 5\\
+3 & 6
+\end{bmatrix}
+$$
+
+---
+
+**`Transpose of Row and Column Matrix`**
+
+`1. Transpose of a Row Matrix`
+
+A **row matrix** contains only one row.
+
+Example
+
+$$
+A=
+\begin{bmatrix}
+2 & 5 & 8 & 9
+\end{bmatrix}
+$$
+
+Order:
+
+$$
+1\times4
+$$
+
+Transpose:
+
+$$
+A^T=
+\begin{bmatrix}
+2\\
+5\\
+8\\
+9
+\end{bmatrix}
+$$
+
+Order:
+
+$$
+4\times1
+$$
+
+Hence,
+
+> The transpose of a **row matrix** is a **column matrix**.
+
+---
+
+`2. Transpose of a Column Matrix`
+
+A **column matrix** contains only one column.
+
+Example
+
+$$
+A=
+\begin{bmatrix}
+4\\
+7\\
+9
+\end{bmatrix}
+$$
+
+Order:
+
+$$
+3\times1
+$$
+
+Transpose:
+
+$$
+A^T=
+\begin{bmatrix}
+4 & 7 & 9
+\end{bmatrix}
+$$
+
+Order:
+
+$$
+1\times3
+$$
+
+Hence,
+
+> The transpose of a **column matrix** is a **row matrix**.
+
+---
+
+`Transpose of Horizontal and Vertical Matrices`
+
+A **horizontal matrix** is another name for a **row matrix**, while a **vertical matrix** is another name for a **column matrix**.
+
+**Horizontal Matrix**
+
+$$
+A=
+\begin{bmatrix}
+3 & 6 & 9 & 12
+\end{bmatrix}
+$$
+
+Transpose
+
+$$
+A^T=
+\begin{bmatrix}
+3\\
+6\\
+9\\
+12
+\end{bmatrix}
+$$
+
+Thus, a horizontal matrix becomes a vertical matrix.
+
+---
+
+`Vertical Matrix`
+
+$$
+B=
+\begin{bmatrix}
+5\\
+8\\
+11
+\end{bmatrix}
+$$
+
+Transpose
+
+$$
+B^T=
+\begin{bmatrix}
+5 & 8 & 11
+\end{bmatrix}
+$$
+
+Thus, a vertical matrix becomes a horizontal matrix.
+
+---
+
+**`Transpose of a Symmetric Matrix`**
+
+A **symmetric matrix** is a square matrix whose transpose is equal to the original matrix.
+
+Mathematically,
+
+$$
+A=A^T
+$$
+
+### Example
+
+$$
+A=
+\begin{bmatrix}
+2 & 4 & 6\\
+4 & 5 & 7\\
+6 & 7 & 9
+\end{bmatrix}
+$$
+
+Transpose
+
+$$
+A^T=
+\begin{bmatrix}
+2 & 4 & 6\\
+4 & 5 & 7\\
+6 & 7 & 9
+\end{bmatrix}
+$$
+
+Since
+
+$$
+A=A^T
+$$
+
+the matrix is **symmetric**.
+
+**Important Points**
+
+- Every symmetric matrix is a **square matrix**.
+- Elements on opposite sides of the main diagonal are equal.
+- The transpose of a symmetric matrix is always the matrix itself.
+
+---
+
+**`Transpose of a Diagonal Matrix`**
+
+A **diagonal matrix** is a square matrix in which all the elements outside the main diagonal are zero.
+
+General form:
+
+$$
+A=
+\begin{bmatrix}
+a_1 & 0 & 0\\
+0 & a_2 & 0\\
+0 & 0 & a_3
+\end{bmatrix}
+$$
+
+When we transpose a diagonal matrix, the rows become columns. Since all the non-diagonal elements are already zero, the transpose remains exactly the same.
+
+Mathematically,
+
+$$
+A^T=A
+$$
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+4 & 0 & 0\\
+0 & 7 & 0\\
+0 & 0 & 9
+\end{bmatrix}
+$$
+
+Transpose:
+
+$$
+A^T=
+\begin{bmatrix}
+4 & 0 & 0\\
+0 & 7 & 0\\
+0 & 0 & 9
+\end{bmatrix}
+$$
+
+Since
+
+$$
+A^T=A
+$$
+
+the transpose of every diagonal matrix is the matrix itself.
+
+**Important Points**
+
+- Every diagonal matrix is a **square matrix**.
+- Every diagonal matrix is also a **symmetric matrix**.
+- The transpose of a diagonal matrix never changes the position of its non-zero elements.
+
+---
+
+**`Transpose of a Transposed Matrix`**
+
+When the transpose operation is applied **twice**, we obtain the original matrix.
+
+This property is called the **Double Transpose Property**.
+
+Mathematically,
+
+$$
+(A^T)^T=A
+$$
+
+**Why?**
+
+- First transpose changes rows into columns.
+- Second transpose changes those columns back into rows.
+- Therefore, the original arrangement is restored.
+
+**Example**
+
+Let
+
+$$
+A=
+\begin{bmatrix}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{bmatrix}
+$$
+
+First transpose:
+
+$$
+A^T=
+\begin{bmatrix}
+1 & 4\\
+2 & 5\\
+3 & 6
+\end{bmatrix}
+$$
+
+Transpose again:
+
+$$
+(A^T)^T=
+\begin{bmatrix}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{bmatrix}
+$$
+
+Hence,
+
+$$
+(A^T)^T=A
+$$
+
+**Important Points**
+
+- This property is valid for **every matrix**.
+- It does not matter whether the matrix is square or rectangular.
+- Applying transpose twice always returns the original matrix.
+
+---
+
+**`Transpose of a Square Matrix`**
+
+A **square matrix** has the same number of rows and columns.
+
+If
+
+$$
+A
+$$
+
+is of order
+
+$$
+n\times n
+$$
+
+then its transpose is also of order
+
+$$
+n\times n
+$$
+
+Unlike rectangular matrices, the order of a square matrix does **not** change after taking the transpose.
+
+**Example**
+
+$$
+A=
+\begin{bmatrix}
+2 & 4 & 6\\
+1 & 3 & 5\\
+7 & 8 & 9
+\end{bmatrix}
+$$
+
+Transpose:
+
+$$
+A^T=
+\begin{bmatrix}
+2 & 1 & 7\\
+4 & 3 & 8\\
+6 & 5 & 9
+\end{bmatrix}
+$$
+
+Original order:
+
+$$
+3\times3
+$$
+
+Transpose order:
+
+$$
+3\times3
+$$
+
+Only the positions of the elements change.
+
+**Important Points**
+
+- A square matrix always remains a square matrix after transpose.
+- The order remains unchanged.
+- A square matrix may or may not be symmetric.
+
+---
+
+**`Properties of Matrix Transpose`**
+
+The transpose operation satisfies several important algebraic properties.
+
+---
+
+`1. Double Transpose Property`
+
+Taking the transpose twice gives the original matrix.
+
+$$
+(A^T)^T=A
+$$
+
+---
+
+`2. Addition Property`
+
+The transpose of the sum of two matrices equals the sum of their transposes.
+
+$$
+(A+B)^T=A^T+B^T
+$$
 
 `Example`
-```bash
-A (2 × 3)
 
-A = | 1 2 3 |
-    | 4 5 6 |
+$$
+A=
+\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix},
+\quad
+B=
+\begin{bmatrix}
+5 & 6\\
+7 & 8
+\end{bmatrix}
+$$
 
-Aᵀ (3 × 2)
+Then
 
-Aᵀ =  | 1 4 |
-      | 2 5 |
-      | 3 6 |
-```
+$$
+(A+B)^T=A^T+B^T
+$$
 
+---
+
+`3. Subtraction Property`
+
+The transpose of the difference of two matrices equals the difference of their transposes.
+
+$$
+(A-B)^T=A^T-B^T
+$$
+
+---
+
+`4. Scalar Multiplication Property`
+
+If $k$ is any scalar,
+
+$$
+(kA)^T=kA^T
+$$
+
+**Example**
+
+If
+
+$$
+k=5
+$$
+
+then
+
+$$
+(5A)^T=5A^T
+$$
+
+---
+
+`5. Matrix Multiplication Property`
+
+The transpose of the product of two matrices is equal to the product of their transposes in the **reverse order**.
+
+$$
+(AB)^T=B^TA^T
+$$
+
+Notice that the order changes.
+
+It is **not**
+
+$$
+A^TB^T
+$$
+
+This is one of the most important properties of transpose.
+
+---
+
+`6. Identity Matrix Property`
+
+The transpose of an identity matrix is the identity matrix itself.
+
+$$
+I^T=I
+$$
+
+Example
+
+$$
+I=
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+$$
+
+---
+
+`7. Zero Matrix Property`
+
+The transpose of a zero matrix is also a zero matrix.
+
+$$
+O^T=O
+$$
+
+---
+
+`8. Symmetric Matrix Property`
+
+If a matrix is symmetric,
+
+$$
+A=A^T
+$$
+
+then taking its transpose does not change the matrix.
+
+---
+
+`9. Diagonal Matrix Property`
+
+Every diagonal matrix satisfies
+
+$$
+A^T=A
+$$
+
+Therefore, every diagonal matrix is symmetric.
+
+---
+
+`10. Determinant Property`
+
+For every square matrix,
+
+$$
+|A^T|=|A|
+$$
+
+This means the determinant of a matrix remains unchanged after taking the transpose.
+
+---
+
+`11. Inverse Property`
+
+If a matrix is invertible,
+
+$$
+(A^{-1})^T=(A^T)^{-1}
+$$
+
+This means the transpose of the inverse is equal to the inverse of the transpose.
+
+---
