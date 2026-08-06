@@ -1333,7 +1333,7 @@ $$
 A=A^T
 $$
 
-### Example
+**Example**
 
 $$
 A=
@@ -1742,5 +1742,553 @@ $$
 $$
 
 This means the transpose of the inverse is equal to the inverse of the transpose.
+
+---
+
+**`5. Inverse of a Matrix`**
+
+The **inverse of a matrix** is a matrix that, when multiplied by the original matrix, produces the **identity matrix**. The inverse of a matrix plays the same role in matrix algebra as the reciprocal of a number in arithmetic.
+
+For example,
+
+- The reciprocal (inverse) of the number **5** is
+
+$$
+\frac{1}{5}
+$$
+
+because
+
+$$
+5\times\frac{1}{5}=1
+$$
+
+Similarly, if a matrix $A$ has an inverse $A^{-1}$, then
+
+$$
+AA^{-1}=A^{-1}A=I
+$$
+
+where $I$ is the **identity matrix**.
+
+The inverse of a matrix is widely used in solving systems of linear equations, computer graphics, machine learning, cryptography, engineering, and scientific computing.
+
+> **Note:** Only **square matrices** having a **non-zero determinant** possess an inverse.
+
+---
+
+Let
+
+$$
+A
+$$
+
+be a square matrix.
+
+If there exists another matrix
+
+$$
+A^{-1}
+$$
+
+such that
+
+$$
+AA^{-1}=A^{-1}A=I
+$$
+
+then
+
+$$
+A^{-1}
+$$
+
+is called the **inverse of matrix $A$**.
+
+---
+
+**`Conditions for the Existence of an Inverse`**
+
+A matrix has an inverse only if:
+
+- It is a **square matrix**.
+- Its determinant is **non-zero**.
+
+Mathematically,
+
+$$
+|A|\neq0
+$$
+
+If
+
+$$
+|A|=0
+$$
+
+then the matrix has **no inverse**.
+
+---
+
+**`Formula for the Inverse of a 2×2 Matrix`**
+
+Let
+
+$$
+A=
+\begin{bmatrix}
+a & b\\
+c & d
+\end{bmatrix}
+$$
+
+Then,
+
+$$
+A^{-1}
+=
+\frac{1}{ad-bc}
+\begin{bmatrix}
+d & -b\\
+-c & a
+\end{bmatrix}
+$$
+
+provided
+
+$$
+ad-bc\neq0
+$$
+
+---
+
+**Example**
+
+Find the inverse of
+
+$$
+A=
+\begin{bmatrix}
+2 & 3\\
+1 & 4
+\end{bmatrix}
+$$
+
+`Step 1: Find the determinant`
+
+$$
+|A|
+=(2)(4)-(3)(1)
+=8-3
+=5
+$$
+
+Since
+
+$$
+|A|\neq0
+$$
+
+the inverse exists.
+
+`Step 2: Apply the formula`
+
+$$
+A^{-1}
+=
+\frac{1}{5}
+\begin{bmatrix}
+4 & -3\\
+-1 & 2
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+A^{-1}
+=
+\begin{bmatrix}
+\frac45 & -\frac35\\
+-\frac15 & \frac25
+\end{bmatrix}
+$$
+
+---
+
+**`Finding the Inverse of a Matrix`**
+
+There are several methods for finding the inverse of a matrix.
+
+`1. Formula Method (2×2 Matrix)`
+
+Used only for matrices of order
+
+$$
+2\times2
+$$
+
+Formula:
+
+$$
+A^{-1}
+=
+\frac{1}{|A|}
+\operatorname{adj}(A)
+$$
+
+---
+
+`2. Adjoint (Adjugate) Method`
+
+This method can be used for higher-order square matrices.
+
+**Steps**
+
+1. Find the determinant.
+2. Find the matrix of minors.
+3. Convert minors into cofactors.
+4. Find the transpose of the cofactor matrix (Adjoint).
+5. Divide the adjoint by the determinant.
+
+Formula
+
+$$
+A^{-1}
+=
+\frac{1}{|A|}
+\operatorname{adj}(A)
+$$
+
+---
+
+`3. Gauss-Jordan Elimination Method`
+
+Steps
+
+1. Form the augmented matrix
+
+$$
+[A|I]
+$$
+
+2. Apply elementary row operations.
+3. Convert the left side into the identity matrix.
+4. The right side becomes the inverse matrix.
+
+This method is commonly used for matrices of order
+
+$$
+3\times3
+$$
+
+or higher.
+
+---
+
+**`Terms Related to Inverse of a Matrix`**
+
+`1. Identity Matrix`
+
+An identity matrix is a square matrix whose diagonal elements are 1 and all other elements are 0.
+
+Example
+
+$$
+I=
+\begin{bmatrix}
+1&0\\
+0&1
+\end{bmatrix}
+$$
+
+It satisfies
+
+$$
+AI=IA=A
+$$
+
+---
+
+`2. Singular Matrix`
+
+A square matrix whose determinant is zero.
+
+$$
+|A|=0
+$$
+
+A singular matrix **does not have an inverse**.
+
+---
+
+`3. Non-Singular Matrix`
+
+A square matrix having a non-zero determinant.
+
+$$
+|A|\neq0
+$$
+
+A non-singular matrix **always has an inverse**.
+
+---
+
+`4. Adjoint (Adjugate) Matrix`
+
+The transpose of the cofactor matrix is called the **adjoint** of the matrix.
+
+It is denoted by
+
+$$
+\operatorname{adj}(A)
+$$
+
+---
+
+`5. Determinant`
+
+The determinant determines whether the inverse exists.
+
+- If
+
+$$
+|A|\neq0
+$$
+
+Inverse exists.
+
+- If
+
+$$
+|A|=0
+$$
+
+Inverse does not exist.
+
+---
+
+**`Properties of Inverse Matrix`**
+
+The inverse operation satisfies several important properties.
+
+---
+
+`1. Inverse of the Identity Matrix`
+
+$$
+I^{-1}=I
+$$
+
+---
+
+`2. Inverse of an Inverse Matrix`
+
+$$
+(A^{-1})^{-1}=A
+$$
+
+---
+
+`3. Product Property`
+
+The inverse of a product is
+
+$$
+(AB)^{-1}=B^{-1}A^{-1}
+$$
+
+Notice that the order is reversed.
+
+---
+
+`4. Transpose Property`
+
+$$
+(A^T)^{-1}=(A^{-1})^T
+$$
+
+---
+
+`5. Scalar Multiplication Property`
+
+If
+
+$$
+k\neq0
+$$
+
+then
+
+$$
+(kA)^{-1}
+=
+\frac1kA^{-1}
+$$
+
+---
+
+`6. Determinant Property`
+
+$$
+|A^{-1}|
+=
+\frac1{|A|}
+$$
+
+provided
+
+$$
+|A|\neq0
+$$
+
+---
+
+`7. Inverse of a Diagonal Matrix`
+
+The inverse of a diagonal matrix is another diagonal matrix whose diagonal entries are reciprocals of the original diagonal entries.
+
+Example
+
+$$
+A=
+\begin{bmatrix}
+2&0\\
+0&5
+\end{bmatrix}
+$$
+
+$$
+A^{-1}
+=
+\begin{bmatrix}
+\frac12&0\\
+0&\frac15
+\end{bmatrix}
+$$
+
+---
+
+`8. Inverse of a Symmetric Matrix`
+
+If
+
+$$
+A=A^T
+$$
+
+and the inverse exists, then
+
+$$
+A^{-1}
+$$
+
+is also symmetric.
+
+---
+
+**`Determinant of Inverse Matrix`**
+
+If
+
+$$
+A
+$$
+
+is an invertible matrix, then
+
+$$
+|A^{-1}|
+=
+\frac1{|A|}
+$$
+
+This means the determinant of the inverse is simply the reciprocal of the determinant of the original matrix.
+
+**Example**
+
+If
+
+$$
+|A|=8
+$$
+
+then
+
+$$
+|A^{-1}|
+=
+\frac18
+$$
+
+**Important Points**
+
+- Applicable only for invertible matrices.
+- If
+
+$$
+|A|=0
+$$
+
+then the inverse does not exist.
+
+---
+
+
+**`Important Formulas`**
+
+$$
+AA^{-1}=I
+$$
+
+---
+
+`Formula`
+
+$$
+A^{-1}
+=
+\frac1{|A|}
+\operatorname{adj}(A)
+$$
+
+---
+
+`2×2 Matrix`
+
+$$
+A^{-1} =
+\frac1{ad-bc}
+\begin{bmatrix}
+d&-b\\
+-c&a
+\end{bmatrix}
+$$
+
+---
+
+`Product Property`
+
+$$
+(AB)^{-1}=B^{-1}A^{-1}
+$$
+
+---
+
+`Transpose Property`
+
+$$
+(A^T)^{-1}=(A^{-1})^T
+$$
+
+---
+
+`Determinant Property`
+
+$$
+|A^{-1}|
+=
+\frac1{|A|}
+$$
 
 ---
