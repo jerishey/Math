@@ -2866,3 +2866,876 @@ $$
 the matrix is non-singular and has an inverse.
 
 ---
+
+## **`5. Vector Spaces in Linear Algebra`**
+
+A **Vector Space** is one of the most fundamental concepts in **Linear Algebra**. It is a collection (or set) of objects called **vectors** together with two operations:
+
+1. **Vector Addition**
+2. **Scalar Multiplication**
+
+These operations must satisfy a specific set of mathematical rules known as the **Vector Space Axioms**.
+
+Although vectors are often represented as arrows or ordered lists of numbers, vector spaces can also consist of matrices, polynomials, functions, and many other mathematical objects.
+
+---
+
+Vector spaces provide the foundation for many advanced topics such as:
+
+- Linear Transformations
+- Eigenvalues and Eigenvectors
+- Machine Learning
+- Artificial Intelligence
+- Computer Graphics
+- Robotics
+- Data Science
+- Signal Processing
+- Quantum Computing
+
+
+> **Note:** Every vector space is defined over a field of scalars, usually the set of **real numbers ($\mathbb{R}$)** or **complex numbers ($\mathbb{C}$)**.
+
+---
+
+**`What is a Vector?`**
+
+A **vector** is a mathematical object that has both **magnitude** (length) and **direction**.
+
+Examples of vectors are:
+
+$$
+\begin{bmatrix}
+2\\
+5
+\end{bmatrix}
+,
+\qquad
+\begin{bmatrix}
+1\\
+4\\
+6
+\end{bmatrix}
+$$
+
+Unlike ordinary numbers (called **scalars**), vectors can represent displacement, velocity, force, and many other physical quantities.
+
+---
+
+**`Definition of a Vector Space`**
+
+A **Vector Space** is a set of vectors $V$ together with two operations:
+
+- Vector Addition
+- Scalar Multiplication
+
+such that all the vector space axioms are satisfied.
+
+If
+
+$$
+u,v\in V
+$$
+
+then
+
+$$
+u+v\in V
+$$
+
+and if
+
+$$
+k
+$$
+
+is any scalar,
+
+$$
+ku\in V
+$$
+
+where
+
+- $u,v$ are vectors
+- $k$ is a scalar
+
+---
+
+**`Understanding the Two Operations`**
+
+`1. Vector Addition`
+
+Two vectors are added by adding their corresponding components.
+
+Example
+
+$$
+u=
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix}
+,
+\qquad
+v=
+\begin{bmatrix}
+3\\
+5
+\end{bmatrix}
+$$
+
+Then
+
+$$
+u+v=
+\begin{bmatrix}
+2+3\\
+4+5
+\end{bmatrix} =
+\begin{bmatrix}
+5\\
+9
+\end{bmatrix}
+$$
+
+---
+
+`2. Scalar Multiplication`
+
+A scalar multiplies every element of the vector.
+
+Example
+
+$$
+3
+\begin{bmatrix}
+2\\
+5
+\end{bmatrix} =
+\begin{bmatrix}
+6\\
+15
+\end{bmatrix}
+$$
+
+---
+
+**`Vector Space Axioms (Properties)`**
+
+A set becomes a **Vector Space** only if it satisfies **all** of the following properties.
+
+---
+
+`1. Closure under Addition`
+
+If two vectors belong to the vector space, then their sum must also belong to the same vector space.
+
+Mathematically,
+
+$$
+u,v\in V
+\quad\Rightarrow\quad
+u+v\in V
+$$
+
+**Example**
+
+$$
+u=
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+,
+\qquad
+v=
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+Then
+
+$$
+u+v=
+\begin{bmatrix}
+4\\
+6
+\end{bmatrix}
+$$
+
+which is also a vector in the same space.
+
+---
+
+`2. Closure under Scalar Multiplication`
+
+If a vector belongs to the vector space, multiplying it by any scalar must produce another vector in the same space.
+
+$$
+k\in\mathbb{R},
+\quad
+u\in V
+\quad\Rightarrow\quad
+ku\in V
+$$
+
+**Example**
+
+$$
+2
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix} =
+\begin{bmatrix}
+6\\
+8
+\end{bmatrix}
+$$
+
+---
+
+`3. Commutative Property of Addition`
+
+Changing the order of addition does not affect the result.
+
+$$
+u+v=v+u
+$$
+
+**Example**
+
+$$
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
++
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
++
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+$$
+
+---
+
+`4. Associative Property of Addition`
+
+Grouping of vectors does not change the result.
+
+$$
+(u+v)+w=u+(v+w)
+$$
+
+---
+
+`5. Additive Identity`
+
+There exists a **zero vector** denoted by
+
+$$
+0
+$$
+
+such that
+
+$$
+u+0=u
+$$
+
+Example
+
+$$
+\begin{bmatrix}
+5\\
+8
+\end{bmatrix}
++
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix} =
+\begin{bmatrix}
+5\\
+8
+\end{bmatrix}
+$$
+
+---
+
+`6. Additive Inverse`
+
+Every vector has an opposite vector.
+
+$$
+u+(-u)=0
+$$
+
+Example
+
+$$
+\begin{bmatrix}
+4\\
+7
+\end{bmatrix}
++
+\begin{bmatrix}
+-4\\
+-7
+\end{bmatrix} =
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+---
+
+`7. Multiplicative Identity`
+
+Multiplying by 1 leaves the vector unchanged.
+
+$$
+1u=u
+$$
+
+---
+
+`8. Distributive Property over Vector Addition`
+
+$$
+k(u+v)=ku+kv
+$$
+
+Example
+
+$$
+2
+\left(
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
++
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+\right) =
+\begin{bmatrix}
+8\\
+12
+\end{bmatrix}
+$$
+
+---
+
+`9. Distributive Property over Scalar Addition`
+
+$$
+(a+b)u=au+bu
+$$
+
+---
+
+`10. Compatibility of Scalar Multiplication`
+
+$$
+(ab)u=a(bu)
+$$
+
+---
+
+**`Examples of Vector Spaces`**
+
+The following sets satisfy all the vector space axioms.
+
+---
+
+`1. Real Numbers`
+
+The set
+
+$$
+\mathbb{R}
+$$
+
+forms a vector space over itself.
+
+Example
+
+$$
+2+5=7
+$$
+
+$$
+3(5)=15
+$$
+
+---
+
+`2. Two-Dimensional Space`
+
+$$
+\mathbb{R}^2
+$$
+
+contains vectors of the form
+
+$$
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+Example
+
+$$
+\begin{bmatrix}
+2\\
+3
+\end{bmatrix}
+,
+\quad
+\begin{bmatrix}
+5\\
+1
+\end{bmatrix}
+$$
+
+---
+
+`3. Three-Dimensional Space`
+
+$$
+\mathbb{R}^3
+$$
+
+contains vectors
+
+$$
+\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}
+$$
+
+---
+
+`4. Matrix Vector Space`
+
+All matrices of the same order form a vector space.
+
+Example
+
+$$
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+$$
+
+---
+
+`5. Polynomial Vector Space`
+
+All polynomials form a vector space.
+
+Example
+
+$$
+2x^2+5x+1
+$$
+
+---
+
+`6. Function Vector Space`
+
+Continuous functions such as
+
+$$
+f(x)=x^2
+$$
+
+also form vector spaces.
+
+---
+
+**`Non-Examples of Vector Spaces`**
+
+Some sets fail to satisfy the vector space axioms.
+
+---
+
+`Positive Integers`
+
+Positive integers are **not** a vector space because negative numbers are not included.
+
+Example
+
+$$
+5+(-5)=0
+$$
+
+but
+
+$$
+0
+$$
+
+is not a positive integer.
+
+---
+
+`Natural Numbers`
+
+Natural numbers do not contain additive inverses.
+
+Hence they are not vector spaces.
+
+---
+
+`Odd Numbers`
+
+Odd numbers are not closed under addition.
+
+Example
+
+$$
+3+5=8
+$$
+
+which is not odd.
+
+---
+
+`Positive Real Numbers`
+
+Positive real numbers are not closed under multiplication by negative scalars.
+
+Example
+
+$$
+(-2)(5)=-10
+$$
+
+which is not positive.
+
+---
+
+**`Subspaces`**
+
+A **Subspace** is a subset of a vector space that is itself a vector space under the same operations of vector addition and scalar multiplication.
+
+Suppose
+
+$$
+W\subseteq V
+$$
+
+where
+
+- $V$ is a vector space.
+- $W$ is a subset of $V$.
+
+Then $W$ is called a **subspace** if it also satisfies all the vector space axioms.
+
+---
+
+**`Conditions for a Subspace`**
+
+A subset $W$ of a vector space $V$ is a subspace if it satisfies the following three conditions:
+
+`1. Zero Vector`
+
+The zero vector must belong to the subset.
+
+$$
+0\in W
+$$
+
+---
+
+`2. Closure under Addition`
+
+If
+
+$$
+u,v\in W
+$$
+
+then
+
+$$
+u+v\in W
+$$
+
+---
+
+`3. Closure under Scalar Multiplication`
+
+If
+
+$$
+u\in W
+$$
+
+and
+
+$$
+k
+$$
+
+is any scalar, then
+
+$$
+ku\in W
+$$
+
+---
+
+**`Example of a Subspace`**
+
+Consider
+
+$$
+W=
+\left\{
+\begin{bmatrix}
+x\\
+0
+\end{bmatrix}
+:x\in\mathbb{R}
+\right\}
+$$
+
+Every vector has the form
+
+$$
+\begin{bmatrix}
+x\\
+0
+\end{bmatrix}
+$$
+
+This set contains the zero vector,
+
+is closed under addition,
+
+and is closed under scalar multiplication.
+
+Therefore,
+
+$$
+W
+$$
+
+is a **subspace** of
+
+$$
+\mathbb{R}^2.
+$$
+
+---
+
+**`Non-Example of a Subspace`**
+
+Consider
+
+$$
+W=
+\left\{
+\begin{bmatrix}
+x\\
+1
+\end{bmatrix}
+:x\in\mathbb{R}
+\right\}
+$$
+
+The zero vector
+
+$$
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+does **not** belong to this set.
+
+Hence,
+
+$$
+W
+$$
+
+is **not** a subspace.
+
+---
+
+**`Linear Combination`**
+
+A **Linear Combination** is an expression obtained by multiplying vectors by scalars and then adding the results.
+
+If
+
+$$
+v_1,v_2,\ldots,v_n
+$$
+
+are vectors and
+
+$$
+c_1,c_2,\ldots,c_n
+$$
+
+are scalars, then
+
+$$
+c_1v_1+c_2v_2+\cdots+c_nv_n
+$$
+
+is called a linear combination.
+
+**Example**
+
+Let
+
+$$
+v_1=
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix},
+\qquad
+v_2=
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+Take
+
+$$
+c_1=2,
+\qquad
+c_2=-1
+$$
+
+Then
+
+$$
+2v_1-v_2=
+2
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+-
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix} =
+\begin{bmatrix}
+-1\\
+0
+\end{bmatrix}
+$$
+
+---
+
+**`Span of a Set of Vectors`**
+
+The **span** of a set of vectors is the collection of **all possible linear combinations** of those vectors.
+
+If
+
+$$
+S=\{v_1,v_2,\ldots,v_n\}
+$$
+
+then
+
+$$
+\text{Span}(S) =
+\left\{
+c_1v_1+\cdots+c_nv_n
+\right\}
+$$
+
+where
+
+$$
+c_1,c_2,\ldots,c_n
+$$
+
+are scalars.
+
+**Example**
+
+Let
+
+$$
+S=
+\left\{
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+\right\}
+$$
+
+Every vector in
+
+$$
+\mathbb{R}^2
+$$
+
+can be written as
+
+$$
+a
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
++
+b
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix} =
+\begin{bmatrix}
+a\\
+b
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\text{Span}(S)=\mathbb{R}^2
+$$
+
+---
+
+
