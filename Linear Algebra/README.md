@@ -4352,3 +4352,567 @@ These vectors together form the null space.
 - Important in machine learning, signal processing, and computer vision.
 
 ---
+
+**`Rank of a Matrix`**
+
+The **Rank** of a matrix is one of the most important concepts in Linear Algebra. It represents the **maximum number of linearly independent rows or columns** in a matrix.
+
+In other words, the rank tells us how much **independent information** is contained in a matrix.
+
+It is denoted by
+
+$$
+\operatorname{Rank}(A)
+$$
+
+where $A$ is a matrix.
+
+---
+
+The **rank of a matrix** is the dimension of its **row space** or **column space**.
+
+Mathematically,
+
+$$
+\operatorname{Rank}(A)
+=
+\dim(\text{Row Space})
+=
+\dim(\text{Column Space})
+$$
+
+The row rank and column rank of every matrix are always equal.
+
+---
+
+**Example**
+
+Consider
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+2&4
+\end{bmatrix}
+$$
+
+The second row is
+
+$$
+2\times
+\begin{bmatrix}
+1&2
+\end{bmatrix}
+$$
+
+Since one row depends on the other, there is only **one independent row**.
+
+Therefore,
+
+$$
+\operatorname{Rank}(A)=1
+$$
+
+---
+
+**Example**
+
+Consider
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+$$
+
+Neither row is a multiple of the other.
+
+Hence,
+
+both rows are independent.
+
+Therefore,
+
+$$
+\operatorname{Rank}(A)=2
+$$
+
+---
+
+**`Properties of Rank`**
+
+- The rank is always a non-negative integer.
+- The rank cannot exceed the number of rows or columns.
+- Row rank is always equal to column rank.
+- A full-rank matrix has the maximum possible rank.
+- Rank helps determine whether a system of linear equations has a unique solution.
+
+---
+
+**`Full Rank Matrix`**
+
+A matrix is called a **Full Rank Matrix** if its rank is equal to the smaller of the number of rows and columns.
+
+For a square matrix,
+
+$$
+\operatorname{Rank}(A)=n
+$$
+
+where
+
+$$
+A
+$$
+
+is an
+
+$$
+n\times n
+$$
+
+matrix.
+
+### Example
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+3&5
+\end{bmatrix}
+$$
+
+Since both rows are independent,
+
+$$
+\operatorname{Rank}(A)=2
+$$
+
+The matrix is **full rank**.
+
+---
+
+**`Nullity of a Matrix`**
+
+The **Nullity** of a matrix is the **dimension of its null space (kernel)**.
+
+It tells us the number of independent solutions of
+
+$$
+Ax=0
+$$
+
+Nullity is denoted by
+
+$$
+\operatorname{Nullity}(A)
+$$
+
+---
+
+## Definition
+
+If
+
+$$
+N(A)
+$$
+
+represents the null space of matrix
+
+$$
+A
+$$
+
+then
+
+$$
+\operatorname{Nullity}(A) =
+\dim(N(A))
+$$
+
+---
+
+**Example**
+
+Suppose
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+2&4
+\end{bmatrix}
+$$
+
+Its rank is
+
+$$
+1
+$$
+
+Since the matrix has
+
+$$
+2
+$$
+
+columns,
+
+its nullity is
+
+$$
+2-1=1
+$$
+
+Therefore,
+
+$$
+\operatorname{Nullity}(A)=1
+$$
+
+---
+
+**`Importance of Nullity`**
+
+Nullity helps us determine
+
+- the number of free variables,
+- the number of independent solutions,
+- whether vectors are linearly dependent,
+- the dimension of the kernel of a linear transformation.
+
+---
+
+**`Rank–Nullity Theorem`**
+
+The **Rank–Nullity Theorem** is one of the most fundamental theorems in Linear Algebra.
+
+It establishes the relationship between the rank and nullity of a matrix.
+
+If a matrix has
+
+$$
+n
+$$
+
+columns,
+
+then
+
+$$
+\boxed{
+\operatorname{Rank}(A)
++
+\operatorname{Nullity}(A) =
+n
+}
+$$
+
+where
+
+- Rank = Number of independent columns.
+- Nullity = Dimension of the null space.
+- $n$ = Total number of columns.
+
+---
+
+**Example**
+
+Consider
+
+$$
+A=
+\begin{bmatrix}
+1&2&3\\
+2&4&6
+\end{bmatrix}
+$$
+
+There is only one independent row.
+
+Hence,
+
+$$
+\operatorname{Rank}(A)=1
+$$
+
+The matrix has
+
+$$
+3
+$$
+
+columns.
+
+Therefore,
+
+$$
+\operatorname{Nullity}(A)
+=
+3-1
+=
+2
+$$
+
+Verification:
+
+$$
+1+2=3
+$$
+
+Thus,
+
+the Rank–Nullity Theorem is satisfied.
+
+---
+
+**`Importance of the Rank–Nullity Theorem`**
+
+The theorem helps us
+
+- determine the number of free variables,
+- solve homogeneous systems,
+- study linear transformations,
+- analyze matrix dimensions,
+- understand vector spaces more deeply.
+
+---
+
+**`Properties of Vector Spaces`**
+
+Every vector space satisfies several important properties.
+
+---
+
+`1. Closure Property`
+
+If
+
+$$
+u,v\in V
+$$
+
+then
+
+$$
+u+v\in V
+$$
+
+Similarly,
+
+$$
+ku\in V
+$$
+
+for every scalar
+
+$$
+k.
+$$
+
+---
+
+`2. Existence of Zero Vector`
+
+Every vector space contains a unique zero vector.
+
+$$
+0\in V
+$$
+
+such that
+
+$$
+u+0=u
+$$
+
+---
+
+`3. Existence of Additive Inverse`
+
+For every vector
+
+$$
+u
+$$
+
+there exists another vector
+
+$$
+-u
+$$
+
+such that
+
+$$
+u+(-u)=0
+$$
+
+---
+
+`4. Commutative Law`
+
+$$
+u+v=v+u
+$$
+
+---
+
+`5. Associative Law`
+
+$$
+(u+v)+w=u+(v+w)
+$$
+
+---
+
+`6. Scalar Identity`
+
+Multiplying any vector by
+
+$$
+1
+$$
+
+does not change the vector.
+
+$$
+1u=u
+$$
+
+---
+
+`7. Distributive Laws`
+
+Vector spaces satisfy
+
+$$
+k(u+v)=ku+kv
+$$
+
+and
+
+$$
+(a+b)u=au+bu
+$$
+
+---
+
+`8. Compatibility of Scalar Multiplication`
+
+$$
+(ab)u=a(bu)
+$$
+
+---
+
+`9. Unique Zero Vector`
+
+Every vector space contains exactly one zero vector.
+
+---
+
+`10. Unique Additive Inverse`
+
+Every vector has exactly one additive inverse.
+
+---
+
+**`Important Formulas`**
+
+`Linear Combination`
+
+$$
+v =
+c_1v_1
++
+c_2v_2
++
+\cdots
++
+c_nv_n
+$$
+
+---
+
+`Span`
+
+$$
+\operatorname{Span}(S) =
+\{
+c_1v_1+\cdots+c_nv_n
+\}
+$$
+
+---
+
+`Basis`
+
+A basis is a set of vectors that is
+
+- Linearly Independent
+- Spans the Vector Space
+
+---
+
+**`Dimension`**
+
+$$
+\dim(V) =
+\text{Number of Basis Vectors}
+$$
+
+---
+
+`Rank`
+
+$$
+\operatorname{Rank}(A) =
+\dim(\text{Column Space}) =
+\dim(\text{Row Space})
+$$
+
+---
+
+`Nullity`
+
+$$
+\operatorname{Nullity}(A) =
+\dim(\text{Null Space})
+$$
+
+---
+
+`Rank–Nullity Theorem`
+
+$$
+\boxed{
+\operatorname{Rank}(A)
++
+\operatorname{Nullity}(A) =
+n
+}
+$$
+
+---
+
+**`Key Takeaways`**
+
+- A vector space is a set of vectors satisfying ten fundamental axioms.
+- Linear combinations generate new vectors from existing vectors.
+- The span of a set contains all possible linear combinations of its vectors.
+- Linearly independent vectors provide unique information, while dependent vectors contain redundancy.
+- A basis is a minimal set of independent vectors that spans the entire vector space.
+- The dimension of a vector space equals the number of vectors in its basis.
+- The row space, column space, and null space describe different aspects of a matrix.
+- Rank measures the amount of independent information in a matrix.
+- Nullity measures the dimension of the null space.
+- The Rank–Nullity Theorem connects rank and nullity through the number of columns.
+- Vector spaces are fundamental in mathematics, engineering, artificial intelligence, machine learning, computer graphics, robotics, and many other scientific disciplines.
+
+---
