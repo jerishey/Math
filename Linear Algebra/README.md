@@ -3738,4 +3738,617 @@ $$
 
 ---
 
+**`Linear Independence and Linear Dependence`**
 
+One of the most important concepts in Linear Algebra is determining whether a set of vectors is **independent** or **dependent**. These concepts help us understand whether a vector can be expressed using other vectors in the same set.
+
+They are fundamental in finding the **basis**, **dimension**, and **span** of a vector space.
+
+---
+
+**`Linear Independence`**
+
+A set of vectors is said to be **linearly independent** if **none of the vectors can be written as a linear combination of the remaining vectors**.
+
+In other words, every vector contributes unique information to the vector space.
+
+Mathematically, suppose
+
+$$
+v_1,v_2,\ldots,v_n
+$$
+
+are vectors.
+
+They are linearly independent if
+
+$$
+c_1v_1+c_2v_2+\cdots+c_nv_n=0
+$$
+
+has only the **trivial solution**
+
+$$
+c_1=c_2=\cdots=c_n=0
+$$
+
+where
+
+- $c_1,c_2,\ldots,c_n$ are scalars.
+- The **zero vector** is represented by $0$.
+
+**Example**
+
+Consider
+
+$$
+v_1=
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix},
+\qquad
+v_2=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+$$
+
+These vectors cannot be written using each other.
+
+Therefore,
+
+$$
+\{v_1,v_2\}
+$$
+
+is a **linearly independent set**.
+
+---
+
+**Example**
+
+Consider
+
+$$
+v_1=
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix},
+\qquad
+v_2=
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+Neither vector is a scalar multiple of the other.
+
+Hence,
+
+they are linearly independent.
+
+---
+
+**`Important Characteristics`**
+
+- Every vector contributes new information.
+- No vector is redundant.
+- Forms a good candidate for a basis.
+- Number of vectors cannot exceed the dimension of the vector space.
+
+---
+
+**`Linear Dependence`**
+
+A set of vectors is called **linearly dependent** if **at least one vector can be written as a linear combination of the remaining vectors**.
+
+This means one or more vectors are redundant.
+
+Mathematically,
+
+$$
+c_1v_1+c_2v_2+\cdots+c_nv_n=0
+$$
+
+has a **non-trivial solution**, meaning
+
+at least one scalar is not zero.
+
+---
+
+**Example**
+
+Consider
+
+$$
+v_1=
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix},
+\qquad
+v_2=
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix}
+$$
+
+Notice
+
+$$
+v_2=2v_1
+$$
+
+Therefore,
+
+one vector depends on the other.
+
+Hence,
+
+the vectors are **linearly dependent**.
+
+---
+
+**Example**
+
+Consider
+
+$$
+v_1=
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix},
+\qquad
+v_2=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix},
+\qquad
+v_3=
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}
+$$
+
+Observe
+
+$$
+v_3=v_1+v_2
+$$
+
+Thus,
+
+the set is linearly dependent.
+
+---
+
+**Important Characteristics**
+
+- At least one redundant vector exists.
+- One vector can be removed without changing the span.
+- Cannot be used directly as a basis.
+
+---
+
+`Difference Between Linear Independence and Dependence`
+
+| Linear Independence | Linear Dependence |
+|----------------------|-------------------|
+| No vector depends on another | At least one vector depends on another |
+| Only trivial solution exists | Non-trivial solution exists |
+| No redundant vectors | Redundant vectors exist |
+| Can form a basis | Cannot directly form a basis |
+
+---
+
+`Basis of a Vector Space`
+
+A **Basis** is one of the most important concepts in Linear Algebra.
+
+A basis is a set of vectors that
+
+- are **linearly independent**, and
+- span the entire vector space.
+
+Thus, every vector in the vector space can be written as a unique linear combination of the basis vectors.
+
+Mathematically,
+
+If
+
+$$
+B=\{v_1,v_2,\ldots,v_n\}
+$$
+
+then
+
+- the vectors are linearly independent.
+- they span the vector space.
+
+---
+
+**Example**
+
+The standard basis of
+
+$$
+\mathbb{R}^2
+$$
+
+is
+
+$$
+\left\{
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+\right\}
+$$
+
+Every vector
+
+$$
+\begin{bmatrix}
+a\\
+b
+\end{bmatrix}
+$$
+
+can be written as
+
+$$
+a
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
++
+b
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+$$
+
+Hence,
+
+these vectors form a basis.
+
+---
+
+`Standard Basis`
+
+The most common basis is called the **Standard Basis**.
+
+For
+
+$$
+\mathbb{R}^3
+$$
+
+the standard basis is
+
+$$
+e_1=
+\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix},
+\qquad
+e_2=
+\begin{bmatrix}
+0\\
+1\\
+0
+\end{bmatrix},
+\qquad
+e_3=
+\begin{bmatrix}
+0\\
+0\\
+1
+\end{bmatrix}
+$$
+
+Every vector in
+
+$$
+\mathbb{R}^3
+$$
+
+can be represented using these vectors.
+
+---
+
+`Properties of a Basis`
+
+A basis always satisfies:
+
+- It spans the vector space.
+- It is linearly independent.
+- Every vector has a unique representation.
+- Every finite-dimensional vector space has at least one basis.
+
+---
+
+`Dimension of a Vector Space`
+
+The **Dimension** of a vector space is the **number of vectors in its basis**.
+
+It tells us the minimum number of independent vectors required to describe the entire vector space.
+
+It is denoted by
+
+$$
+\dim(V)
+$$
+
+---
+
+**Examples**
+
+For
+
+$$
+\mathbb{R}
+$$
+
+$$
+\dim(\mathbb{R})=1
+$$
+
+---
+
+For
+
+$$
+\mathbb{R}^2
+$$
+
+$$
+\dim(\mathbb{R}^2)=2
+$$
+
+---
+
+For
+
+$$
+\mathbb{R}^3
+$$
+
+$$
+\dim(\mathbb{R}^3)=3
+$$
+
+---
+
+**`Finite-Dimensional Vector Space`**
+
+A vector space having a finite number of basis vectors.
+
+Examples
+
+$$
+\mathbb{R}^2,\qquad
+\mathbb{R}^3
+$$
+
+---
+
+**`Infinite-Dimensional Vector Space`**
+
+A vector space requiring infinitely many basis vectors.
+
+Example
+
+All polynomial functions
+
+$$
+P(x)
+$$
+
+---
+
+**Coordinate Vector**
+
+A **Coordinate Vector** represents a vector with respect to a particular basis.
+
+Suppose
+
+$$
+B=\{v_1,v_2\}
+$$
+
+is a basis.
+
+If
+
+$$
+u =
+2v_1+5v_2
+$$
+
+then the coordinate vector of
+
+$$
+u
+$$
+
+relative to the basis
+
+$$
+B
+$$
+
+is
+
+$$
+[u]_B=
+\begin{bmatrix}
+2\\
+5
+\end{bmatrix}
+$$
+
+Coordinate vectors make computations easier and are widely used in computer graphics and machine learning.
+
+---
+
+**`Row Space`**
+
+The **Row Space** of a matrix is the set of **all possible linear combinations of its rows**.
+
+Suppose
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+$$
+
+Its row vectors are
+
+$$
+(1,2)
+$$
+
+and
+
+$$
+(3,4)
+$$
+
+The collection of all linear combinations of these rows forms the row space.
+
+---
+
+**`Importance`**
+
+- Used in determining the rank of a matrix.
+- Helps solve systems of linear equations.
+- Describes information contained in the rows.
+
+---
+
+`Column Space`
+
+The **Column Space** is the collection of **all linear combinations of the columns** of a matrix.
+
+Example
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+$$
+
+Columns are
+
+$$
+\begin{bmatrix}
+1\\
+3
+\end{bmatrix}
+,
+\qquad
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix}
+$$
+
+Their span forms the **column space**.
+
+---
+
+**Importance**
+
+- Determines whether a system
+
+$$
+Ax=b
+$$
+
+has a solution.
+
+- Used in data science and machine learning.
+
+- Determines the rank of the matrix.
+
+---
+
+**`Null Space (Kernel)`**
+
+The **Null Space**, also called the **Kernel**, is the set of all vectors that satisfy
+
+$$
+Ax=0
+$$
+
+where
+
+- $A$ is a matrix.
+- $x$ is an unknown vector.
+
+The null space contains every solution of the homogeneous system.
+
+Mathematically,
+
+$$
+N(A)=
+\{x:Ax=0\}
+$$
+
+---
+
+**Example**
+
+Consider
+
+$$
+A=
+\begin{bmatrix}
+1&1\\
+2&2
+\end{bmatrix}
+$$
+
+We solve
+
+$$
+Ax=0
+$$
+
+to find every vector satisfying the equation.
+
+These vectors together form the null space.
+
+---
+
+**`Importance of Null Space`**
+
+- Used to solve homogeneous systems.
+- Determines linear dependence.
+- Used in the Rank-Nullity Theorem.
+- Important in machine learning, signal processing, and computer vision.
+
+---
