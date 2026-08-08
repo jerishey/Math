@@ -530,6 +530,1452 @@ B = (0, 1, 0)
 
 A × B = (0, 0, 1)
 ```
+---
+
+### **`Vector Components`**
+
+A **vector** is a mathematical quantity that has both **magnitude** and **direction**.
+
+A vector can be represented geometrically as an arrow or algebraically as an ordered collection of numbers called its **components**.
+
+For example,
+
+$$
+\vec{v}
+=
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+contains two components:
+
+- $3$ → component along the $x$-axis
+- $4$ → component along the $y$-axis
+
+Vector components are fundamental in Linear Algebra because they allow us to perform operations such as:
+
+- Vector addition
+- Vector subtraction
+- Scalar multiplication
+- Dot product
+- Cross product
+- Finding magnitude
+- Finding direction
+- Representing points and movements
+- Solving physical and engineering problems
+
+---
+
+**`What are Vector Components?`**
+
+The **components of a vector** are the numerical values that describe the vector along different coordinate axes.
+
+For a two-dimensional vector,
+
+$$
+\vec{v} =
+\begin{bmatrix}
+v_x\\
+v_y
+\end{bmatrix}
+$$
+
+where
+
+- $v_x$ = component along the $x$-axis
+- $v_y$ = component along the $y$-axis
+
+For a three-dimensional vector,
+
+$$
+\vec{v} =
+\begin{bmatrix}
+v_x\\
+v_y\\
+v_z
+\end{bmatrix}
+$$
+
+where
+
+- $v_x$ = $x$-component
+- $v_y$ = $y$-component
+- $v_z$ = $z$-component
+
+---
+
+**`Components in 2D`**
+
+A vector in two-dimensional space has two components.
+
+$$
+\vec{v} =
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+It can also be written as
+
+$$
+\vec{v}=x\hat{i}+y\hat{j}
+$$
+
+where
+
+- $\hat{i}$ = unit vector along the $x$-axis
+- $\hat{j}$ = unit vector along the $y$-axis
+
+---
+
+**Example**
+
+Consider
+
+$$
+\vec{v} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+Then
+
+$$
+\vec{v}=3\hat{i}+4\hat{j}
+$$
+
+Therefore,
+
+$$
+v_x=3
+$$
+
+and
+
+$$
+v_y=4
+$$
+
+---
+
+**`Components in 3D`**
+
+A vector in three-dimensional space has three components.
+
+$$
+\vec{v} =
+\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}
+$$
+
+or
+
+$$
+\vec{v}=x\hat{i}+y\hat{j}+z\hat{k}
+$$
+
+where
+
+- $\hat{i}$ = unit vector along the $x$-axis
+- $\hat{j}$ = unit vector along the $y$-axis
+- $\hat{k}$ = unit vector along the $z$-axis
+
+### Example
+
+$$
+\vec{v} =
+\begin{bmatrix}
+2\\
+3\\
+5
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\vec{v}=2\hat{i}+3\hat{j}+5\hat{k}
+$$
+
+The components are
+
+$$
+v_x=2
+$$
+
+$$
+v_y=3
+$$
+
+$$
+v_z=5
+$$
+
+---
+
+**`Horizontal and Vertical Components`**
+
+In a two-dimensional coordinate system, a vector can be separated into two perpendicular components:
+
+- Horizontal component
+- Vertical component
+
+If a vector has magnitude $V$ and makes an angle $\theta$ with the positive $x$-axis, then:
+
+$$
+V_x=V\cos\theta
+$$
+
+and
+
+$$
+V_y=V\sin\theta
+$$
+
+Therefore,
+
+$$
+\boxed{
+\vec{V} =
+V\cos\theta\hat{i} +
+V\sin\theta\hat{j}
+}
+$$
+
+---
+
+**Example**
+
+Suppose a vector has magnitude
+
+$$
+V=10
+$$
+
+and makes an angle
+
+$$
+\theta=30^\circ
+$$
+
+with the positive $x$-axis.
+
+The horizontal component is
+
+$$
+V_x
+=
+10\cos30^\circ
+$$
+
+Since
+
+$$
+\cos30^\circ=\frac{\sqrt{3}}{2}
+$$
+
+we get
+
+$$
+V_x=5\sqrt{3}
+$$
+
+The vertical component is
+
+$$
+V_y =
+10\sin30^\circ
+$$
+
+Since
+
+$$
+\sin30^\circ=\frac12
+$$
+
+we get
+
+$$
+V_y=5
+$$
+
+Therefore,
+
+$$
+\vec{V} =
+5\sqrt{3}\hat{i} +
+5\hat{j}
+$$
+
+---
+
+**`Finding Components from Initial and Terminal Points`**
+
+Suppose a vector starts at
+
+$$
+P(x_1,y_1)
+$$
+
+and ends at
+
+$$
+Q(x_2,y_2)
+$$
+
+Then the vector components are obtained by subtracting the coordinates of the initial point from the terminal point.
+
+$$
+\boxed{
+\vec{PQ} =
+\begin{bmatrix}
+x_2-x_1\\
+y_2-y_1
+\end{bmatrix}
+}
+$$
+
+---
+
+**Example**
+
+Let
+
+$$
+P=(2,3)
+$$
+
+and
+
+$$
+Q=(7,8)
+$$
+
+Then
+
+$$
+\vec{PQ} =
+\begin{bmatrix}
+7-2\\
+8-3
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\vec{PQ} =
+\begin{bmatrix}
+5\\
+5
+\end{bmatrix}
+$$
+
+So the vector has components
+
+$$
+(5,5)
+$$
+
+---
+
+**`Vector Components in 3D`**
+
+Suppose
+
+$$
+P(x_1,y_1,z_1)
+$$
+
+is the initial point and
+
+$$
+Q(x_2,y_2,z_2)
+$$
+
+is the terminal point.
+
+Then
+
+$$
+\boxed{
+\vec{PQ} =
+\begin{bmatrix}
+x_2-x_1\\
+y_2-y_1\\
+z_2-z_1
+\end{bmatrix}
+}
+$$
+
+---
+
+**Example**
+
+Let
+
+$$
+P=(1,2,3)
+$$
+
+and
+
+$$
+Q=(5,7,9)
+$$
+
+Then
+
+$$
+\vec{PQ} =
+\begin{bmatrix}
+5-1\\
+7-2\\
+9-3
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\vec{PQ} =
+\begin{bmatrix}
+4\\
+5\\
+6
+\end{bmatrix}
+$$
+
+---
+
+**`Magnitude from Vector Components`**
+
+The magnitude of a vector can be calculated directly from its components.
+
+For a 2D vector
+
+$$
+\vec{v} =
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+the magnitude is
+
+$$
+\boxed{
+|\vec{v}|=\sqrt{x^2+y^2}
+}
+$$
+
+---
+
+**Example**
+
+For
+
+$$
+\vec{v} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+we have
+
+$$
+|\vec{v}| =
+\sqrt{3^2+4^2}
+$$
+
+$$
+= \sqrt{9+16}
+$$
+
+$$
+=\sqrt{25}
+$$
+
+$$
+=5
+$$
+
+---
+
+**`Magnitude of a 3D Vector`**
+
+For
+
+$$
+\vec{v} =
+\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}
+$$
+
+the magnitude is
+
+$$
+\boxed{
+|\vec{v}| =
+\sqrt{x^2+y^2+z^2}
+}
+$$
+
+**Example**
+
+For
+
+$$
+\vec{v} =
+\begin{bmatrix}
+2\\
+3\\
+6
+\end{bmatrix}
+$$
+
+$$
+|\vec{v}| =
+\sqrt{2^2+3^2+6^2}
+$$
+
+$$
+= \sqrt{4+9+36}
+$$
+
+$$
+=\sqrt{49}
+$$
+
+$$
+=7
+$$
+
+---
+
+**`Direction from Vector Components`**
+
+For a 2D vector
+
+$$
+\vec{v} =
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+the direction angle $\theta$ can be calculated using
+
+$$
+\boxed{
+\theta=\tan^{-1}\left(\frac{y}{x}\right)
+}
+$$
+
+However, when determining the correct quadrant, it is better to use the two-argument function
+
+$$
+\theta=\operatorname{atan2}(y,x)
+$$
+
+because it considers the signs of both components.
+
+---
+
+**Example**
+
+For
+
+$$
+\vec{v} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+$$
+\theta =
+\tan^{-1}\left(\frac43\right)
+$$
+
+Therefore,
+
+$$
+\theta\approx53.13^\circ
+$$
+
+---
+
+**`Unit Vector from Components`**
+
+A **Unit Vector** is a vector whose magnitude is exactly $1$.
+
+For a non-zero vector $\vec{v}$, its unit vector is
+
+$$
+\boxed{
+\hat{v} =
+\frac{\vec{v}}{|\vec{v}|}
+}
+$$
+
+---
+
+**Example**
+
+Let
+
+$$
+\vec{v} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+We already know
+
+$$
+|\vec{v}|=5
+$$
+
+Therefore,
+
+$$
+\hat{v} =
+\frac15
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+Thus,
+
+$$
+\boxed{
+\hat{v} =
+\begin{bmatrix}
+\frac35\\
+\frac45
+\end{bmatrix}
+}
+$$
+
+The magnitude of this vector is $1$.
+
+---
+
+**`Vector Components and Addition`**
+
+Vector addition is performed by adding corresponding components.
+
+Suppose
+
+$$
+\vec{u} =
+\begin{bmatrix}
+u_x\\
+u_y
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{v} =
+\begin{bmatrix}
+v_x\\
+v_y
+\end{bmatrix}
+$$
+
+Then
+
+$$
+\boxed{
+\vec{u}+\vec{v} =
+\begin{bmatrix}
+u_x+v_x\\
+u_y+v_y
+\end{bmatrix}
+}
+$$
+
+---
+
+**Example**
+
+$$
+\vec{u} =
+\begin{bmatrix}
+2\\
+3
+\end{bmatrix}
+$$
+
+$$
+\vec{v} =
+\begin{bmatrix}
+4\\
+5
+\end{bmatrix}
+$$
+
+Then
+
+$$
+\vec{u}+\vec{v} =
+\begin{bmatrix}
+2+4\\
+3+5
+\end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix}
+6\\
+8
+\end{bmatrix}
+$$
+
+---
+
+**`Vector Components and Subtraction`**
+
+Vector subtraction is also performed component by component.
+
+$$
+\boxed{
+\vec{u}-\vec{v} =
+\begin{bmatrix}
+u_x-v_x\\
+u_y-v_y
+\end{bmatrix}
+}
+$$
+
+**Example**
+
+$$
+\vec{u} =
+\begin{bmatrix}
+7\\
+5
+\end{bmatrix}
+$$
+
+$$
+\vec{v} =
+\begin{bmatrix}
+2\\
+3
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\vec{u}-\vec{v} =
+\begin{bmatrix}
+7-2\\
+5-3
+\end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix}
+5\\
+2
+\end{bmatrix}
+$$
+
+---
+
+**`Scalar Multiplication of Components`**
+
+When a vector is multiplied by a scalar, every component is multiplied by that scalar.
+
+$$
+k
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix} =
+\begin{bmatrix}
+kx\\
+ky
+\end{bmatrix}
+$$
+
+**Example**
+
+$$
+3
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix} =
+\begin{bmatrix}
+6\\
+12
+\end{bmatrix}
+$$
+
+---
+
+**`Vector Components and Dot Product`**
+
+The **dot product** of two vectors is calculated using their corresponding components.
+
+For
+
+$$
+\vec{u} =
+\begin{bmatrix}
+u_x\\
+u_y
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{v} =
+\begin{bmatrix}
+v_x\\
+v_y
+\end{bmatrix}
+$$
+
+the dot product is
+
+$$
+\boxed{
+\vec{u}\cdot\vec{v} =
+u_xv_x+u_yv_y
+}
+$$
+
+For three-dimensional vectors,
+
+$$
+\boxed{
+\vec{u}\cdot\vec{v} =
+u_xv_x+u_yv_y+u_zv_z
+}
+$$
+
+---
+
+**Example**
+
+$$
+\vec{u} =
+\begin{bmatrix}
+2\\
+3
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{v} =
+\begin{bmatrix}
+4\\
+5
+\end{bmatrix}
+$$
+
+Then
+
+$$
+\vec{u}\cdot\vec{v} =
+(2)(4)+(3)(5)
+$$
+
+$$
+=8+15
+$$
+
+$$
+=23
+$$
+
+---
+
+**`Components and Angle Between Vectors`**
+
+The dot product can also be used to find the angle between two vectors.
+
+$$
+\boxed{
+\vec{u}\cdot\vec{v} =
+|\vec{u}||\vec{v}|\cos\theta
+}
+$$
+
+Therefore,
+
+$$
+\boxed{
+\cos\theta =
+\frac{\vec{u}\cdot\vec{v}}
+{|\vec{u}||\vec{v}|}
+}
+$$
+
+and
+
+$$
+\boxed{
+\theta =
+\cos^{-1}
+\left(
+\frac{\vec{u}\cdot\vec{v}}
+{|\vec{u}||\vec{v}|}
+\right)
+}
+$$
+
+---
+
+**`Orthogonal Vectors`**
+
+Two vectors are **orthogonal** if they are perpendicular to each other.
+
+For orthogonal vectors,
+
+$$
+\vec{u}\cdot\vec{v}=0
+$$
+
+**Example**
+
+$$
+\vec{u} =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{v} =
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+$$
+
+Then
+
+$$
+\vec{u}\cdot\vec{v} =
+(1)(0)+(0)(1)
+=0
+$$
+
+Therefore, the vectors are orthogonal.
+
+---
+
+**`Components and Linear Combination`**
+
+A vector can be represented as a linear combination of basis vectors.
+
+In $\mathbb{R}^2$,
+
+$$
+\vec{v} =
+x\hat{i}+y\hat{j}
+$$
+
+where $x$ and $y$ are the components.
+
+For example,
+
+$$
+\vec{v} =
+\begin{bmatrix}
+3\\
+5
+\end{bmatrix}
+$$
+
+can be written as
+
+$$
+\vec{v}=3\hat{i}+5\hat{j}
+$$
+
+Similarly, in $\mathbb{R}^3$,
+
+$$
+\vec{v} =
+x\hat{i}+y\hat{j}+z\hat{k}
+$$
+
+---
+
+**`Negative Components`**
+
+A component can be positive, negative, or zero.
+
+`Positive Component`
+
+$$
+v_x>0
+$$
+
+means the vector has a component in the positive $x$ direction.
+
+`Negative Component`
+
+$$
+v_x<0
+$$
+
+means the vector has a component in the negative $x$ direction.
+
+`Zero Component`
+
+$$
+v_x=0
+$$
+
+means there is no component in the $x$ direction.
+
+---
+
+**`Components and Quadrants`**
+
+For a two-dimensional vector, the signs of its components determine its quadrant.
+
+| Quadrant | $x$ Component | $y$ Component |
+|---|---:|---:|
+| I | $+$ | $+$ |
+| II | $-$ | $+$ |
+| III | $-$ | $-$ |
+| IV | $+$ | $-$ |
+
+**Example**
+
+If
+
+$$
+\vec{v} =
+\begin{bmatrix}
+-3\\
+4
+\end{bmatrix}
+$$
+
+then
+
+$$
+x<0
+$$
+
+and
+
+$$
+y>0
+$$
+
+Therefore, the vector lies in **Quadrant II**.
+
+---
+
+**`Components of the Zero Vector`**
+
+The zero vector has every component equal to zero.
+
+In $\mathbb{R}^2$,
+
+$$
+\vec{0} =
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+In $\mathbb{R}^3$,
+
+$$
+\vec{0} =
+\begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix}
+$$
+
+Its magnitude is
+
+$$
+|\vec{0}|=0
+$$
+
+The zero vector does not have a unique direction.
+
+---
+
+**`Vector Components in Different Dimensions`**
+
+The number of components depends on the dimension of the vector space.
+
+| Vector Space | Number of Components |
+|---|---:|
+| $\mathbb{R}$ | 1 |
+| $\mathbb{R}^2$ | 2 |
+| $\mathbb{R}^3$ | 3 |
+| $\mathbb{R}^4$ | 4 |
+| $\mathbb{R}^n$ | $n$ |
+
+For example,
+
+$$
+\vec{v}\in\mathbb{R}^4
+$$
+
+has the form
+
+$$
+\vec{v} =
+\begin{bmatrix}
+v_1\\
+v_2\\
+v_3\\
+v_4
+\end{bmatrix}
+$$
+
+---
+
+**`Components of a Vector vs Magnitude`**
+
+It is important to distinguish between **components** and **magnitude**.
+
+For
+
+$$
+\vec{v} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+the components are
+
+$$
+3,\quad4
+$$
+
+while the magnitude is
+
+$$
+|\vec{v}|=5
+$$
+
+Therefore,
+
+> **Components describe the vector along coordinate directions, while magnitude describes the overall length of the vector.**
+
+---
+
+**`Components and Direction Cosines in 3D`**
+
+For a three-dimensional vector
+
+$$
+\vec{v} =
+\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}
+$$
+
+with magnitude
+
+$$
+|\vec{v}| =
+\sqrt{x^2+y^2+z^2}
+$$
+
+the direction cosines are
+
+$$
+\cos\alpha=\frac{x}{|\vec{v}|}
+$$
+
+$$
+\cos\beta=\frac{y}{|\vec{v}|}
+$$
+
+$$
+\cos\gamma=\frac{z}{|\vec{v}|}
+$$
+
+where
+
+- $\alpha$ = angle with the $x$-axis
+- $\beta$ = angle with the $y$-axis
+- $\gamma$ = angle with the $z$-axis
+
+They satisfy
+
+$$
+\boxed{
+\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1
+}
+$$
+
+---
+
+**Example**
+
+Given
+
+$$
+\vec{v} =
+\begin{bmatrix}
+2\\
+3\\
+6
+\end{bmatrix}
+$$
+
+find:
+
+1. Components
+2. Magnitude
+3. Unit vector
+
+`Step 1: Components`
+
+The components are
+
+$$
+v_x=2,\qquad
+v_y=3,\qquad
+v_z=6
+$$
+
+---
+
+`Step 2: Magnitude`
+
+$$
+|\vec{v}| =
+\sqrt{2^2+3^2+6^2}
+$$
+
+$$
+= \sqrt{4+9+36}
+$$
+
+$$
+=\sqrt{49}
+$$
+
+$$
+=7
+$$
+
+---
+
+`Step 3: Unit Vector`
+
+$$
+\hat{v} =
+\frac{\vec{v}}{|\vec{v}|}
+$$
+
+Therefore,
+
+$$
+\hat{v} =
+\frac17
+\begin{bmatrix}
+2\\
+3\\
+6
+\end{bmatrix}
+$$
+
+$$
+\boxed{
+\hat{v} =
+\begin{bmatrix}
+\frac27\\
+\frac37\\
+\frac67
+\end{bmatrix}
+}
+$$
+
+---
+
+**`Important Formulas`**
+
+`2D Vector`
+
+$$
+\boxed{
+\vec{v} =
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+}
+$$
+
+---
+
+`3D Vector`
+
+$$
+\boxed{
+\vec{v} =
+\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}
+}
+$$
+
+---
+
+`Vector from Two Points`
+
+$$
+\boxed{
+\vec{PQ} =
+\begin{bmatrix}
+x_2-x_1\\
+y_2-y_1
+\end{bmatrix}
+}
+$$
+
+---
+
+`Magnitude of 2D Vector`
+
+$$
+\boxed{
+|\vec{v}|=\sqrt{x^2+y^2}
+}
+$$
+
+---
+
+`Magnitude of 3D Vector`
+
+$$
+\boxed{
+|\vec{v}|=\sqrt{x^2+y^2+z^2}
+}
+$$
+
+---
+
+`Unit Vector`
+
+$$
+\boxed{
+\hat{v} =
+\frac{\vec{v}}{|\vec{v}|}
+}
+$$
+
+---
+
+**`Components from Magnitude and Angle`**
+
+$$
+\boxed{
+V_x=V\cos\theta
+}
+$$
+
+$$
+\boxed{
+V_y=V\sin\theta
+}
+$$
+
+---
+
+**`Direction Angle`**
+
+$$
+\boxed{
+\theta =
+\tan^{-1}
+\left(
+\frac{y}{x}
+\right)
+}
+$$
+
+For correct quadrant handling:
+
+$$
+\boxed{
+\theta=\operatorname{atan2}(y,x)
+}
+$$
+
+---
+
+**`Dot Product`**
+
+$$
+\boxed{
+\vec{u}\cdot\vec{v} =
+u_xv_x+u_yv_y
+}
+$$
+
+---
+
+**`Angle Between Vectors`**
+
+$$
+\boxed{
+\theta =
+\cos^{-1}
+\left(
+\frac{\vec{u}\cdot\vec{v}}
+{|\vec{u}||\vec{v}|}
+\right)
+}
+$$
 
 ---
 
@@ -3645,8 +5091,7 @@ $$
 \begin{bmatrix}
 1\\
 2
-\end{bmatrix}
--
+\end{bmatrix} -
 \begin{bmatrix}
 3\\
 4
@@ -4374,10 +5819,8 @@ The **rank of a matrix** is the dimension of its **row space** or **column space
 Mathematically,
 
 $$
-\operatorname{Rank}(A)
-=
-\dim(\text{Row Space})
-=
+\operatorname{Rank}(A) =
+\dim(\text{Row Space}) =
 \dim(\text{Column Space})
 $$
 
@@ -4476,7 +5919,7 @@ $$
 
 matrix.
 
-### Example
+**Example**
 
 $$
 A=
@@ -4514,7 +5957,7 @@ $$
 
 ---
 
-## Definition
+**`Definition`**
 
 If
 
@@ -4652,10 +6095,8 @@ columns.
 Therefore,
 
 $$
-\operatorname{Nullity}(A)
-=
-3-1
-=
+\operatorname{Nullity}(A) =
+3-1 =
 2
 $$
 
