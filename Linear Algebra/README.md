@@ -541,8 +541,7 @@ A vector can be represented geometrically as an arrow or algebraically as an ord
 For example,
 
 $$
-\vec{v}
-=
+\vec{v} =
 \begin{bmatrix}
 3\\
 4
@@ -688,7 +687,7 @@ where
 - $\hat{j}$ = unit vector along the $y$-axis
 - $\hat{k}$ = unit vector along the $z$-axis
 
-### Example
+**Example**
 
 $$
 \vec{v} =
@@ -771,8 +770,7 @@ with the positive $x$-axis.
 The horizontal component is
 
 $$
-V_x
-=
+V_x =
 10\cos30^\circ
 $$
 
