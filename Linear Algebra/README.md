@@ -3009,8 +3009,7 @@ $$
 \operatorname{proj}_{\vec{b}}\vec{a}
 \right)
 \cdot
-\vec{b}
-=
+\vec{b} =
 0
 $$
 
