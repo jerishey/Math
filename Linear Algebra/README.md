@@ -1977,6 +1977,1229 @@ $$
 
 ---
 
+### **`Vector Projection`**
+
+**Vector Projection** is the process of finding the component of one vector that lies in the direction of another vector.
+
+In simple words, projection tells us:
+
+> **How much of one vector points in the direction of another vector.**
+
+Vector projection is closely related to the **dot product** and is an important concept in Linear Algebra.
+
+It is used in:
+
+- Geometry
+- Physics
+- Computer Graphics
+- Robotics
+- Machine Learning
+- Data Science
+- Signal Processing
+- Computer Vision
+
+---
+
+**`What is Vector Projection?`**
+
+Suppose we have two vectors:
+
+$$
+\vec{a}
+$$
+
+and
+
+$$
+\vec{b}
+$$
+
+We want to find the projection of $\vec{a}$ onto $\vec{b}$.
+
+The projection represents the part of $\vec{a}$ that points in the direction of $\vec{b}$.
+
+It is written as:
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a}
+$$
+
+and is read as:
+
+> **Projection of $\vec{a}$ onto $\vec{b}$.**
+
+---
+
+**`Geometrical Meaning`**
+
+Suppose $\vec{a}$ and $\vec{b}$ form an angle $\theta$.
+
+The projection of $\vec{a}$ onto $\vec{b}$ is the "shadow" of $\vec{a}$ on the direction of $\vec{b}$.
+
+The length of this projection is:
+
+$$
+|\vec{a}|\cos\theta
+$$
+
+Therefore,
+
+$$
+\boxed{
+\text{Scalar Projection} =
+|\vec{a}|\cos\theta
+}
+$$
+
+The direction of the projection is along $\vec{b}$.
+
+---
+
+**`Scalar Projection`**
+
+The **Scalar Projection** gives only the length of the projection.
+
+The scalar projection of $\vec{a}$ onto $\vec{b}$ is:
+
+$$
+\boxed{
+\operatorname{comp}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|}
+}
+$$
+
+Using the dot product formula:
+
+$$
+\vec{a}\cdot\vec{b} =
+|\vec{a}||\vec{b}|\cos\theta
+$$
+
+we get:
+
+$$
+\operatorname{comp}_{\vec{b}}\vec{a} =
+|\vec{a}|\cos\theta
+$$
+
+---
+
+**`Vector Projection`**
+
+The **Vector Projection** gives both the magnitude and direction of the projected vector.
+
+The formula is:
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|^2}
+\vec{b}
+}
+$$
+
+Since
+
+$$
+|\vec{b}|^2 =
+\vec{b}\cdot\vec{b}
+$$
+
+we can also write:
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{\vec{b}\cdot\vec{b}}
+\vec{b}
+}
+$$
+
+---
+
+**`Why Do We Divide by $|\vec{b}|^2$?`**
+
+This is an important part of understanding projection.
+
+Suppose we want a vector in the direction of $\vec{b}$.
+
+Any vector in the direction of $\vec{b}$ can be written as:
+
+$$
+k\vec{b}
+$$
+
+for some scalar $k$.
+
+The projection must have the correct component of $\vec{a}$ along $\vec{b}$.
+
+The required scalar is:
+
+$$
+k=
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|^2}
+$$
+
+Therefore,
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a} =
+k\vec{b}
+$$
+
+which gives:
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|^2}
+\vec{b}
+}
+$$
+
+---
+
+**Example of Vector Projection**
+
+Let
+
+$$
+\vec{a} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{b} =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+Find the projection of $\vec{a}$ onto $\vec{b}$.
+
+---
+
+`Step 1: Find the Dot Product`
+
+$$
+\vec{a}\cdot\vec{b} =
+(3)(1)+(4)(0)
+$$
+
+$$
+=3
+$$
+
+---
+
+`Step 2: Find $|\vec{b}|^2$`
+
+$$
+|\vec{b}|^2 =
+1^2+0^2
+$$
+
+$$
+=1
+$$
+
+---
+
+`Step 3: Apply the Projection Formula`
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{3}{1}
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix}
+}
+$$
+
+The vector $\vec{a}$ has a horizontal component of $3$ in the direction of $\vec{b}$.
+
+---
+
+**Example**
+
+Let
+
+$$
+\vec{a} =
+\begin{bmatrix}
+2\\
+3
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{b} =
+\begin{bmatrix}
+4\\
+1
+\end{bmatrix}
+$$
+
+Find the projection of $\vec{a}$ onto $\vec{b}$.
+
+---
+
+`Step 1: Calculate the Dot Product`
+
+$$
+\vec{a}\cdot\vec{b} =
+(2)(4)+(3)(1)
+$$
+
+$$
+=8+3
+$$
+
+$$
+=11
+$$
+
+---
+
+`Step 2: Calculate $|\vec{b}|^2$`
+
+$$
+|\vec{b}|^2 =
+4^2+1^2
+$$
+
+$$
+=16+1
+$$
+
+$$
+=17
+$$
+
+---
+
+`Step 3: Apply the Formula`
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{11}{17}
+\begin{bmatrix}
+4\\
+1
+\end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\begin{bmatrix}
+\frac{44}{17}\\
+\frac{11}{17}
+\end{bmatrix}
+}
+$$
+
+---
+
+**`Scalar Projection vs Vector Projection`**
+
+These two concepts are related but different.
+
+| Scalar Projection | Vector Projection |
+|---|---|
+| Gives a scalar | Gives a vector |
+| Gives only magnitude along a direction | Gives magnitude and direction |
+| $\frac{\vec{a}\cdot\vec{b}}{|\vec{b}|}$ | $\frac{\vec{a}\cdot\vec{b}}{|\vec{b}|^2}\vec{b}$ |
+| Can be positive or negative | Points along or opposite to $\vec{b}$ |
+
+---
+
+**`Projection Using a Unit Vector`**
+
+Suppose $\hat{b}$ is a **unit vector** in the direction of $\vec{b}$.
+
+Since
+
+$$
+|\hat{b}|=1
+$$
+
+the projection becomes:
+
+$$
+\boxed{
+\operatorname{proj}_{\hat{b}}\vec{a} =
+(\vec{a}\cdot\hat{b})\hat{b}
+}
+$$
+
+The scalar projection is:
+
+$$
+\boxed{
+\operatorname{comp}_{\hat{b}}\vec{a} =
+\vec{a}\cdot\hat{b}
+}
+$$
+
+This form is often easier to use.
+
+---
+
+**`Finding a Unit Vector`**
+
+If $\vec{b}$ is not already a unit vector, we can normalize it.
+
+The unit vector in the direction of $\vec{b}$ is:
+
+$$
+\boxed{
+\hat{b} =
+\frac{\vec{b}}{|\vec{b}|}
+}
+$$
+
+Then:
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a} =
+(\vec{a}\cdot\hat{b})\hat{b}
+$$
+
+---
+
+**`Projection and the Dot Product`**
+
+Vector projection is directly based on the **dot product**.
+
+Recall:
+
+$$
+\vec{a}\cdot\vec{b} =
+|\vec{a}||\vec{b}|\cos\theta
+$$
+
+Therefore,
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{
+|\vec{a}||\vec{b}|\cos\theta
+}{
+|\vec{b}|^2
+}
+\vec{b}
+$$
+
+Simplifying:
+
+$$
+= \frac{|\vec{a}|\cos\theta}{|\vec{b}|}
+\vec{b}
+$$
+
+Since
+
+$$
+\frac{\vec{b}}{|\vec{b}|}
+$$
+
+is the unit vector in the direction of $\vec{b}$, the projection is simply the component of $\vec{a}$ along that direction.
+
+---
+
+**`Projection and Angle Between Vectors`**
+
+The scalar projection can also be written as:
+
+$$
+\boxed{
+\operatorname{comp}_{\vec{b}}\vec{a} =
+|\vec{a}|\cos\theta
+}
+$$
+
+where $\theta$ is the angle between the vectors.
+
+Therefore:
+
+If
+
+$$
+0^\circ<\theta<90^\circ
+$$
+
+then
+
+$$
+\cos\theta>0
+$$
+
+and the scalar projection is positive.
+
+---
+
+If
+
+$$
+\theta=90^\circ
+$$
+
+then
+
+$$
+\cos90^\circ=0
+$$
+
+so:
+
+$$
+\operatorname{comp}_{\vec{b}}\vec{a}=0
+$$
+
+---
+
+If
+
+$$
+90^\circ<\theta<180^\circ
+$$
+
+then
+
+$$
+\cos\theta<0
+$$
+
+and the scalar projection is negative.
+
+---
+
+**`Important Special Cases`**
+
+`1. Same Direction`
+
+If
+
+$$
+\theta=0^\circ
+$$
+
+then
+
+$$
+\cos0^\circ=1
+$$
+
+Therefore:
+
+$$
+\operatorname{comp}_{\vec{b}}\vec{a} =
+|\vec{a}|
+$$
+
+when $\vec{a}$ points in the same direction as $\vec{b}$.
+
+---
+
+`2. Perpendicular Vectors`
+
+If
+
+$$
+\theta=90^\circ
+$$
+
+then
+
+$$
+\cos90^\circ=0
+$$
+
+Therefore:
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\vec{0}
+}
+$$
+
+This means a vector has no component in a direction perpendicular to it.
+
+---
+
+`3. Opposite Direction`
+
+If
+
+$$
+\theta=180^\circ
+$$
+
+then
+
+$$
+\cos180^\circ=-1
+$$
+
+Therefore, the scalar projection is negative.
+
+The projection points opposite to $\vec{b}$.
+
+---
+
+`Orthogonal Decomposition`
+
+One of the most important applications of projection is **orthogonal decomposition**.
+
+A vector $\vec{a}$ can be divided into two parts:
+
+1. Component parallel to $\vec{b}$
+2. Component perpendicular to $\vec{b}$
+
+Therefore,
+
+$$
+\boxed{
+\vec{a} =
+\vec{a}_{\parallel} +
+\vec{a}_{\perp}
+}
+$$
+
+where
+
+$$
+\vec{a}_{\parallel} =
+\operatorname{proj}_{\vec{b}}\vec{a}
+$$
+
+and
+
+$$
+\vec{a}_{\perp} =
+\vec{a} -
+\operatorname{proj}_{\vec{b}}\vec{a}
+$$
+
+---
+
+**`Perpendicular Component`**
+
+The component of $\vec{a}$ perpendicular to $\vec{b}$ is:
+
+$$
+\boxed{
+\vec{a}_{\perp} =
+\vec{a} -
+\operatorname{proj}_{\vec{b}}\vec{a}
+}
+$$
+
+Using the projection formula:
+
+$$
+\boxed{
+\vec{a}_{\perp} =
+\vec{a} -
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|^2}
+\vec{b}
+}
+$$
+
+---
+
+**Example of Orthogonal Decomposition**
+
+Let
+
+$$
+\vec{a} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{b} =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+We already found:
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix}
+$$
+
+Therefore:
+
+$$
+\vec{a}_{\perp} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix} -
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix}
+$$
+
+$$
+\boxed{
+\vec{a}_{\perp} =
+\begin{bmatrix}
+0\\
+4
+\end{bmatrix}
+}
+$$
+
+Therefore:
+
+$$
+\vec{a} =
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix} +
+\begin{bmatrix}
+0\\
+4
+\end{bmatrix}
+$$
+
+The first vector is parallel to $\vec{b}$ and the second is perpendicular to $\vec{b}$.
+
+---
+
+**`Checking Orthogonality`**
+
+The perpendicular component must satisfy:
+
+$$
+\vec{a}_{\perp}\cdot\vec{b}=0
+$$
+
+For the previous example:
+
+$$
+\begin{bmatrix}
+0\\
+4
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+$$
+=(0)(1)+(4)(0)
+$$
+
+$$
+=0
+$$
+
+Therefore, the two vectors are perpendicular.
+
+---
+
+**`Projection onto a Coordinate Axis`**
+
+Projection onto the $x$-axis is particularly simple.
+
+For
+
+$$
+\vec{a} =
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+the projection onto the $x$-axis is:
+
+$$
+\boxed{
+\operatorname{proj}_{x}\vec{a} =
+\begin{bmatrix}
+x\\
+0
+\end{bmatrix}
+}
+$$
+
+Similarly, projection onto the $y$-axis is:
+
+$$
+\boxed{
+\operatorname{proj}_{y}\vec{a} =
+\begin{bmatrix}
+0\\
+y
+\end{bmatrix}
+}
+$$
+
+---
+
+**`Projection in 3D`**
+
+The same formula works in three dimensions.
+
+Suppose:
+
+$$
+\vec{a} =
+\begin{bmatrix}
+a_1\\
+a_2\\
+a_3
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{b} =
+\begin{bmatrix}
+b_1\\
+b_2\\
+b_3
+\end{bmatrix}
+$$
+
+Then:
+
+$$
+\vec{a}\cdot\vec{b} =
+a_1b_1+a_2b_2+a_3b_3
+$$
+
+and:
+
+$$
+|\vec{b}|^2 =
+b_1^2+b_2^2+b_3^2
+$$
+
+Therefore:
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{
+a_1b_1+a_2b_2+a_3b_3
+}{
+b_1^2+b_2^2+b_3^2
+}
+\begin{bmatrix}
+b_1\\
+b_2\\
+b_3
+\end{bmatrix}
+}
+$$
+
+---
+
+**`Projection onto a Subspace`**
+
+Projection is not limited to a single vector.
+
+We can also project a vector onto a **subspace**.
+
+Suppose $W$ is a subspace.
+
+The projection of $\vec{v}$ onto $W$ is the vector in $W$ that is closest to $\vec{v}$.
+
+It can be written as:
+
+$$
+\vec{v} =
+\vec{v}_W +
+\vec{v}_{W^\perp}
+$$
+
+where
+
+- $\vec{v}_W$ lies in $W$.
+- $\vec{v}_{W^\perp}$ lies in the orthogonal complement of $W$.
+
+---
+
+**`Projection Matrix`**
+
+Projection can also be represented using a **matrix**.
+
+Suppose $\vec{b}$ is a non-zero column vector.
+
+The projection matrix onto the direction of $\vec{b}$ is:
+
+$$
+\boxed{
+P =
+\frac{\vec{b}\vec{b}^T}
+{\vec{b}^T\vec{b}}
+}
+$$
+
+Then the projection of any vector $\vec{a}$ onto $\vec{b}$ can be calculated as:
+
+$$
+\boxed{
+P\vec{a} =
+\operatorname{proj}_{\vec{b}}\vec{a}
+}
+$$
+
+This is particularly important in advanced Linear Algebra, numerical methods, computer graphics, and machine learning.
+
+---
+
+**Example of Projection Matrix**
+
+Let
+
+$$
+\vec{b} =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+Then:
+
+$$
+\vec{b}\vec{b}^T =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+\begin{bmatrix}
+1&0
+\end{bmatrix}
+$$
+
+Therefore:
+
+$$
+\vec{b}\vec{b}^T =
+\begin{bmatrix}
+1&0\\
+0&0
+\end{bmatrix}
+$$
+
+Also,
+
+$$
+\vec{b}^T\vec{b}=1
+$$
+
+Therefore:
+
+$$
+\boxed{
+P=
+\begin{bmatrix}
+1&0\\
+0&0
+\end{bmatrix}
+}
+$$
+
+Applying this to
+
+$$
+\vec{a} =
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+gives:
+
+$$
+P\vec{a} =
+\begin{bmatrix}
+1&0\\
+0&0
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix}
+3\\
+0
+\end{bmatrix}
+$$
+
+which is exactly the projection of $\vec{a}$ onto the $x$-axis.
+
+---
+
+**`Properties of Projection`**
+
+`1. Projection Lies in the Target Direction`
+
+The projection of $\vec{a}$ onto $\vec{b}$ is always a scalar multiple of $\vec{b}$.
+
+$$
+\operatorname{proj}_{\vec{b}}\vec{a} =
+k\vec{b}
+$$
+
+---
+
+`2. Perpendicular Component is Orthogonal`
+
+$$
+\left(
+\vec{a} -
+\operatorname{proj}_{\vec{b}}\vec{a}
+\right)
+\cdot
+\vec{b}
+=
+0
+$$
+
+---
+
+`3. Projection of a Vector onto Itself`
+
+For a non-zero vector $\vec{a}$:
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{a}}\vec{a} =
+\vec{a}
+}
+$$
+
+---
+
+`4. Projection of a Perpendicular Vector`
+
+If
+
+$$
+\vec{a}\cdot\vec{b}=0
+$$
+
+then:
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\vec{0}
+}
+$$
+
+---
+
+`5. Projection Matrix is Idempotent`
+
+For a projection matrix $P$:
+
+$$
+\boxed{
+P^2=P
+}
+$$
+
+This means applying the same projection twice produces the same result as applying it once.
+
+---
+
+`6. Projection Matrix is Symmetric`
+
+For an orthogonal projection matrix:
+
+$$
+\boxed{
+P^T=P
+}
+$$
+
+---
+
+**`Vector Projection vs Scalar Projection`**
+
+It is important not to confuse these concepts.
+
+`Scalar Projection`
+
+$$
+\boxed{
+\operatorname{comp}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|}
+}
+$$
+
+Result:
+
+$$
+\text{Scalar}
+$$
+
+---
+
+`Vector Projection`
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|^2}
+\vec{b}
+}
+$$
+
+Result:
+
+$$
+\text{Vector}
+$$
+
+---
+
+**`Important Formulas`**
+
+`Scalar Projection`
+
+$$
+\boxed{
+\operatorname{comp}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|}
+}
+$$
+
+---
+
+`Vector Projection`
+
+$$
+\boxed{
+\operatorname{proj}_{\vec{b}}\vec{a} =
+\frac{\vec{a}\cdot\vec{b}}
+{|\vec{b}|^2}
+\vec{b}
+}
+$$
+
+---
+
+`Projection Using a Unit Vector`
+
+$$
+\boxed{
+\operatorname{proj}_{\hat{b}}\vec{a} =
+(\vec{a}\cdot\hat{b})\hat{b}
+}
+$$
+
+---
+
+`Perpendicular Component`
+
+$$
+\boxed{
+\vec{a}_{\perp} =
+\vec{a} -
+\operatorname{proj}_{\vec{b}}\vec{a}
+}
+$$
+
+---
+
+`Orthogonal Decomposition`
+
+$$
+\boxed{
+\vec{a} =
+\vec{a}_{\parallel} +
+\vec{a}_{\perp}
+}
+$$
+
+---
+
+`Projection Matrix`
+
+$$
+\boxed{
+P=
+\frac{\vec{b}\vec{b}^T}
+{\vec{b}^T\vec{b}}
+}
+$$
+
+---
+
+`Projection Using a Matrix`
+
+$$
+\boxed{
+P\vec{a} =
+\operatorname{proj}_{\vec{b}}\vec{a}
+}
+$$
+
+---
+
 ## `3. Introduction to Matrices`
 Matrices are rectangular arrays of numbers, symbols, or characters where all of these elements are arranged in each row and column.
 
