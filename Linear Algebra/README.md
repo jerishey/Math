@@ -1088,7 +1088,7 @@ $$
 However, when determining the correct quadrant, it is better to use the two-argument function
 
 $$
-\theta=\operatorname{atan2}(y,x)
+\theta=\mathrm{atan2}(y,x)
 $$
 
 because it considers the signs of both components.
@@ -1945,7 +1945,7 @@ For correct quadrant handling:
 
 $$
 \boxed{
-\theta=\operatorname{atan2}(y,x)
+\theta=\mathrm{atan2}(y,x)
 }
 $$
 
@@ -2021,7 +2021,7 @@ The projection represents the part of $\vec{a}$ that points in the direction of 
 It is written as:
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 $$
 
 and is read as:
@@ -2063,7 +2063,7 @@ The scalar projection of $\vec{a}$ onto $\vec{b}$ is:
 
 $$
 \boxed{
-\operatorname{comp}_{\vec{b}}\vec{a} =
+\mathrm{comp}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {|\vec{b}|}
 }
@@ -2079,7 +2079,7 @@ $$
 we get:
 
 $$
-\operatorname{comp}_{\vec{b}}\vec{a} =
+\mathrm{comp}_{\vec{b}}\vec{a} =
 |\vec{a}|\cos\theta
 $$
 
@@ -2093,7 +2093,7 @@ The formula is:
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {|\vec{b}|^2}
 \vec{b}
@@ -2111,7 +2111,7 @@ we can also write:
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {\vec{b}\cdot\vec{b}}
 \vec{b}
@@ -2147,7 +2147,7 @@ $$
 Therefore,
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 k\vec{b}
 $$
 
@@ -2155,7 +2155,7 @@ which gives:
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {|\vec{b}|^2}
 \vec{b}
@@ -2219,7 +2219,7 @@ $$
 `Step 3: Apply the Projection Formula`
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{3}{1}
 \begin{bmatrix}
 1\\
@@ -2231,7 +2231,7 @@ Therefore,
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \begin{bmatrix}
 3\\
 0
@@ -2306,7 +2306,7 @@ $$
 `Step 3: Apply the Formula`
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{11}{17}
 \begin{bmatrix}
 4\\
@@ -2318,7 +2318,7 @@ Therefore,
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \begin{bmatrix}
 \frac{44}{17}\\
 \frac{11}{17}
@@ -2355,7 +2355,7 @@ the projection becomes:
 
 $$
 \boxed{
-\operatorname{proj}_{\hat{b}}\vec{a} =
+\mathrm{proj}_{\hat{b}}\vec{a} =
 (\vec{a}\cdot\hat{b})\hat{b}
 }
 $$
@@ -2364,7 +2364,7 @@ The scalar projection is:
 
 $$
 \boxed{
-\operatorname{comp}_{\hat{b}}\vec{a} =
+\mathrm{comp}_{\hat{b}}\vec{a} =
 \vec{a}\cdot\hat{b}
 }
 $$
@@ -2389,7 +2389,7 @@ $$
 Then:
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 (\vec{a}\cdot\hat{b})\hat{b}
 $$
 
@@ -2409,7 +2409,7 @@ $$
 Therefore,
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{
 |\vec{a}||\vec{b}|\cos\theta
 }{
@@ -2441,7 +2441,7 @@ The scalar projection can also be written as:
 
 $$
 \boxed{
-\operatorname{comp}_{\vec{b}}\vec{a} =
+\mathrm{comp}_{\vec{b}}\vec{a} =
 |\vec{a}|\cos\theta
 }
 $$
@@ -2481,7 +2481,7 @@ $$
 so:
 
 $$
-\operatorname{comp}_{\vec{b}}\vec{a}=0
+\mathrm{comp}_{\vec{b}}\vec{a}=0
 $$
 
 ---
@@ -2521,7 +2521,7 @@ $$
 Therefore:
 
 $$
-\operatorname{comp}_{\vec{b}}\vec{a} =
+\mathrm{comp}_{\vec{b}}\vec{a} =
 |\vec{a}|
 $$
 
@@ -2547,7 +2547,7 @@ Therefore:
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \vec{0}
 }
 $$
@@ -2599,7 +2599,7 @@ where
 
 $$
 \vec{a}_{\parallel} =
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 $$
 
 and
@@ -2607,7 +2607,7 @@ and
 $$
 \vec{a}_{\perp} =
 \vec{a} -
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 $$
 
 ---
@@ -2620,7 +2620,7 @@ $$
 \boxed{
 \vec{a}_{\perp} =
 \vec{a} -
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 }
 $$
 
@@ -2663,7 +2663,7 @@ $$
 We already found:
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \begin{bmatrix}
 3\\
 0
@@ -2764,7 +2764,7 @@ the projection onto the $x$-axis is:
 
 $$
 \boxed{
-\operatorname{proj}_{x}\vec{a} =
+\mathrm{proj}_{x}\vec{a} =
 \begin{bmatrix}
 x\\
 0
@@ -2776,7 +2776,7 @@ Similarly, projection onto the $y$-axis is:
 
 $$
 \boxed{
-\operatorname{proj}_{y}\vec{a} =
+\mathrm{proj}_{y}\vec{a} =
 \begin{bmatrix}
 0\\
 y
@@ -2830,7 +2830,7 @@ Therefore:
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{
 a_1b_1+a_2b_2+a_3b_3
 }{
@@ -2892,7 +2892,7 @@ Then the projection of any vector $\vec{a}$ onto $\vec{b}$ can be calculated as:
 $$
 \boxed{
 P\vec{a} =
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 }
 $$
 
@@ -2995,7 +2995,7 @@ which is exactly the projection of $\vec{a}$ onto the $x$-axis.
 The projection of $\vec{a}$ onto $\vec{b}$ is always a scalar multiple of $\vec{b}$.
 
 $$
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 k\vec{b}
 $$
 
@@ -3006,7 +3006,7 @@ $$
 $$
 \left(
 \vec{a} -
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 \right)
 \cdot
 \vec{b} =
@@ -3021,7 +3021,7 @@ For a non-zero vector $\vec{a}$:
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{a}}\vec{a} =
+\mathrm{proj}_{\vec{a}}\vec{a} =
 \vec{a}
 }
 $$
@@ -3040,7 +3040,7 @@ then:
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \vec{0}
 }
 $$
@@ -3081,7 +3081,7 @@ It is important not to confuse these concepts.
 
 $$
 \boxed{
-\operatorname{comp}_{\vec{b}}\vec{a} =
+\mathrm{comp}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {|\vec{b}|}
 }
@@ -3099,7 +3099,7 @@ $$
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {|\vec{b}|^2}
 \vec{b}
@@ -3120,7 +3120,7 @@ $$
 
 $$
 \boxed{
-\operatorname{comp}_{\vec{b}}\vec{a} =
+\mathrm{comp}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {|\vec{b}|}
 }
@@ -3132,7 +3132,7 @@ $$
 
 $$
 \boxed{
-\operatorname{proj}_{\vec{b}}\vec{a} =
+\mathrm{proj}_{\vec{b}}\vec{a} =
 \frac{\vec{a}\cdot\vec{b}}
 {|\vec{b}|^2}
 \vec{b}
@@ -3145,7 +3145,7 @@ $$
 
 $$
 \boxed{
-\operatorname{proj}_{\hat{b}}\vec{a} =
+\mathrm{proj}_{\hat{b}}\vec{a} =
 (\vec{a}\cdot\hat{b})\hat{b}
 }
 $$
@@ -3158,7 +3158,7 @@ $$
 \boxed{
 \vec{a}_{\perp} =
 \vec{a} -
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 }
 $$
 
@@ -3193,7 +3193,7 @@ $$
 $$
 \boxed{
 P\vec{a} =
-\operatorname{proj}_{\vec{b}}\vec{a}
+\mathrm{proj}_{\vec{b}}\vec{a}
 }
 $$
 
@@ -7027,7 +7027,7 @@ In other words, the rank tells us how much **independent information** is contai
 It is denoted by
 
 $$
-\operatorname{Rank}(A)
+\mathrm{Rank}(A)
 $$
 
 where $A$ is a matrix.
@@ -7039,7 +7039,7 @@ The **rank of a matrix** is the dimension of its **row space** or **column space
 Mathematically,
 
 $$
-\operatorname{Rank}(A) =
+\mathrm{Rank}(A) =
 \dim(\text{Row Space}) =
 \dim(\text{Column Space})
 $$
@@ -7074,7 +7074,7 @@ Since one row depends on the other, there is only **one independent row**.
 Therefore,
 
 $$
-\operatorname{Rank}(A)=1
+\mathrm{Rank}(A)=1
 $$
 
 ---
@@ -7100,7 +7100,7 @@ both rows are independent.
 Therefore,
 
 $$
-\operatorname{Rank}(A)=2
+\mathrm{Rank}(A)=2
 $$
 
 ---
@@ -7122,7 +7122,7 @@ A matrix is called a **Full Rank Matrix** if its rank is equal to the smaller of
 For a square matrix,
 
 $$
-\operatorname{Rank}(A)=n
+\mathrm{Rank}(A)=n
 $$
 
 where
@@ -7152,7 +7152,7 @@ $$
 Since both rows are independent,
 
 $$
-\operatorname{Rank}(A)=2
+\mathrm{Rank}(A)=2
 $$
 
 The matrix is **full rank**.
@@ -7172,7 +7172,7 @@ $$
 Nullity is denoted by
 
 $$
-\operatorname{Nullity}(A)
+\mathrm{Nullity}(A)
 $$
 
 ---
@@ -7194,7 +7194,7 @@ $$
 then
 
 $$
-\operatorname{Nullity}(A) =
+\mathrm{Nullity}(A) =
 \dim(N(A))
 $$
 
@@ -7235,7 +7235,7 @@ $$
 Therefore,
 
 $$
-\operatorname{Nullity}(A)=1
+\mathrm{Nullity}(A)=1
 $$
 
 ---
@@ -7269,9 +7269,9 @@ then
 
 $$
 \boxed{
-\operatorname{Rank}(A)
+\mathrm{Rank}(A)
 +
-\operatorname{Nullity}(A) =
+\mathrm{Nullity}(A) =
 n
 }
 $$
@@ -7301,7 +7301,7 @@ There is only one independent row.
 Hence,
 
 $$
-\operatorname{Rank}(A)=1
+\mathrm{Rank}(A)=1
 $$
 
 The matrix has
@@ -7315,7 +7315,7 @@ columns.
 Therefore,
 
 $$
-\operatorname{Nullity}(A) =
+\mathrm{Nullity}(A) =
 3-1 =
 2
 $$
@@ -7504,7 +7504,7 @@ $$
 `Span`
 
 $$
-\operatorname{Span}(S) =
+\mathrm{Span}(S) =
 \{
 c_1v_1+\cdots+c_nv_n
 \}
@@ -7533,7 +7533,7 @@ $$
 `Rank`
 
 $$
-\operatorname{Rank}(A) =
+\mathrm{Rank}(A) =
 \dim(\text{Column Space}) =
 \dim(\text{Row Space})
 $$
@@ -7543,7 +7543,7 @@ $$
 `Nullity`
 
 $$
-\operatorname{Nullity}(A) =
+\mathrm{Nullity}(A) =
 \dim(\text{Null Space})
 $$
 
@@ -7553,9 +7553,9 @@ $$
 
 $$
 \boxed{
-\operatorname{Rank}(A)
+\mathrm{Rank}(A)
 +
-\operatorname{Nullity}(A) =
+\mathrm{Nullity}(A) =
 n
 }
 $$
