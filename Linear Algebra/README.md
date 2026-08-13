@@ -7577,3 +7577,1671 @@ $$
 - Vector spaces are fundamental in mathematics, engineering, artificial intelligence, machine learning, computer graphics, robotics, and many other scientific disciplines.
 
 ---
+
+## **`6. The Geometry of Linear Equations`**
+
+Linear Algebra is not only about manipulating equations and matrices. One of its most powerful ideas is that **linear equations have geometric meanings**.
+
+A system of linear equations can be understood in several different ways:
+
+- **Algebraically** — as equations involving unknown variables
+- **Geometrically** — as lines, planes, and their intersections
+- **Vectorially** — as linear combinations of vectors
+- **Matrix-wise** — as a matrix equation such as $A\vec{x}=\vec{b}$
+
+For example:
+
+$$
+x+y=4
+$$
+
+is an algebraic equation, but geometrically it represents a **line** in $\mathbb{R}^2$.
+
+Similarly,
+
+$$
+x+y+z=4
+$$
+
+represents a **plane** in $\mathbb{R}^3$.
+
+Understanding these connections is essential for studying:
+
+- Matrices
+- Gaussian Elimination
+- Vector Spaces
+- Linear Independence
+- Span
+- Column Space
+- Null Space
+- Linear Transformations
+
+---
+
+### **`1. Linear Equation in Two Variables`**
+
+A linear equation in two variables has the general form:
+
+$$
+ax+by=c
+$$
+
+where $a$, $b$, and $c$ are constants.
+
+For example:
+
+$$
+2x+3y=6
+$$
+
+This equation contains two variables:
+
+$$
+x,\ y
+$$
+
+and each variable has a power of $1$.
+
+Therefore, it is a linear equation.
+
+---
+
+**`Geometric Meaning`**
+
+A linear equation in two variables represents a **straight line** in the two-dimensional coordinate plane.
+
+The coordinate plane is represented by:
+
+$$
+\mathbb{R}^2
+$$
+
+A point $(x,y)$ lies on the line if it satisfies the equation.
+
+For example:
+
+$$
+x+y=4
+$$
+
+Some solutions are:
+
+$$
+(0,4)
+$$
+
+$$
+(1,3)
+$$
+
+$$
+(2,2)
+$$
+
+$$
+(3,1)
+$$
+
+and:
+
+$$
+(4,0)
+$$
+
+All these points lie on the same straight line.
+
+Therefore:
+
+$$
+\boxed{x+y=4}
+$$
+
+represents a line in $\mathbb{R}^2$.
+
+---
+
+**`Slope-Intercept Form`**
+
+A linear equation can often be written as:
+
+$$
+y=mx+c
+$$
+
+where:
+
+- $m$ = slope
+- $c$ = $y$-intercept
+
+For example:
+
+$$
+2x+y=4
+$$
+
+Rearrange:
+
+$$
+y=-2x+4
+$$
+
+Therefore:
+
+$$
+m=-2
+$$
+
+and:
+
+$$
+c=4
+$$
+
+---
+
+### **`2. Geometric Meaning of a System`**
+
+A **system of linear equations** consists of two or more equations that must be satisfied simultaneously.
+
+Consider:
+
+$$
+\begin{aligned}
+x+y&=4\\
+x-y&=2
+\end{aligned}
+$$
+
+We need values of $x$ and $y$ that satisfy **both equations at the same time**.
+
+Adding the equations:
+
+$$
+(x+y)+(x-y)=4+2
+$$
+
+$$
+2x=6
+$$
+
+Therefore:
+
+$$
+x=3
+$$
+
+Substitute into:
+
+$$
+x+y=4
+$$
+
+$$
+3+y=4
+$$
+
+Thus:
+
+$$
+y=1
+$$
+
+Therefore:
+
+$$
+\boxed{(x,y)=(3,1)}
+$$
+
+---
+
+**`Geometric Interpretation`**
+
+Each equation represents a line.
+
+The solution:
+
+$$
+(3,1)
+$$
+
+is the point where the two lines intersect.
+
+Therefore:
+
+$$
+\boxed{
+\text{Solution of system} =
+\text{Intersection of the lines}
+}
+$$
+
+This is one of the most important geometric interpretations of linear equations.
+
+---
+
+### **`3. Three Possibilities for Two Lines`**
+
+When two linear equations are represented geometrically, there are three possible situations.
+
+---
+
+**`Case 1: One Solution`**
+
+The two lines intersect at exactly one point.
+
+For example:
+
+$$
+\begin{aligned}
+x+y&=4\\
+x-y&=2
+\end{aligned}
+$$
+
+The lines intersect at:
+
+$$
+(3,1)
+$$
+
+Therefore:
+
+$$
+\boxed{\text{One unique solution}}
+$$
+
+---
+
+**`Case 2: No Solution`**
+
+Two lines can be parallel.
+
+For example:
+
+$$
+x+y=2
+$$
+
+and:
+
+$$
+x+y=5
+$$
+
+Both lines have the same slope but different intercepts.
+
+Therefore, they never intersect.
+
+Hence:
+
+$$
+\boxed{\text{No solution}}
+$$
+
+Algebraically, elimination produces something like:
+
+$$
+0=3
+$$
+
+which is impossible.
+
+---
+
+**`Case 3: Infinitely Many Solutions`**
+
+Two equations can represent the same line.
+
+For example:
+
+$$
+x+y=4
+$$
+
+and:
+
+$$
+2x+2y=8
+$$
+
+The second equation is simply twice the first.
+
+Therefore, both equations describe exactly the same line.
+
+Every point on that line satisfies both equations.
+
+Hence:
+
+$$
+\boxed{\text{Infinitely many solutions}}
+$$
+
+---
+
+### **`4. Linear Equations in Three Variables`**
+
+A linear equation in three variables has the form:
+
+$$
+ax+by+cz=d
+$$
+
+For example:
+
+$$
+x+2y+3z=6
+$$
+
+The variables are:
+
+$$
+x,\ y,\ z
+$$
+
+Unlike a linear equation in two variables, which represents a line, a linear equation in three variables represents a **plane** in $\mathbb{R}^3$.
+
+---
+
+**`Example`**
+
+Consider:
+
+$$
+x+y+z=6
+$$
+
+Some points satisfying this equation are:
+
+$$
+(6,0,0)
+$$
+
+$$
+(0,6,0)
+$$
+
+$$
+(0,0,6)
+$$
+
+and many others.
+
+All these points lie on the same plane.
+
+Therefore:
+
+$$
+\boxed{
+x+y+z=6
+}
+$$
+
+represents a plane in $\mathbb{R}^3$.
+
+---
+
+### **`5. System of Equations in Three Dimensions`**
+
+Consider:
+
+$$
+\begin{aligned}
+x+y+z&=6\\
+x-y+z&=2\\
+2x+y-z&=3
+\end{aligned}
+$$
+
+Each equation represents a plane.
+
+The solution of the system is the set of points that belong to **all three planes simultaneously**.
+
+Depending on the equations, the planes can produce:
+
+- One common point
+- No common point
+- A common line
+- The same plane
+
+---
+
+**`Unique Solution`**
+
+Three planes can intersect at exactly one point.
+
+Then:
+
+$$
+\boxed{\text{One solution}}
+$$
+
+---
+
+**`Infinite Solutions`**
+
+The planes may share a common line.
+
+Then every point on that line is a solution.
+
+Therefore:
+
+$$
+\boxed{\text{Infinitely many solutions}}
+$$
+
+---
+
+**`No Solution`**
+
+The planes may have no common point.
+
+Therefore:
+
+$$
+\boxed{\text{No solution}}
+$$
+
+---
+
+### **`6. Geometry of $A\vec{x}=\vec{b}$`**
+
+A system of linear equations can be written compactly as:
+
+$$
+\boxed{
+A\vec{x}=\vec{b}
+}
+$$
+
+Suppose:
+
+$$
+A=
+\begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\vec{x} =
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+Then:
+
+$$
+A\vec{x} =
+\begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+which gives:
+
+$$
+A\vec{x} =
+\begin{bmatrix}
+ax+by\\
+cx+dy
+\end{bmatrix}
+$$
+
+Therefore:
+
+$$
+A\vec{x}=\vec{b}
+$$
+
+is simply a compact representation of a system of linear equations.
+
+---
+
+**`Example`**
+
+Consider:
+
+$$
+\begin{aligned}
+x+2y&=5\\
+3x+4y&=11
+\end{aligned}
+$$
+
+This can be written as:
+
+$$
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix} =
+\begin{bmatrix}
+5\\
+11
+\end{bmatrix}
+$$
+
+Here:
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+$$
+
+$$
+\vec{x}=
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\vec{b}=
+\begin{bmatrix}
+5\\
+11
+\end{bmatrix}
+$$
+
+---
+
+### **`7. Row Picture`**
+
+The **row picture** views a system as a collection of equations.
+
+Consider:
+
+$$
+\begin{aligned}
+x+y&=4\\
+2x-y&=2
+\end{aligned}
+$$
+
+The first row represents:
+
+$$
+x+y=4
+$$
+
+The second row represents:
+
+$$
+2x-y=2
+$$
+
+Each equation represents a line.
+
+The solution is the point where the two lines intersect.
+
+Therefore:
+
+$$
+\boxed{
+\text{Row Picture} =
+\text{Intersection of equations}
+}
+$$
+
+---
+
+**`In Three Dimensions`**
+
+For a system with three variables:
+
+$$
+\begin{aligned}
+a_1x+b_1y+c_1z&=d_1\\
+a_2x+b_2y+c_2z&=d_2\\
+a_3x+b_3y+c_3z&=d_3
+\end{aligned}
+$$
+
+Each equation represents a plane.
+
+The solution is the common intersection of these planes.
+
+---
+
+### **`8. Column Picture`**
+
+The same equation:
+
+$$
+A\vec{x}=\vec{b}
+$$
+
+can be interpreted using the **columns of $A$**.
+
+Consider:
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+$$
+
+Then:
+
+$$
+A
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix} =
+x
+\begin{bmatrix}
+1\\
+3
+\end{bmatrix}
++
+y
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix}
+$$
+
+Therefore:
+
+$$
+x
+\begin{bmatrix}
+1\\
+3
+\end{bmatrix}
++
+y
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix} =
+\vec{b}
+$$
+
+The question becomes:
+
+> Can $\vec{b}$ be produced as a linear combination of the columns of $A$?
+
+This is the **column picture**.
+
+---
+
+### **`9. Row Picture vs Column Picture`**
+
+The row and column pictures describe the same equation:
+
+$$
+\boxed{
+A\vec{x}=\vec{b}
+}
+$$
+
+| Row Picture | Column Picture |
+|---|---|
+| Focuses on equations | Focuses on vectors |
+| Rows represent equations | Columns represent vectors |
+| Geometric objects intersect | Vectors are combined |
+| Solution is an intersection | $\vec{b}$ is a linear combination |
+| Useful for geometry of equations | Useful for span and vector spaces |
+
+---
+
+**`Example`**
+
+Consider:
+
+$$
+A=
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\vec{b} =
+\begin{bmatrix}
+5\\
+11
+\end{bmatrix}
+$$
+
+**`Row Picture`**
+
+Solve:
+
+$$
+\begin{aligned}
+x+2y&=5\\
+3x+4y&=11
+\end{aligned}
+$$
+
+The solution is the intersection of two lines.
+
+**`Column Picture`**
+
+Write:
+
+$$
+x
+\begin{bmatrix}
+1\\
+3
+\end{bmatrix}
++
+y
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix} =
+\begin{bmatrix}
+5\\
+11
+\end{bmatrix}
+$$
+
+Now we are asking whether the target vector can be constructed from the two columns.
+
+---
+
+### **`10. Homogeneous Linear Equations`**
+
+A system is called **homogeneous** when the right-hand side is the zero vector.
+
+It has the form:
+
+$$
+\boxed{
+A\vec{x}=\vec{0}
+}
+$$
+
+For example:
+
+$$
+\begin{aligned}
+x+y&=0\\
+2x-y&=0
+\end{aligned}
+$$
+
+The right-hand side is:
+
+$$
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+---
+
+**`Important Property`**
+
+Every homogeneous system has at least one solution:
+
+$$
+\boxed{
+\vec{x}=\vec{0}
+}
+$$
+
+This is because:
+
+$$
+A\vec{0}=\vec{0}
+$$
+
+for every matrix $A$.
+
+---
+
+### **`11. Trivial Solution`**
+
+For a homogeneous system:
+
+$$
+A\vec{x}=\vec{0}
+$$
+
+the solution:
+
+$$
+\boxed{
+\vec{x}=\vec{0}
+}
+$$
+
+is called the **trivial solution**.
+
+For example:
+
+$$
+\begin{bmatrix}
+1&2\\
+3&4
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix} =
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+may have only:
+
+$$
+x=0,\qquad y=0
+$$
+
+as its solution.
+
+---
+
+### **`12. Non-Trivial Solutions`**
+
+A homogeneous system can also have solutions other than the zero vector.
+
+These are called **non-trivial solutions**.
+
+Consider:
+
+$$
+x+2y=0
+$$
+
+Let:
+
+$$
+y=1
+$$
+
+Then:
+
+$$
+x=-2
+$$
+
+Therefore:
+
+$$
+\begin{bmatrix}
+-2\\
+1
+\end{bmatrix}
+$$
+
+is a non-trivial solution.
+
+We can write the complete solution as:
+
+$$
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix} =
+t
+\begin{bmatrix}
+-2\\
+1
+\end{bmatrix}
+$$
+
+where:
+
+$$
+t\in\mathbb{R}
+$$
+
+This represents a line through the origin.
+
+---
+
+### **`13. Geometry of Homogeneous Systems`**
+
+Consider:
+
+$$
+x+y=0
+$$
+
+This equation represents a line passing through the origin.
+
+Why?
+
+Because:
+
+$$
+(0,0)
+$$
+
+satisfies:
+
+$$
+0+0=0
+$$
+
+More generally:
+
+$$
+A\vec{x}=\vec{0}
+$$
+
+always contains the origin.
+
+The set of all solutions of a homogeneous system forms a **subspace**.
+
+---
+
+**`Examples`**
+
+In $\mathbb{R}^2$, the solution set can be:
+
+- Only the origin
+- A line through the origin
+- The entire $\mathbb{R}^2$
+
+In $\mathbb{R}^3$, it can be:
+
+- Only the origin
+- A line through the origin
+- A plane through the origin
+- All of $\mathbb{R}^3$
+
+---
+
+### **`14. Linear Combinations`**
+
+A **linear combination** is an expression formed by multiplying vectors by scalars and adding them.
+
+Suppose:
+
+$$
+\vec{v}_1=
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\vec{v}_2=
+\begin{bmatrix}
+3\\
+1
+\end{bmatrix}
+$$
+
+A linear combination is:
+
+$$
+c_1\vec{v}_1+c_2\vec{v}_2
+$$
+
+where $c_1$ and $c_2$ are scalars.
+
+---
+
+**`Example`**
+
+Take:
+
+$$
+c_1=2
+$$
+
+and:
+
+$$
+c_2=3
+$$
+
+Then:
+
+$$
+2\vec{v}_1+3\vec{v}_2
+$$
+
+becomes:
+
+$$
+2
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
++
+3
+\begin{bmatrix}
+3\\
+1
+\end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix}
+2\\
+4
+\end{bmatrix}
++
+\begin{bmatrix}
+9\\
+3
+\end{bmatrix}
+$$
+
+Therefore:
+
+$$
+\boxed{
+\begin{bmatrix}
+11\\
+7
+\end{bmatrix}
+}
+$$
+
+is a linear combination of $\vec{v}_1$ and $\vec{v}_2$.
+
+---
+
+### **`15. Span`**
+
+The **span** of a collection of vectors is the set of **all possible linear combinations** of those vectors.
+
+For vectors:
+
+$$
+\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_n
+$$
+
+we write:
+
+$$
+\boxed{
+\mathrm{span}
+\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_n\}
+}
+$$
+
+Formally:
+
+$$
+\mathrm{span}
+\{\vec{v}_1,\ldots,\vec{v}_n\} =
+\left\{
+c_1\vec{v}_1+\cdots+c_n\vec{v}_n
+:
+c_i\in\mathbb{R}
+\right\}
+$$
+
+---
+
+**`Example`**
+
+Let:
+
+$$
+\vec{v}_1=
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\vec{v}_2=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+$$
+
+A general linear combination is:
+
+$$
+c_1
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
++
+c_2
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+$$
+
+which gives:
+
+$$
+\begin{bmatrix}
+c_1\\
+c_2
+\end{bmatrix}
+$$
+
+Since $c_1$ and $c_2$ can be any real numbers:
+
+$$
+\boxed{
+\mathrm{span}\{\vec{v}_1,\vec{v}_2\} =
+\mathbb{R}^2
+}
+$$
+
+---
+
+### **`16. Geometry of Span`**
+
+The geometry of a span depends on the number and relationship of the vectors.
+
+**`1. One Non-Zero Vector in`** $\mathbb{R}^2$
+
+The span is a line passing through the origin.
+
+$$
+\boxed{\text{Line}}
+$$
+
+**`2. Two Independent Vectors in`** $\mathbb{R}^2$
+
+Their span is the entire plane.
+
+$$
+\boxed{\mathbb{R}^2}
+$$
+
+**`3. One Non-Zero Vector in`** $\mathbb{R}^3$
+
+Its span is a line through the origin.
+
+<br>
+
+**`4. Two Independent Vectors in`** $\mathbb{R}^3$
+
+Their span is a plane through the origin.
+
+<br>
+
+**`5. Three Independent Vectors in`** $\mathbb{R}^3$
+
+Their span is:
+
+$$
+\boxed{\mathbb{R}^3}
+$$
+
+---
+
+### **`17. Linear Independence and Geometry`**
+
+Vectors are **linearly independent** if none of the vectors can be written as a linear combination of the others.
+
+For vectors:
+
+$$
+\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_n
+$$
+
+they are linearly independent if:
+
+$$
+c_1\vec{v}_1+
+c_2\vec{v}_2+
+\cdots+
+c_n\vec{v}_n =
+\vec{0}
+$$
+
+has only the solution:
+
+$$
+c_1=c_2=\cdots=c_n=0
+$$
+
+---
+
+**`Geometric Meaning`**
+
+Consider two vectors:
+
+$$
+\vec{v}_1=
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\vec{v}_2=
+\begin{bmatrix}
+2\\
+4
+\end{bmatrix}
+$$
+
+Notice:
+
+$$
+\vec{v}_2=2\vec{v}_1
+$$
+
+Therefore, the vectors point in the same direction.
+
+They are linearly dependent.
+
+---
+
+**`Independent Vectors`**
+
+Consider:
+
+$$
+\vec{v}_1=
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\vec{v}_2=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+$$
+
+Neither vector can be created from the other.
+
+Therefore:
+
+$$
+\boxed{
+\vec{v}_1,\vec{v}_2
+\text{ are linearly independent}
+}
+$$
+
+---
+
+### **`18. Intersection of Planes`**
+
+In $\mathbb{R}^3$, a linear equation:
+
+$$
+ax+by+cz=d
+$$
+
+represents a plane.
+
+Two planes can have different geometric relationships.
+
+---
+
+**`Case 1: Intersecting Planes`**
+
+Two non-parallel planes generally intersect in a line.
+
+Therefore:
+
+$$
+\boxed{\text{Intersection = line}}
+$$
+
+---
+
+**`Case 2: Parallel Planes`**
+
+Two distinct parallel planes never intersect.
+
+Therefore:
+
+$$
+\boxed{\text{No intersection}}
+$$
+
+---
+
+**`Case 3: Same Plane`**
+
+Two equations may represent the exact same plane.
+
+Then they have infinitely many common points.
+
+Therefore:
+
+$$
+\boxed{\text{Intersection = entire plane}}
+$$
+
+---
+
+### **`19. Geometric Meaning of a Unique Solution`**
+
+A system has a **unique solution** when all the equations have exactly one common point.
+
+In $\mathbb{R}^2$:
+
+$$
+\boxed{
+\text{Two lines intersect at exactly one point}
+}
+$$
+
+In $\mathbb{R}^3$:
+
+$$
+\boxed{
+\text{Three planes intersect at exactly one point}
+}
+$$
+
+For example:
+
+$$
+\begin{aligned}
+x+y&=4\\
+x-y&=2
+\end{aligned}
+$$
+
+gives:
+
+$$
+(x,y)=(3,1)
+$$
+
+Therefore:
+
+$$
+\boxed{\text{Unique solution}}
+$$
+
+---
+
+### **`20. Geometric Meaning of No Solution`**
+
+A system has **no solution** when the equations have no common point.
+
+For example:
+
+$$
+\begin{aligned}
+x+y&=2\\
+x+y&=5
+\end{aligned}
+$$
+
+Subtracting the equations:
+
+$$
+0=3
+$$
+
+which is impossible.
+
+Geometrically, the two equations represent parallel lines.
+
+Therefore:
+
+$$
+\boxed{\text{No solution}}
+$$
+
+---
+
+### **`21. Geometric Meaning of Infinitely Many Solutions`**
+
+A system has infinitely many solutions when there are infinitely many points satisfying all the equations.
+
+Consider:
+
+$$
+\begin{aligned}
+x+y&=4\\
+2x+2y&=8
+\end{aligned}
+$$
+
+The second equation is twice the first:
+
+$$
+2(x+y)=2(4)
+$$
+
+Therefore, both equations represent the same line.
+
+Every point on this line is a solution.
+
+Hence:
+
+$$
+\boxed{\text{Infinitely many solutions}}
+$$
+
+---
+
+**`Parametric Form`**
+
+Starting with:
+
+$$
+x+y=4
+$$
+
+Let:
+
+$$
+y=t
+$$
+
+Then:
+
+$$
+x=4-t
+$$
+
+Therefore:
+
+$$
+\boxed{
+x=4-t,\qquad y=t
+}
+$$
+
+where:
+
+$$
+t\in\mathbb{R}
+$$
+
+This represents infinitely many points on the line.
+
+---
+
+### **`22. Geometry and Gaussian Elimination`**
+
+**Gaussian Elimination** is a systematic method for simplifying a system of linear equations.
+
+The important idea is:
+
+> **Row operations simplify the equations without changing their solution set.**
+
+Consider:
+
+$$
+\begin{aligned}
+x+y&=4\\
+2x+2y&=8
+\end{aligned}
+$$
+
+The augmented matrix is:
+
+$$
+\left[
+\begin{array}{cc|c}
+1&1&4\\
+2&2&8
+\end{array}
+\right]
+$$
+
+Apply:
+
+$$
+R_2\rightarrow R_2-2R_1
+$$
+
+Then:
+
+$$
+\left[
+\begin{array}{cc|c}
+1&1&4\\
+0&0&0
+\end{array}
+\right]
+$$
+
+The second row represents:
+
+$$
+0=0
+$$
+
+This means the second equation did not provide any additional independent information.
+
+Geometrically, this makes sense because both equations represented the **same line**.
+
+---
+
+**`Gaussian Elimination and Geometry`**
+
+Gaussian Elimination helps reveal the geometric structure of a system.
+
+For example:
+
+**`One pivot for two variables`**
+
+There is a free variable, which can produce infinitely many solutions.
+
+<br>
+
+**`Two pivots for two variables`**
+
+Both variables are determined, producing a unique solution.
+
+<br>
+
+**`A row such as`**
+
+$$
+[0\quad0\mid c]
+$$
+
+where:
+
+$$
+c\neq0
+$$
+
+means:
+
+$$
+0=c
+$$
+
+which is impossible.
+
+Therefore:
+
+$$
+\boxed{\text{No solution}}
+$$
+
+---
+
+### **`Important Connections`**
+
+The geometry of linear equations connects several major ideas in Linear Algebra:
+
+$$
+\boxed{
+\text{Linear Equations}
+\rightarrow
+\text{Lines and Planes}
+\rightarrow
+\text{Systems}
+\rightarrow
+\text{Matrices}
+}
+$$
+
+and:
+
+$$
+\boxed{
+A\vec{x}=\vec{b}
+\rightarrow
+\text{Row Picture}
+\rightarrow
+\text{Column Picture}
+}
+$$
+
+and:
+
+$$
+\boxed{
+\text{Linear Combinations}
+\rightarrow
+\text{Span}
+\rightarrow
+\text{Linear Independence}
+}
+$$
+
+---
