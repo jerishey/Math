@@ -4948,5 +4948,174 @@ $$
 ---
 
 
+## `4. Systems of linear equations`
 
+A **system of linear equations** is a collection of equations in which every unknown appears only to the first power and is never multiplied by another unknown.
+
+A general system of $m$ equations in $n$ unknowns looks like this:
+
+$$
+\begin{aligned}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2 \\
+&\ \vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
+\end{aligned}
+$$
+
+A **solution** is a set of values for $x_1, \dots, x_n$ that satisfies every equation at once. A system can have:
+
+- exactly one solution,
+- no solution, or
+- infinitely many solutions.
+
+**Example** used throughout:
+
+$$
+\begin{aligned}
+2x - y &= 0 \\
+-x + 2y &= 3
+\end{aligned}
+$$
+
+Its solution is $x = 1,\ y = 2$.
+
+---
+
+### `Matrix representation`
+
+The same system can be packed into a compact form using a coefficient matrix, a vector of unknowns, and a right-hand side vector:
+
+$$
+\underbrace{\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}}_{A}
+\underbrace{\begin{bmatrix} x \\ y \end{bmatrix}}_{\mathbf{x}}
+=
+\underbrace{\begin{bmatrix} 0 \\ 3 \end{bmatrix}}_{\mathbf{b}}
+$$
+
+This is written as
+
+$$
+A\mathbf{x} = \mathbf{b}
+$$
+
+| Symbol | Name | Size |
+|--------|------|------|
+| $A$ | Coefficient matrix | $m \times n$ |
+| $\mathbf{x}$ | Vector of unknowns | $n \times 1$ |
+| $\mathbf{b}$ | Right-hand side | $m \times 1$ |
+
+The **augmented matrix** $[A \mid \mathbf{b}]$ is often used for elimination:
+
+$$
+\left[\begin{array}{cc|c} 2 & -1 & 0 \\ -1 & 2 & 3 \end{array}\right]
+$$
+
+---
+
+### `Row picture`
+
+In the **row picture**, we look at one equation at a time. Each equation describes a geometric object:
+
+- In 2 unknowns, each equation is a **line**.
+- In 3 unknowns, each equation is a **plane**.
+- In $n$ unknowns, each equation is a **hyperplane**.
+
+The solution is the point where all of these objects intersect.
+
+For the running example:
+
+- Row 1: $2x - y = 0$ is a line through the origin with slope 2.
+- Row 2: $-x + 2y = 3$ is a line with slope $\tfrac{1}{2}$.
+- The two lines cross at $(1, 2)$, which is the solution.
+
+Check: $2(1) - 2 = 0$ and $-1 + 2(2) = 3$.
+
+---
+
+### `Column picture`
+
+In the **column picture**, we look at the columns of $A$ as vectors and ask:
+
+> Can $\mathbf{b}$ be built as a combination of the columns of $A$?
+
+The system $A\mathbf{x} = \mathbf{b}$ is the same as
+
+$$
+x \begin{bmatrix} 2 \\ -1 \end{bmatrix} + y \begin{bmatrix} -1 \\ 2 \end{bmatrix} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}
+$$
+
+The unknowns $x$ and $y$ are the **weights** of a **linear combination**. With $x = 1$ and $y = 2$:
+
+$$
+1 \begin{bmatrix} 2 \\ -1 \end{bmatrix} + 2 \begin{bmatrix} -1 \\ 2 \end{bmatrix} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}
+$$
+
+Key ideas:
+
+- The set of all combinations of the columns is the **column space** of $A$.
+- $A\mathbf{x} = \mathbf{b}$ is solvable exactly when $\mathbf{b}$ lies in the column space.
+
+---
+
+### `Matrix picture`
+
+The **matrix picture** treats $A$ as a function that acts on vectors:
+
+$$
+\mathbf{x} \longmapsto A\mathbf{x}
+$$
+
+Solving $A\mathbf{x} = \mathbf{b}$ means finding the input $\mathbf{x}$ that $A$ sends to $\mathbf{b}$.
+
+- If $A$ is square and **invertible**, the solution is unique:
+
+  $$
+  \mathbf{x} = A^{-1}\mathbf{b}
+  $$
+
+- In practice, we usually solve by **Gaussian elimination** rather than computing $A^{-1}$.
+- Elimination factors the matrix as $A = LU$, where $L$ is lower triangular and $U$ is upper triangular.
+
+Elimination on the running example:
+
+$$
+\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix} 2 & -1 \\ 0 & \tfrac{3}{2} \end{bmatrix}
+$$
+
+Back substitution then gives $y = 2$ and $x = 1$.
+
+---
+
+### `Geometry of lines and planes`
+
+The three possible outcomes of a system have a clear geometric meaning.
+
+**`In 2D (two equations, two unknowns)`**
+
+| Outcome | Row picture | Column picture |
+|---------|-------------|----------------|
+| One solution | Lines intersect at a single point | $\mathbf{b}$ is reachable; columns are independent |
+| No solution | Lines are parallel and distinct | $\mathbf{b}$ is outside the column space |
+| Infinitely many solutions | Lines coincide | Columns are dependent, and $\mathbf{b}$ is on their line |
+
+**`In 3D (three equations, three unknowns)`**
+
+- **One solution:** three planes meet at a single point.
+- **No solution:** the planes have no common point. For example, two planes are parallel, or the three planes form a "triangular prism" with no shared intersection.
+- **Infinitely many solutions:** the planes meet along a common line, or all three coincide.
+
+**`Singular vs. nonsingular`**
+
+A square matrix $A$ is **singular** when its columns are linearly dependent, which means:
+
+- $\det(A) = 0$
+- $A$ has no inverse
+- $A\mathbf{x} = \mathbf{b}$ has either no solution or infinitely many solutions
+
+A **nonsingular** matrix has independent columns, $\det(A) \neq 0$, and gives exactly one solution for every $\mathbf{b}$.
+
+---
 
