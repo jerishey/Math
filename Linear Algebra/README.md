@@ -4988,8 +4988,7 @@ The same system can be packed into a compact form using a coefficient matrix, a 
 
 $$
 \underbrace{\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}}_{A}
-\underbrace{\begin{bmatrix} x \\ y \end{bmatrix}}_{\mathbf{x}}
-=
+\underbrace{\begin{bmatrix} x \\ y \end{bmatrix}}_{\mathbf{x}} =
 \underbrace{\begin{bmatrix} 0 \\ 3 \end{bmatrix}}_{\mathbf{b}}
 $$
 
@@ -5314,17 +5313,16 @@ There is one type for each row operation:
 
 | Type | Example ($3 \times 3$) | Effect of $EA$ |
 |------|------------------------|----------------|
-| Replacement | $\begin{bmatrix} 1&0&0\\-3&1&0\\0&0&1 \end{bmatrix}$ | Row 2 $\leftarrow$ row 2 $- 3 \times$ row 1 |
-| Exchange | $\begin{bmatrix} 0&1&0\\1&0&0\\0&0&1 \end{bmatrix}$ | Swap rows 1 and 2 |
-| Scaling | $\begin{bmatrix} 1&0&0\\0&\tfrac12&0\\0&0&1 \end{bmatrix}$ | Row 2 $\leftarrow \tfrac12 \times$ row 2 |
+| Replacement | A = $\begin{bmatrix} 1&0&0\\-3&1&0\\0&0&1 \end{bmatrix}$ | Row 2 $\leftarrow$ row 2 $- 3 \times$ row 1 |
+| Exchange | A = $\begin{bmatrix} 0&1&0\\1&0&0\\0&0&1 \end{bmatrix}$ | Swap rows 1 and 2 |
+| Scaling | A = $\begin{bmatrix} 1&0&0\\0&\tfrac12&0\\0&0&1 \end{bmatrix}$ | Row 2 $\leftarrow \tfrac12 \times$ row 2 |
 
 Example with the running matrix:
 
 $$
 E_{21}A =
 \begin{bmatrix} 1 & 0 & 0 \\ -3 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
-\begin{bmatrix} 1 & 2 & 1 \\ 3 & 8 & 1 \\ 0 & 4 & 1 \end{bmatrix}
-=
+\begin{bmatrix} 1 & 2 & 1 \\ 3 & 8 & 1 \\ 0 & 4 & 1 \end{bmatrix} =
 \begin{bmatrix} 1 & 2 & 1 \\ 0 & 2 & -2 \\ 0 & 4 & 1 \end{bmatrix}
 $$
 
@@ -5392,9 +5390,7 @@ $$
 All the elimination steps collapse into one matrix $E = E_{32}E_{21}$:
 
 $$
-E = \begin{bmatrix} 1 & 0 & 0 \\ -3 & 1 & 0 \\ 6 & -2 & 1 \end{bmatrix},
-\qquad
-EA = U
+E = \begin{bmatrix} 1 & 0 & 0 \\ -3 & 1 & 0 \\ 6 & -2 & 1 \end{bmatrix}, \qquad EA = U
 $$
 
 Check, row 3 of $EA$: $6(1,2,1) - 2(3,8,1) + (0,4,1) = (0,\ 0,\ 5)$ ✓.
@@ -5404,8 +5400,7 @@ The same $E$ acts on the right-hand side:
 $$
 E\mathbf{b} =
 \begin{bmatrix} 1 & 0 & 0 \\ -3 & 1 & 0 \\ 6 & -2 & 1 \end{bmatrix}
-\begin{bmatrix} 2 \\ 12 \\ 2 \end{bmatrix}
-=
+\begin{bmatrix} 2 \\ 12 \\ 2 \end{bmatrix} =
 \begin{bmatrix} 2 \\ 6 \\ -10 \end{bmatrix} = \mathbf{c}
 $$
 
