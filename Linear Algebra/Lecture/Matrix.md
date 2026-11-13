@@ -587,7 +587,7 @@ The expensive elimination is done **once**. For any new right-hand side $\mathbf
 
 ---
 
-### **`13. Associative Property of Matrix Multiplication`**
+### **`4. Associative Property of Matrix Multiplication`**
 
 Matrix multiplication is **associative**:
 
@@ -626,7 +626,7 @@ Associativity lets you regroup, but not reorder. $(AB)C = A(BC)$ is fine, while 
 
 ---
 
-### **`4. Non-Commutative Property of Matrix Multiplication (AB ≠ BA)`**
+### **`5. Non-Commutative Property of Matrix Multiplication (AB ≠ BA)`**
 
 Matrix multiplication is **not commutative**: in general,
 
